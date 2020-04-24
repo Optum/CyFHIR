@@ -1,0 +1,242 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [{
+      "fullUrl": "urn:uuid:0ac86237-f4b0-4f53-b20c-e8ea5556e772",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "0ac86237-f4b0-4f53-b20c-e8ea5556e772",
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [{
+            "system": "http://hl7.org/fhir/sid/cvx",
+            "code": "140",
+            "display": "Influenza, seasonal, injectable, preservative free"
+          }],
+          "text": "Influenza, seasonal, injectable, preservative free"
+        },
+        "patient": {
+          "reference": "urn:uuid:be6c5420-4b0a-46bf-847a-1d350938d5db"
+        },
+        "encounter": {
+          "reference": "urn:uuid:dda4b31c-a8ef-4f41-a85e-ec1e10e25e3c"
+        },
+        "occurrenceDateTime": "2005-08-07T00:34:37-04:00",
+        "primarySource": true
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:be6c5420-4b0a-46bf-847a-1d350938d5db",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patientWithCAD",
+        "extension": [{
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [{
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [{
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Bedsaul"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Indian Trail",
+              "state": "North Carolina",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 0.14629033365730687
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 29.85370966634269
+          }
+        ],
+        "identifier": [{
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "dca75ee4-1627-4a57-9756-1ffdb507b819"
+          },
+          {
+            "type": {
+              "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "MR",
+                "display": "Medical Record Number"
+              }],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "dca75ee4-1627-4a57-9756-1ffdb507b819"
+          },
+          {
+            "type": {
+              "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "SS",
+                "display": "Social Security Number"
+              }],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-89-1450"
+          },
+          {
+            "type": {
+              "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "DL",
+                "display": "Driver's License"
+              }],
+              "text": "Driver's License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99911503"
+          },
+          {
+            "type": {
+              "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "PPN",
+                "display": "Passport Number"
+              }],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X85265758X"
+          }
+        ],
+        "name": [{
+          "use": "official",
+          "family": "Hickle",
+          "given": [
+            "Brady"
+          ],
+          "prefix": [
+            "Mrs."
+          ]
+        }],
+        "telecom": [{
+          "system": "phone",
+          "value": "555-951-1165",
+          "use": "home"
+        }],
+        "gender": "female",
+        "birthDate": "1955-07-03",
+        "address": [{
+          "extension": [{
+            "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+            "extension": [{
+                "url": "latitude",
+                "valueDecimal": 35.83020399999999
+              },
+              {
+                "url": "longitude",
+                "valueDecimal": -78.641439
+              }
+            ]
+          }],
+          "line": [
+            "241 Fay Divide"
+          ],
+          "city": "Raleigh",
+          "state": "North Carolina",
+          "postalCode": "27511",
+          "country": "US"
+        }],
+        "maritalStatus": {
+          "coding": [{
+            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+            "code": "M",
+            "display": "M"
+          }],
+          "text": "M"
+        },
+        "multipleBirthInteger": 1,
+        "communication": [{
+          "language": {
+            "coding": [{
+              "system": "urn:ietf:bcp:47",
+              "code": "en-US",
+              "display": "English"
+            }],
+            "text": "English"
+          }
+        }]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dda4b31c-a8ef-4f41-a85e-ec1e10e25e3c",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "dda4b31c-a8ef-4f41-a85e-ec1e10e25e3c",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [{
+          "coding": [{
+            "system": "http://snomed.info/sct",
+            "code": "185349003",
+            "display": "Encounter for check up (procedure)"
+          }],
+          "text": "Encounter for check up (procedure)"
+        }],
+        "subject": {
+          "reference": "urn:uuid:be6c5420-4b0a-46bf-847a-1d350938d5db"
+        },
+        "period": {
+          "start": "2005-08-07T00:34:37-04:00",
+          "end": "2005-08-07T00:49:37-04:00"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    }
+  ]
+}

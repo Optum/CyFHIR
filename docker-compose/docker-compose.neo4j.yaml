@@ -1,0 +1,20 @@
+version: '3'
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+  neo4j:
+    image: neo4j
+    build: ..
+    networks:
+      - backend
+    environment:
+      NEO4J_HOST: 0.0.0.0
+      NEO4J_AUTH: none
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*,cyfhir.*
+    ports:
+      - '7474:7474'
+      - '7473:7473'
+      - '7687:7687'
