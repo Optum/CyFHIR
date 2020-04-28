@@ -6,12 +6,6 @@ and that can convert Neo4j query responses into FHIR Resources. This is being bu
 of the more popular databases built into other FHIR Servers. We are also providing a standard way for logging, streaming, performance testing, and deployment to be done
 with Neo4j.
 
-##### Maintainers:
-- [Liron Benjamin](https://github.optum.com/lbenjam8)
-- [Matthew Frisby](https://github.optum.com/mfrisby3)
-- [Dan Madrid](https://github.optum.com/dmadrid6)
-- [Tyler Yam](https://github.optum.com/tyam1)
-
 ## Prerequisites
 * Docker and Docker Compose
 * Node.js (>12.0.0) and npm (>6.0.0)

@@ -1,18 +1,23 @@
+// Cypher that loads a FHIR Bundle
 function loadBundleCypher (_bundle) {
   const _bundleFormatted = _bundle.replace(/"/g, '\\"');
   const cypher = `CALL cyfhir.loadBundle("${_bundleFormatted}")`;
   return cypher;
 }
 
+// Cypher that deletes all Nodes and Relationships in Neo4J DB
 function deleteAllNodesCypher () {
   const cypher = 'MATCH (n) DETACH DELETE n';
   return cypher;
 }
 
+// Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
+// points to that resource is included in the Bundle
 function buildBundleAroundIDCypher (_id) {
-  const cypher = `MATCH (m:entry)-[*]->(n:resource)
-                  OPTIONAL MATCH (n:resource)-[*2]->()-[r:reference]->(o:entry)
-                  WHERE (n.id = "${_id}")
+  const cypher = `WITH "${_id}" as _id
+                  MATCH (m:entry)-[*]->(n:resource)
+                  MATCH (q:resource)-[*2]->()-[r:reference]->(o:entry)
+                  WHERE (n.id = _id) AND (o._resourceId = _id)
                   WITH collect(m)+collect(o) AS entryList
                   UNWIND entryList AS entry
                   CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
@@ -22,11 +27,13 @@ function buildBundleAroundIDCypher (_id) {
   return cypher;
 }
 
+// Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
+// points to that resource is included in the Bundle IF it matches the ResourceType filter
 function buildBundleAroundIDWithFilterCypher (_id, _filter) {
   const cypher = `WITH "${_id}" AS _id
                   MATCH (m:entry)-[*]->(n:resource)
-                  OPTIONAL MATCH (n:resource)-[*2]->()-[r:reference]->(o:entry)
-                  WHERE (n.id = _id)
+                  MATCH (q:resource)-[*2]->()-[r:reference]->(o:entry)
+                  WHERE (n.id = _id) AND (o._resourceId = _id)
                   WITH collect(m)+collect(o) AS entryList, ${_filter} AS filter
                   MATCH (m:entry)-[*1]->(n:resource)
                   WHERE (m in entryList)
