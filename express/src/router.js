@@ -1,6 +1,8 @@
 const appRoot = require('app-root-path');
 const express = require('express');
 const neo4jController = require(`${appRoot}/src/controllers/neo4jController`);
+const jsonABC = require('jsonabc');
+const equal = require('deep-equal');
 
 // SwaggerDoc routes detailed below in route's order of appearence
 
@@ -22,6 +24,11 @@ const routerHandler = function () {
 
   router.delete('/delete', (req, res) => {
     return neo4jController.deleteAll(req, res);
+  });
+
+  router.post('/compareJSON', (req, res) => {
+    const sortedJsons = req.body.jsons.map((json) => { return jsonABC.sortObj(json); });
+    return res.status(200).send({ isEqual: equal(...sortedJsons) });
   });
 
   return router;
@@ -89,3 +96,24 @@ module.exports = routerHandler();
      *              schema:
      *                type: object
      */
+
+/**
+      * @swagger
+      *
+      *   /api/compareJSON:
+      *    post:
+      *      summary: Compare two JSON Objects to test CyFHIR
+      *      requestBody:
+      *        required: true
+      *        content:
+      *           application/json:
+      *             schema:
+      *               type: object
+      *             example: {"jsons":[{"ex1":{"ex3":"value"},"ex2":"value"},{"ex2":"value","ex1":{"ex3":"value"}}]}
+      *      responses:
+      *        "200":
+      *          content:
+      *            application/json:
+      *              schema:
+      *                type: object
+      */
