@@ -55,13 +55,15 @@ Currently CyFHIR has 1 procedure and 1 aggregating function:
 ##### Functions
 
 -   `cyfhir.buildBundle()`
-    -   Pass an array of expanded, structured FHIR Resources that were the result of your query, to do so to properly build FHIR Bundles the last few lines of your query will almost always look like this:
-            UNWIND entryList AS entry
-            CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
-            WITH collect(path) AS paths
-            CALL apoc.convert.toTree(paths) YIELD value
-            RETURN cyfhir.buildBundle(COLLECT(value))
-        The entryList variable above that gets unwound is the list of entry nodes that match a query that you've written above. This expands those entry nodes to get the full resource, converts that to a JSON/tree-like structure, then passes it to CyFHIR to build the bundle and enforce correct cardinality of resource properties.
+    -   Pass an array of expanded, structured FHIR Resources that were the result of your query. To properly pass data into this function, the last few lines of your query will probably end up looking like this:
+  ```  
+    UNWIND entryList AS entry
+    CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
+    WITH collect(path) AS paths
+    CALL apoc.convert.toTree(paths) YIELD value
+    RETURN cyfhir.buildBundle(COLLECT(value))
+    ```
+    - The entryList variable above that gets unwound is the list of entry nodes that match a query that you've written above. This expands those entry nodes to get the full resource, converts that to a JSON/tree-like structure, then passes it to CyFHIR to build the bundle and enforce correct cardinality of resource properties.
 
 <a name="repo"></a>
 
