@@ -1,4 +1,4 @@
-# **_CyFHIR_**
+![CyFHIR](imgs/cyfhir.png)
 
 ### Operationalizing Neo4j for use within Healthcare by leveraging HL7 FHIR Standards
 
