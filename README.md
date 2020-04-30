@@ -1,4 +1,5 @@
-# CyFHIR
+![CyFHIR](imgs/cyfhir.png)
+#
 
 Operationalizing Neo4j for use within healthcare by providing a platform that supports data interoperability.
 The main focus of this project is to supply developers with a Native Java Plugin for Neo4j that can load FHIR resources directly into Neo4j
