@@ -6,7 +6,7 @@ import neo4jController from './controllers/neo4jController'
 const router = express.Router()
 
 /** Displayed below */
-router.post('/LoadBundle', (req, res) => {
+router.post('/LoadBundle', (req: Request, res: Response) => {
     return neo4jController.loadBundle(req.body, res);
 });
 

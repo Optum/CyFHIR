@@ -2,7 +2,6 @@ import app from './app'
 import http, { Server } from 'http'
 
 const port: number = parseInt(process.env.PORT || '3000')
-
 const server: Server = http.createServer(app);
 
 function startServer(port: number): Promise<any> {

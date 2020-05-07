@@ -1,4 +1,4 @@
-import swaggerJSDoc, { Options } from 'swagger-jsdoc'
+import swaggerJSDoc from 'swagger-jsdoc'
 import config from './config'
 
 const swaggerDocs = swaggerJSDoc(config)
