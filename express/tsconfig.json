@@ -4,9 +4,6 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "sourceMap": true,
-    "paths": {
-      "@controllers/*": ["src/controllers/*"]
-    },
     "strict": false,
     "target": "es6",
     "esModuleInterop": true,
