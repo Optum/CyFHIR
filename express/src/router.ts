@@ -1,10 +1,7 @@
 import express from 'express'
 
-class Router {
-    private router
-    constructor(server) {
-        this.router = express.Router()
-        server.use('/', this.router)
-    }
-}
-export default Router
+const router = express.Router()
+router.get('/test', (req, res) => {
+    return 'hello daniel'
+})
+export default router

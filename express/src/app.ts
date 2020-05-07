@@ -1,30 +1,39 @@
-import express, { Application, Request, Response } from 'express'
-import Router from './router'
-import swaggerSpec from './swagger/swagger'
+import express, { Request, Response } from 'express'
+import session from 'express-session'
+import cors from 'cors'
+import morgan from 'morgan'
+
+// import Router from './router'
+import swaggerDocs from './swagger/swagger'
 import swaggerUi from 'swagger-ui-express'
-import bodyParser from 'body-parser'
+// import bodyParser from 'body-parser'
 
-class App {
-  public httpServer
+// create app
+const app = express()
 
-  constructor() {
-    this.httpServer = express()
-    const router = new Router(this.httpServer)
+app.use(session({
+  resave: true,
+  saveUninitialized: true,
+  secret: 'shhh-dont-tell'
+}));
 
-    // this.httpServer.get('/test', (req: Request, res: Response) => {
-    //   res.send('Hello')
-    // })
+// Custom Morgan metric for Response Time in Seconds
+morgan.token('response-time-seconds', function getResponseTimeInSeconds (req, res) {
+  return (this['response-time'](req, res) / 1000).toFixed(2);
+});
 
-    // swagger docs
-    // this.httpServer.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-    // this.httpServer.get('/docs', swaggerUi.setup(swaggerSpec));
-  }
+// Cross-Origin Resource Sharing - Wildcard for now
+app.use(cors({
+  'Access-Control-Allow-Origin': '*'
+}));
 
-  public start = (port) => {
-    return new Promise((resolve, reject) => {
-      this.httpServer.listen(port, () => resolve(port))
-      .on('error', (err: object) => reject(err))
-    })
-  }
-}
-export default App;
+app.use('/test', (req, res) => {
+  res.send('hello world')
+})
+
+// swagger docs
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+
+app.get('/', (req, res) => res.send('Hello World!'))
+
+export default app
