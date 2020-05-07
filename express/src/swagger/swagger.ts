@@ -1,16 +1,5 @@
 import swaggerJSDoc, { Options } from 'swagger-jsdoc'
-// import config from './swagger.json';
+import config from './config'
 
-const swaggerOptions: Options = {
-    definition: {
-        info: {
-            title: "CDS Service",
-            version: "1.0.0",
-            description: "test"
-        },
-        openapi: "3.0.0"
-    }
-}
-
-const swaggerDocs = swaggerJSDoc(swaggerOptions)
+const swaggerDocs = swaggerJSDoc(config)
 export default swaggerDocs
