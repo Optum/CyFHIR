@@ -5,7 +5,7 @@ const port: number = parseInt(process.env.PORT || '3000')
 
 const server: Server = http.createServer(app);
 
-function startServer(port): Promise<any> {
+function startServer(port: number): Promise<any> {
     return new Promise((resolve, reject) => {
         server.listen(port, () => {
             resolve(port)

@@ -2,8 +2,7 @@ import express, { Request, Response } from 'express'
 import session from 'express-session'
 import cors from 'cors'
 import morgan from 'morgan'
-
-// import Router from './router'
+import router from './router'
 import swaggerDocs from './swagger/swagger'
 import swaggerUi from 'swagger-ui-express'
 import bodyParser from 'body-parser'
@@ -50,6 +49,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-// app.use('/api/', routes);
+// Add in api routing
+app.use('/api/', router);
 
 export default app

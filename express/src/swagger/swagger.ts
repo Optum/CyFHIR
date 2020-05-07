@@ -9,8 +9,7 @@ const swaggerOptions: Options = {
             description: "test"
         },
         openapi: "3.0.0"
-    },
-    apis: ["./src/app.ts"]
+    }
 }
 
 const swaggerDocs = swaggerJSDoc(swaggerOptions)

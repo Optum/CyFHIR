@@ -1,19 +1,19 @@
 // Cypher that loads a FHIR Bundle
-function loadBundleCypher(_bundle) {
+function loadBundleCypher(_bundle: string): string {
     const _bundleFormatted = _bundle.replace(/"/g, '\\"');
     const cypher = `CALL cyfhir.loadBundle("${_bundleFormatted}")`;
     return cypher;
 }
 
 // Cypher that deletes all Nodes and Relationships in Neo4J DB
-function deleteAllNodesCypher() {
+function deleteAllNodesCypher(): string {
     const cypher = 'MATCH (n) DETACH DELETE n';
     return cypher;
 }
 
 // Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
 // points to that resource is included in the Bundle
-function buildBundleAroundIDCypher(_id) {
+function buildBundleAroundIDCypher(_id: string): string {
     const cypher = `WITH "${_id}" as _id
                     MATCH (m:entry)-[*]->(n:resource)
                     MATCH (q:resource)-[*2]->()-[r:reference]->(o:entry)
@@ -29,7 +29,7 @@ function buildBundleAroundIDCypher(_id) {
 
 // Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
 // points to that resource is included in the Bundle IF it matches the ResourceType filter
-function buildBundleAroundIDWithFilterCypher(_id, _filter) {
+function buildBundleAroundIDWithFilterCypher(_id: string, _filter: string): string {
     const cypher = `WITH "${_id}" AS _id
                     MATCH (m:entry)-[*]->(n:resource)
                     MATCH (q:resource)-[*2]->()-[r:reference]->(o:entry)
@@ -54,10 +54,10 @@ export = {
     deleteAll: () => {
         return deleteAllNodesCypher();
     },
-    buildBundleAroundID: (_id) => {
+    buildBundleAroundID: (_id: string) => {
         return buildBundleAroundIDCypher(_id);
     },
-    buildBundleAroundIDWithFilter: (_id, _filter) => {
+    buildBundleAroundIDWithFilter: (_id: string, _filter: string) => {
         return buildBundleAroundIDWithFilterCypher(_id, _filter);
     }
 };
