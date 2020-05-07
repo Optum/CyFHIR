@@ -57,7 +57,7 @@ router.post('/BuildBundle/:_id', (req: Request, res: Response) => {
  *              schema:
  *                type: object
  */
-router.delete('/delete', (req, res) => {
+router.delete('/delete', (req: Request, res: Response) => {
     return neo4jController.deleteAll(req, res);
 });
 
