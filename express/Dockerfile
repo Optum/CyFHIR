@@ -16,6 +16,10 @@ RUN adduser -u 1001 -s /bin/bash -D node1 -G root
 ENV PATH /node_modules/.bin:$PATH
 EXPOSE 3000
 
+# compile typescript
+COPY . .
+RUN npm run build
+
 # add app
 COPY . .
 USER 1001

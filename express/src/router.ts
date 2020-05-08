@@ -1,40 +1,34 @@
-const appRoot = require('app-root-path');
-const express = require('express');
-const neo4jController = require(`${appRoot}/src/controllers/neo4jController`);
-const jsonABC = require('jsonabc');
-const equal = require('deep-equal');
+import express, { Request, Response } from 'express';
+import jsonABC from 'jsonabc';
+import equal from 'deep-equal';
+import neo4jController from './controllers/neo4jController';
 
-// SwaggerDoc routes detailed below in route's order of appearence
+/** SwaggerDoc Config For Each Endpoint is Displayed Below */
+const router = express.Router();
 
-const routerHandler = function () {
-  const router = express.Router();
+router.post('/LoadBundle', (req: Request, res: Response) => {
+  return neo4jController.loadBundle(req.body, res);
+});
 
-  router.post('/LoadBundle', (req, res) => {
-    return neo4jController.loadBundle(req.body, res);
-  });
+router.post('/BuildBundle/:_id', (req: Request, res: Response) => {
+  if (!req.params._id) {
+    return res.status(400).send({
+      message: 'ID Not Found in Database'
+    });
+  }
+  return neo4jController.buildBundle(req.params._id, req.body.filter, res);
+});
 
-  router.post('/BuildBundle/:_id', (req, res) => {
-    if (!req.params._id) {
-      return res.status(400).send({
-        message: 'ID Not Found in Database'
-      });
-    }
-    return neo4jController.buildBundle(req.params._id, req.body.filter, res);
-  });
+router.delete('/delete', (req: Request, res: Response) => {
+  return neo4jController.deleteAll(req, res);
+});
 
-  router.delete('/delete', (req, res) => {
-    return neo4jController.deleteAll(req, res);
-  });
+router.post('/compareJSON', (req: Request, res: Response) => {
+  const sortedJsons = req.body.jsons.map((json) => jsonABC.sortObj(json));
+  return res.status(200).send({ isEqual: equal(...sortedJsons) });
+});
 
-  router.post('/compareJSON', (req, res) => {
-    const sortedJsons = req.body.jsons.map((json) => { return jsonABC.sortObj(json); });
-    return res.status(200).send({ isEqual: equal(...sortedJsons) });
-  });
-
-  return router;
-};
-
-module.exports = routerHandler();
+export default router;
 
 /**
    * @swagger
@@ -57,7 +51,8 @@ module.exports = routerHandler();
    *                type: object
    */
 
-/**
+
+   /**
     * @swagger
     *
     *   /api/BuildBundle/{_id}:
@@ -83,7 +78,7 @@ module.exports = routerHandler();
     *                type: object
     */
 
-/**
+    /**
      * @swagger
      *
      *   /api/delete:
@@ -97,7 +92,7 @@ module.exports = routerHandler();
      *                type: object
      */
 
-/**
+     /**
       * @swagger
       *
       *   /api/compareJSON:

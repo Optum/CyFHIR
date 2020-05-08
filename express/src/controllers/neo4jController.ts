@@ -1,17 +1,15 @@
-const neo4j = require('neo4j-driver');
-const cypher = require('./cypherController');
+import { Request, Response } from 'express';
+import neo4j, { Driver, Session } from 'neo4j-driver';
+import cypher from './cypherController';
 
-function transactionInformation () {
+function transactionInformation (): { driver: Driver; session: Session} {
   const uri = process.env.NEO4J_URI;
-  const driver = neo4j.driver(uri);
-  const session = driver.session();
-  return {
-    driver,
-    session
-  };
+  const driver: Driver = neo4j.driver(uri);
+  const session: Session = driver.session();
+  return { driver, session };
 }
 
-function startTransaction (cypher, res) {
+function startTransaction (cypher: string, res) {
   try {
     const transaction = transactionInformation();
     const resultPromise = transaction.session.writeTransaction(tx => tx.run(cypher));
@@ -36,7 +34,7 @@ function startTransaction (cypher, res) {
   }
 }
 
-function loadBundleNeo4j (_bundle, res) {
+function loadBundleNeo4j (_bundle, res: Response) {
   startTransaction(cypher.loadBundle(_bundle), (result) => {
     if (result) {
       return res.status(200).send(result);
@@ -48,7 +46,7 @@ function loadBundleNeo4j (_bundle, res) {
   });
 }
 
-function deleteAllNodes (req, res) {
+function deleteAllNodes (req: Request, res: Response) {
   startTransaction(cypher.deleteAll(), (result) => {
     if (result.result) {
       return res.status(200).send('All nodes deleted');
@@ -58,7 +56,7 @@ function deleteAllNodes (req, res) {
   });
 }
 
-function getBundle (_id, res) {
+function getBundle (_id: string, res: Response) {
   startTransaction(cypher.buildBundleAroundID(_id), (result) => {
     if (result.result) {
       const bundle = result.result.records[0]._fields[0];
@@ -74,7 +72,7 @@ function getBundle (_id, res) {
   });
 }
 
-function getBundleWithFilter (_id, _filter, res) {
+function getBundleWithFilter (_id: string, _filter: string, res: Response) {
   startTransaction(cypher.buildBundleAroundIDWithFilter(_id, _filter), (result) => {
     if (result.result) {
       const bundle = result.result.records[0]._fields[0];
@@ -90,14 +88,14 @@ function getBundleWithFilter (_id, _filter, res) {
   });
 }
 
-module.exports = {
-  loadBundle: (bundle, res) => {
+export = {
+  loadBundle: (bundle, res: Response) => {
     return loadBundleNeo4j(bundle, res);
   },
-  deleteAll: (req, res) => {
+  deleteAll: (req: Request, res: Response) => {
     return deleteAllNodes(req, res);
   },
-  buildBundle: (_id, _filter, res) => {
+  buildBundle: (_id: string, _filter: string, res: Response) => {
     if (_filter && Object.keys(_filter).length > 0) {
       return getBundleWithFilter(_id, _filter, res);
     } else {
