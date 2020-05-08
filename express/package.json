@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon src/server.ts",
     "build": "tsc",
-    "serve": "node src/server.js",
+    "serve": "node dist/server.js",
     "test": "jest",
     "lint": "eslint **/*.ts */controllers/*.ts */swagger/*.ts --fix"
   },
