@@ -3,38 +3,13 @@ import jsonABC from 'jsonabc';
 import equal from 'deep-equal';
 import neo4jController from './controllers/neo4jController';
 
+/** SwaggerDoc Config For Each Endpoint is Displayed Below */
 const router = express.Router();
 
-/** Displayed below */
 router.post('/LoadBundle', (req: Request, res: Response) => {
   return neo4jController.loadBundle(req.body, res);
 });
 
-/**
- * @swagger
- *
- *   /api/BuildBundle/{_id}:
- *    post:
- *      summary: Build Bundle Around ID add filter build with certain FHIR Resources
- *      parameters:
- *          - in: path
- *            name: _id
- *            required: true
- *            example: 6aff2910-82fc-44d6-84a6-c29e4b756b11
- *      requestBody:
- *        required: false
- *        content:
- *           application/json:
- *             schema:
- *               type: object
- *             example: {"filter": "[\"Patient\", \"Condition\"]"}
- *      responses:
- *        "200":
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- */
 router.post('/BuildBundle/:_id', (req: Request, res: Response) => {
   if (!req.params._id) {
     return res.status(400).send({
@@ -44,43 +19,10 @@ router.post('/BuildBundle/:_id', (req: Request, res: Response) => {
   return neo4jController.buildBundle(req.params._id, req.body.filter, res);
 });
 
-/**
- * @swagger
- *
- *   /api/delete:
- *    delete:
- *      summary: Delete all Nodes and Relationships from Neo4j
- *      responses:
- *        "200":
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- */
 router.delete('/delete', (req: Request, res: Response) => {
   return neo4jController.deleteAll(req, res);
 });
 
-/**
- * @swagger
- *
- *   /api/compareJSON:
- *    post:
- *      summary: Compare two JSON Objects to test CyFHIR
- *      requestBody:
- *        required: true
- *        content:
- *           application/json:
- *             schema:
- *               type: object
- *             example: {"jsons":[{"ex1":{"ex3":"value"},"ex2":"value"},{"ex2":"value","ex1":{"ex3":"value"}}]}
- *      responses:
- *        "200":
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- */
 router.post('/compareJSON', (req: Request, res: Response) => {
   const sortedJsons = req.body.jsons.map((json) => jsonABC.sortObj(json));
   return res.status(200).send({ isEqual: equal(...sortedJsons) });
@@ -108,3 +50,65 @@ export default router;
    *              schema:
    *                type: object
    */
+
+
+   /**
+    * @swagger
+    *
+    *   /api/BuildBundle/{_id}:
+    *    post:
+    *      summary: Build Bundle Around ID add filter build with certain FHIR Resources
+    *      parameters:
+    *          - in: path
+    *            name: _id
+    *            required: true
+    *            example: 6aff2910-82fc-44d6-84a6-c29e4b756b11
+    *      requestBody:
+    *        required: false
+    *        content:
+    *           application/json:
+    *             schema:
+    *               type: object
+    *             example: {"filter": "[\"Patient\", \"Condition\"]"}
+    *      responses:
+    *        "200":
+    *          content:
+    *            application/json:
+    *              schema:
+    *                type: object
+    */
+
+    /**
+     * @swagger
+     *
+     *   /api/delete:
+     *    delete:
+     *      summary: Delete all Nodes and Relationships from Neo4j
+     *      responses:
+     *        "200":
+     *          content:
+     *            application/json:
+     *              schema:
+     *                type: object
+     */
+
+     /**
+      * @swagger
+      *
+      *   /api/compareJSON:
+      *    post:
+      *      summary: Compare two JSON Objects to test CyFHIR
+      *      requestBody:
+      *        required: true
+      *        content:
+      *           application/json:
+      *             schema:
+      *               type: object
+      *             example: {"jsons":[{"ex1":{"ex3":"value"},"ex2":"value"},{"ex2":"value","ex1":{"ex3":"value"}}]}
+      *      responses:
+      *        "200":
+      *          content:
+      *            application/json:
+      *              schema:
+      *                type: object
+      */
