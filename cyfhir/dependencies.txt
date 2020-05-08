@@ -1,14 +1,102 @@
- The POM for org.apache.maven.plugins:maven-dependency-plugin:jar:2.0 is missing, no dependency information available
- Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-dependency-plugin:2.0: Plugin org.apache.maven.plugins:maven-dependency-plugin:2.0 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-dependency-plugin:jar:2.0 has not been downloaded from it before.
- The POM for org.apache.maven.plugins:maven-deploy-plugin:jar:2.7 is missing, no dependency information available
- Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-deploy-plugin:2.7: Plugin org.apache.maven.plugins:maven-deploy-plugin:2.7 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-deploy-plugin:jar:2.7 has not been downloaded from it before.
- The POM for org.apache.maven.plugins:maven-site-plugin:jar:3.3 is missing, no dependency information available
- Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-site-plugin:3.3: Plugin org.apache.maven.plugins:maven-site-plugin:3.3 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-site-plugin:jar:3.3 has not been downloaded from it before.
- The POM for org.apache.maven.plugins:maven-antrun-plugin:jar:1.3 is missing, no dependency information available
- Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-antrun-plugin:1.3: Plugin org.apache.maven.plugins:maven-antrun-plugin:1.3 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-antrun-plugin:jar:1.3 has not been downloaded from it before.
- The POM for org.apache.maven.plugins:maven-assembly-plugin:jar:2.2-beta-5 is missing, no dependency information available
- Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-assembly-plugin:2.2-beta-5: Plugin org.apache.maven.plugins:maven-assembly-plugin:2.2-beta-5 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-assembly-plugin:jar:2.2-beta-5 has not been downloaded from it before.
- The POM for org.apache.maven.plugins:maven-dependency-plugin:jar:2.8 is missing, no dependency information available
- Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-dependency-plugin:2.8: Plugin org.apache.maven.plugins:maven-dependency-plugin:2.8 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-dependency-plugin:jar:2.8 has not been downloaded from it before.
- The POM for org.apache.maven.plugins:maven-release-plugin:jar:2.5.3 is missing, no dependency information available
- Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-release-plugin:2.5.3: Plugin org.apache.maven.plugins:maven-release-plugin:2.5.3 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-release-plugin:jar:2.5.3 has not been downloaded from it before.
+ cyfhir:cyfhir:jar:1.0-SNAPSHOT
+ +- org.neo4j:neo4j-graphdb-api:jar:4.0.3
+ |  +- org.neo4j:annotations:jar:4.0.3
+ |  |  \- org.apache.commons:commons-lang3:jar:3.9
+ |  +- org.neo4j:neo4j-common:jar:4.0.3
+ |  |  \- org.apache.commons:commons-text:jar:1.7
+ |  +- org.neo4j:neo4j-resource:jar:4.0.3
+ |  \- org.neo4j:neo4j-collections:jar:4.0.3
+ +- org.neo4j:neo4j-procedure:jar:4.0.3
+ |  +- org.neo4j:neo4j-procedure-api:jar:4.0.3
+ |  +- org.neo4j:neo4j-codegen:jar:4.0.3
+ |  |  +- org.scala-lang:scala-library:jar:2.12.7
+ |  |  +- org.scala-lang:scala-reflect:jar:2.12.7
+ |  |  +- org.neo4j:neo4j-unsafe:jar:4.0.3
+ |  |  +- org.ow2.asm:asm:jar:7.2
+ |  |  +- org.ow2.asm:asm-util:jar:7.2
+ |  |  +- org.ow2.asm:asm-analysis:jar:7.2
+ |  |  \- org.ow2.asm:asm-tree:jar:7.2
+ |  +- org.neo4j:neo4j-cypher-expression-evaluator:jar:4.0.3
+ |  |  +- org.neo4j:neo4j-parser-4.0:jar:4.0.3
+ |  |  |  +- org.neo4j:neo4j-util-4.0:jar:4.0.3
+ |  |  |  \- org.parboiled:parboiled-scala_2.12:jar:1.2.0
+ |  |  |     \- org.parboiled:parboiled-core:jar:1.2.0
+ |  |  +- org.neo4j:neo4j-ast-4.0:jar:4.0.3
+ |  |  +- org.neo4j:neo4j-expressions-4.0:jar:4.0.3
+ |  |  +- org.neo4j:neo4j-cypher-runtime-util:jar:4.0.3
+ |  |  |  +- org.neo4j:neo4j-cypher-logical-plans:jar:4.0.3
+ |  |  |  |  \- org.neo4j:neo4j-cypher-ir:jar:4.0.3
+ |  |  |  |     +- org.neo4j:neo4j-front-end-4.0:jar:4.0.3
+ |  |  |  |     \- org.neo4j:neo4j-rewriting-4.0:jar:4.0.3
+ |  |  |  \- org.neo4j:neo4j-cypher-planner-spi:jar:4.0.3
+ |  |  \- org.neo4j:neo4j-cypher-interpreted-runtime:jar:4.0.3
+ |  |     \- org.neo4j:neo4j-graph-algo:jar:4.0.3
+ |  \- org.eclipse.collections:eclipse-collections:jar:10.0.0
+ |     \- org.eclipse.collections:eclipse-collections-api:jar:10.0.0
+ +- org.neo4j:neo4j-kernel:jar:4.0.3
+ |  +- org.neo4j:neo4j-native:jar:4.0.3
+ |  |  \- net.java.dev.jna:jna:jar:5.4.0
+ |  +- org.neo4j:neo4j-storage-engine-api:jar:4.0.3
+ |  |  +- org.neo4j:neo4j-lock:jar:4.0.3
+ |  |  +- org.neo4j:neo4j-diagnostics:jar:4.0.3
+ |  |  +- org.neo4j:neo4j-token-api:jar:4.0.3
+ |  |  +- org.neo4j:neo4j-schema:jar:4.0.3
+ |  |  \- org.neo4j:neo4j-monitoring:jar:4.0.3
+ |  +- org.neo4j:neo4j-kernel-api:jar:4.0.3
+ |  +- org.neo4j:neo4j-values:jar:4.0.3
+ |  |  \- org.neo4j:neo4j-exceptions:jar:4.0.3
+ |  +- org.neo4j:neo4j-io:jar:4.0.3
+ |  |  \- org.neo4j:neo4j-concurrent:jar:4.0.3
+ |  +- org.neo4j:neo4j-csv:jar:4.0.3
+ |  +- org.neo4j:neo4j-logging:jar:4.0.3
+ |  +- org.neo4j:neo4j-configuration:jar:4.0.3
+ |  +- org.neo4j:neo4j-layout:jar:4.0.3
+ |  +- org.neo4j:neo4j-index:jar:4.0.3
+ |  +- org.neo4j:neo4j-spatial-index:jar:4.0.3
+ |  +- org.neo4j:neo4j-fulltext-index:jar:4.0.3
+ |  |  \- org.neo4j:neo4j-lucene-index:jar:4.0.3
+ |  |     +- org.apache.lucene:lucene-analyzers-common:jar:8.2.0
+ |  |     +- org.apache.lucene:lucene-core:jar:8.2.0
+ |  |     +- org.apache.lucene:lucene-queryparser:jar:8.2.0
+ |  |     \- org.apache.lucene:lucene-codecs:jar:8.2.0
+ |  +- org.neo4j:neo4j-id-generator:jar:4.0.3
+ |  +- org.neo4j:neo4j-label-index:jar:4.0.3
+ |  +- org.neo4j:neo4j-wal:jar:4.0.3
+ |  \- org.jctools:jctools-core:jar:2.1.2
+ +- com.fasterxml.jackson.core:jackson-databind:jar:2.10.2
+ |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.10.2
+ |  \- com.fasterxml.jackson.core:jackson-core:jar:2.10.2
+ +- org.neo4j.procedure:apoc:jar:4.0.0.6
+ |  +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.71
+ |  |  +- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.71
+ |  |  \- org.jetbrains:annotations:jar:13.0
+ |  +- commons-codec:commons-codec:jar:1.14
+ |  +- com.jayway.jsonpath:json-path:jar:2.4.0
+ |  |  +- net.minidev:json-smart:jar:2.3
+ |  |  |  \- net.minidev:accessors-smart:jar:1.2
+ |  |  \- org.slf4j:slf4j-api:jar:1.7.25
+ |  +- org.hdrhistogram:HdrHistogram:jar:2.1.9
+ |  +- com.novell.ldap:jldap:jar:2009-10-07
+ |  +- org.jsoup:jsoup:jar:1.11.3
+ |  +- org.roaringbitmap:RoaringBitmap:jar:0.7.17
+ |  +- com.fasterxml.jackson.module:jackson-module-kotlin:jar:2.10.3
+ |  |  \- org.jetbrains.kotlin:kotlin-reflect:jar:1.3.61
+ |  +- com.github.javafaker:javafaker:jar:0.10
+ |  |  +- commons-lang:commons-lang:jar:2.6
+ |  |  \- com.github.mifmif:generex:jar:1.0.1
+ |  |     \- dk.brics.automaton:automaton:jar:1.11-8
+ |  +- us.fatehi:schemacrawler:jar:15.04.01
+ |  +- org.apache.commons:commons-math3:jar:3.6.1
+ |  \- org.antlr:antlr4:jar:4.7.2
+ |     +- org.antlr:antlr4-runtime:jar:4.7.2
+ |     +- org.antlr:antlr-runtime:jar:3.5.2
+ |     +- org.antlr:ST4:jar:4.1
+ |     +- org.glassfish:javax.json:jar:1.0.4
+ |     \- com.ibm.icu:icu4j:jar:61.1
+ +- io.netty:netty-all:jar:4.1.48.Final
+ +- io.netty:netty-handler:jar:4.1.48.Final
+ +- io.netty:netty-buffer:jar:4.1.48.Final
+ +- io.netty:netty-resolver:jar:4.1.48.Final
+ +- io.netty:netty-transport:jar:4.1.48.Final
+ +- io.netty:netty-codec:jar:4.1.48.Final
+ \- io.netty:netty-common:jar:4.1.48.Final
