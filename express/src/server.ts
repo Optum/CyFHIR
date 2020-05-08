@@ -1,3 +1,4 @@
+import config from './config';
 import app from './app';
 import http, { Server } from 'http';
 
@@ -23,6 +24,7 @@ function stopServer (): Promise<any> {
   });
 }
 
+config();
 // Initialize server
 if (require.main === module) {
   startServer(port)
