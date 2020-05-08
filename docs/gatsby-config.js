@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `CyFHIR`,
     description: `Homepage of CyFHIR: a Neo4j plugin for FHIR.`,
-    siteUrl: `https://optum.github.io/CyFHIR/`
+    siteUrl: `https://optum.github.io/CyFHIR/`,
   },
   pathPrefix: "/CyFHIR",
   plugins: [

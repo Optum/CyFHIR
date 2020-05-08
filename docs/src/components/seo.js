@@ -51,12 +51,8 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-        name: 'google-site-verification',
-        content: 'iUlDXbqypu_uqudYtPwewgUgOcHxA5skBkO0c2t3roI'
+          name: "google-site-verification",
+          content: "iUlDXbqypu_uqudYtPwewgUgOcHxA5skBkO0c2t3roI",
         },
       ].concat(meta)}
     />
