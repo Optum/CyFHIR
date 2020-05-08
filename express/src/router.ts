@@ -1,14 +1,14 @@
-import express, { Request, Response } from 'express'
-import jsonABC from 'jsonabc'
-import equal from 'deep-equal'
-import neo4jController from './controllers/neo4jController'
+import express, { Request, Response } from 'express';
+import jsonABC from 'jsonabc';
+import equal from 'deep-equal';
+import neo4jController from './controllers/neo4jController';
 
-const router = express.Router()
+const router = express.Router();
 
 /** Displayed below */
 router.post('/LoadBundle', (req: Request, res: Response) => {
-    return neo4jController.loadBundle(req.body, res)
-})
+  return neo4jController.loadBundle(req.body, res);
+});
 
 /**
  * @swagger
@@ -36,13 +36,13 @@ router.post('/LoadBundle', (req: Request, res: Response) => {
  *                type: object
  */
 router.post('/BuildBundle/:_id', (req: Request, res: Response) => {
-    if (!req.params._id) {
-        return res.status(400).send({
-            message: 'ID Not Found in Database'
-        })
-    }
-    return neo4jController.buildBundle(req.params._id, req.body.filter, res)
-})
+  if (!req.params._id) {
+    return res.status(400).send({
+      message: 'ID Not Found in Database'
+    });
+  }
+  return neo4jController.buildBundle(req.params._id, req.body.filter, res);
+});
 
 /**
  * @swagger
@@ -58,8 +58,8 @@ router.post('/BuildBundle/:_id', (req: Request, res: Response) => {
  *                type: object
  */
 router.delete('/delete', (req: Request, res: Response) => {
-    return neo4jController.deleteAll(req, res)
-})
+  return neo4jController.deleteAll(req, res);
+});
 
 /**
  * @swagger
@@ -82,11 +82,11 @@ router.delete('/delete', (req: Request, res: Response) => {
  *                type: object
  */
 router.post('/compareJSON', (req: Request, res: Response) => {
-    const sortedJsons = req.body.jsons.map((json) => jsonABC.sortObj(json))
-    return res.status(200).send({ isEqual: equal(...sortedJsons) })
-})
+  const sortedJsons = req.body.jsons.map((json) => jsonABC.sortObj(json));
+  return res.status(200).send({ isEqual: equal(...sortedJsons) });
+});
 
-export default router
+export default router;
 
 /**
    * @swagger

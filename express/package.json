@@ -8,7 +8,7 @@
     "build": "tsc",
     "serve": "node src/server.js",
     "test": "jest",
-    "lint": "eslint **/*.ts"
+    "lint": "eslint **/*.ts */controllers/*.ts */swagger/*.ts --fix"
   },
   "author": "",
   "license": "ISC",
