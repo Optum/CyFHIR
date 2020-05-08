@@ -8,7 +8,6 @@
     "jest": true
   },
   "extends": [
-    "eslint-config-semistandard",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
@@ -25,6 +24,8 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "object-shorthand": ["error", "always"]
+    "object-shorthand": ["error", "always"],
+    "indent": ["error", 4],
+    "semi": ["error", "never"]
   }
 }
