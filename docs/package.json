@@ -33,7 +33,7 @@
     "@vue/eslint-config-airbnb": "^5.0.2",
     "@vue/eslint-config-typescript": "^5.0.2",
     "babel-node-ts": "^1.0.3",
-    "eslint": "^6.7.2",
+    "eslint": "^7.0.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
     "gh-pages": "^2.2.0",
