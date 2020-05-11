@@ -1,19 +1,26 @@
 <template>
 <div class="home">
-  <HelloWorld msg="Welcome to Your Vue.js App" />
   <Jumbotron />
+  <Card />
 </div>
 </template>
 
 <script>
-import HelloWorld from './Home/HelloWorld.vue';
 import Jumbotron from './Home/Jumbotron.vue';
+import Card from './Home/Card.vue';
+
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
     Jumbotron,
+    Card,
   },
 };
 </script>
+
+<style scoped lang="scss">
+.home {
+    min-height: 100vh;
+}
+</style>

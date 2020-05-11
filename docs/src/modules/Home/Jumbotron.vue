@@ -1,18 +1,10 @@
 <template>
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">
-    This is a simple hero unit, a simple jumbotron-style component for calling
-    extra attention to featured content or information.
-  </p>
-  <hr class="my-4" />
-  <p>
-    It uses utility classes for typography and spacing to space content out
-    within the larger container.
-  </p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+<div class="jumbotron" id="jumbotron-panel">
+  <div class="container">
+    <div id="jumbotron-img-container">
+      <img src="@/assets/logo.svg" class="img-responsive" alt="cyfhir-logo" />
+    </div>
+  </div>
 </div>
 </template>
 
@@ -24,20 +16,27 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
+h1 {
     margin: 40px 0 0;
 }
-ul {
-    list-style-type: none;
-    padding: 0;
+
+#jumbotron-panel {
+    --heightA: 15vh;
+    --heightB: calc(7vw - var(--heightA));
+    --heightC: calc(70vh + var(--heightB));
+    height: var(--heightC);
+    background: url("~@/assets/background.svg") no-repeat center;
+    background-size: cover;
+    border-bottom: 2px solid grey;
 }
-li {
-    display: inline-block;
-    margin: 0 10px;
+
+#jumbo-logo {
+    width: 45%;
 }
-a {
-    color: #42b983;
+
+#jumbotron-img-container {
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 </style>
