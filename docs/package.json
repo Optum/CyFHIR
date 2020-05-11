@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "deploy": "vue-cli-service build && node sitemapGenerator.js && gh-pages -d dist",
+    "deploy": "bash deploy.sh",
     "lint": "vue-cli-service lint",
     "sitemap": "node sitemapGenerator.js"
   },
