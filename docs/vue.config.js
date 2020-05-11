@@ -2,6 +2,10 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
     ? '/CyFHIR/'
     : '/',
+  devServer: {
+    host: 'localhost',
+    port: 8080,
+  },
   chainWebpack: (config) => {
     config
       .plugin('html')

@@ -1,16 +1,13 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Jumbotron/>
-
-  </div>
+<div class="home">
+  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <Jumbotron />
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
 import HelloWorld from './Home/HelloWorld.vue';
 import Jumbotron from './Home/Jumbotron.vue';
-
 
 export default {
   name: 'Home',

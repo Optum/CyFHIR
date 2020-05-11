@@ -4,7 +4,7 @@ import Home from '../modules/Home.vue';
 
 Vue.use(VueRouter);
 
-let routes: Array<RouteConfig> = [
+const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
@@ -17,13 +17,9 @@ let routes: Array<RouteConfig> = [
   // },
 ];
 
-routes = routes.map((route) => {
-  route.path = `/CyFHIR${route.path}`;
-  return route;
-});
-
 const router = new VueRouter({
   routes,
+  base: '/CyFHIR/',
   mode: 'history',
 });
 
