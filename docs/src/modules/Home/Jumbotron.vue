@@ -60,7 +60,7 @@ svg:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    --heightA: 25vh;
+    --heightA: 30vh;
     --heightB: calc(var(--heightA) + 20vw);
     --heightC: calc(10vh + var(--heightB));
     height: var(--heightC);

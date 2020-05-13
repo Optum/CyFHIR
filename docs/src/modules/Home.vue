@@ -1,5 +1,6 @@
 <template>
 <div class="home">
+  <!-- <Header /> -->
   <Jumbotron />
   <div class="container-fluid overlap">
     <div class="row center">
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+// import Header from './Shared/Header.vue';
 import Jumbotron from './Home/Jumbotron.vue';
 import Card from './Home/Card.vue';
 import cardData from './Home/data/cardData';
@@ -19,12 +21,12 @@ import cardData from './Home/data/cardData';
 export default {
   name: 'Home',
   components: {
+    // Header,
     Jumbotron,
     Card,
   },
   data() {
     return {
-      test: 'TEST',
       cardData: null,
     };
   },
