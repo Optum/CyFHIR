@@ -37,7 +37,6 @@ svg {
     filter: drop-shadow(-5px 5px 10px rgba(0,0,0,0.7));
     -webkit-filter: drop-shadow(-5px 10px 10px rgba(0,0,0,0.7));
     width: calc(90% - (20) * ((100vw - 300px) / (1600 - 300)));
-
     transition: transform 0.2s;
 }
 

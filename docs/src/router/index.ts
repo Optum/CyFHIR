@@ -10,11 +10,21 @@ const routes: Array<RouteConfig> = [
     name: 'Home',
     component: Home,
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: () => import('../views/About.vue'),
-  // },
+  {
+    path: '/concepts',
+    name: 'Concepts',
+    component: () => import('../modules/Concepts.vue'),
+  },
+  {
+    path: '/setup',
+    name: 'Setup',
+    component: () => import('../modules/Setup.vue'),
+  },
+  {
+    path: '/guide',
+    name: 'Guide',
+    component: () => import('../modules/Guide.vue'),
+  },
 ];
 
 const router = new VueRouter({

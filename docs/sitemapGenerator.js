@@ -12,17 +12,21 @@ router.options.routes.push({
 });
 
 router.options.routes.push({
-  path: '/about',
-  name: 'About',
+  path: '/concepts',
+  name: 'Concepts',
+});
+
+router.options.routes.push({
+  path: '/setup',
+  name: 'Setup',
+});
+
+router.options.routes.push({
+  path: '/guide',
+  name: 'Guide',
 });
 
 function generateSitemap(_router) {
-  _router.options.routes = _router.options.routes.map((route) => {
-    if (route.path.length > 1) {
-      route.path = `/#${route.path}`;
-    }
-    return route;
-  });
 
   return new Sitemap(_router)
     .build('https://optum.github.io/CyFHIR')
