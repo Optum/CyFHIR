@@ -71,16 +71,6 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# gatsby files
-.cache/
-public
-
 # vuepress build output
 .vuepress/dist
 
@@ -107,9 +97,6 @@ ssl/
 
 # VS Code debugging
 .vscode
-
-# K8s config file
-k8s_config.*
 
 # Cyfhir build
 ./cyfhir/target/*
