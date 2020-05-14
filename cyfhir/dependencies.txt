@@ -90,7 +90,9 @@
  |  \- org.antlr:antlr4:jar:4.7.2
  |     +- org.antlr:antlr4-runtime:jar:4.7.2
  |     +- org.antlr:antlr-runtime:jar:3.5.2
- |     \- org.antlr:ST4:jar:4.1
+ |     +- org.antlr:ST4:jar:4.1
+ |     +- org.glassfish:javax.json:jar:1.0.4
+ |     \- com.ibm.icu:icu4j:jar:61.1
  +- io.netty:netty-all:jar:4.1.48.Final
  +- io.netty:netty-handler:jar:4.1.48.Final
  +- io.netty:netty-buffer:jar:4.1.48.Final

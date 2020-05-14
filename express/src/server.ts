@@ -6,7 +6,7 @@ import neo4jController from './controllers/neo4jController';
 const port: number = parseInt(process.env.PORT || '3000');
 const server: Server = http.createServer(app);
 
-function startServer(port: number): Promise<any> {
+function startServer (port: number): Promise<any> {
   return new Promise((resolve, reject) => {
     server.listen(port, () => {
       resolve(port);
@@ -17,7 +17,7 @@ function startServer(port: number): Promise<any> {
   });
 }
 
-function stopServer(): Promise<any> {
+function stopServer (): Promise<any> {
   return new Promise((resolve, reject) => {
     server.close((err) => {
       reject(err);

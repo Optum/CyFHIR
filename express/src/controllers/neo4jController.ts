@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import neo4j, { Driver, Session } from 'neo4j-driver';
 import cypher from './cypherController';
 
-function transactionInformation(): { driver: Driver; session: Session } {
+function transactionInformation (): { driver: Driver; session: Session } {
   const uri = process.env.NEO4J_URI;
   const auth = process.env.NEO4J_PASSWORD ? neo4j.auth.basic('neo4j', 'password') : null;
 
@@ -11,7 +11,7 @@ function transactionInformation(): { driver: Driver; session: Session } {
   return { driver, session };
 }
 
-async function verifyConnection() {
+async function verifyConnection () {
   const { driver, session } = transactionInformation();
   try {
     await driver.verifyConnectivity();
@@ -21,8 +21,7 @@ async function verifyConnection() {
   }
 }
 
-
-function startTransaction(cypher: string, res) {
+function startTransaction (cypher: string, res) {
   try {
     const transaction = transactionInformation();
     const resultPromise = transaction.session.writeTransaction(tx => tx.run(cypher));
@@ -47,7 +46,7 @@ function startTransaction(cypher: string, res) {
   }
 }
 
-function loadBundleNeo4j(_bundle, res: Response) {
+function loadBundleNeo4j (_bundle, res: Response) {
   startTransaction(cypher.loadBundle(_bundle), (result) => {
     if (result) {
       return res.status(200).send(result);
@@ -59,7 +58,7 @@ function loadBundleNeo4j(_bundle, res: Response) {
   });
 }
 
-function deleteAllNodes(req: Request, res: Response) {
+function deleteAllNodes (req: Request, res: Response) {
   startTransaction(cypher.deleteAll(), (result) => {
     if (result.result) {
       return res.status(200).send('All nodes deleted');
@@ -69,7 +68,7 @@ function deleteAllNodes(req: Request, res: Response) {
   });
 }
 
-function getBundle(_id: string, res: Response) {
+function getBundle (_id: string, res: Response) {
   startTransaction(cypher.buildBundleAroundID(_id), (result) => {
     if (result.result) {
       const bundle = result.result.records[0]._fields[0];
@@ -85,7 +84,7 @@ function getBundle(_id: string, res: Response) {
   });
 }
 
-function getBundleWithFilter(_id: string, _filter: string, res: Response) {
+function getBundleWithFilter (_id: string, _filter: string, res: Response) {
   startTransaction(cypher.buildBundleAroundIDWithFilter(_id, _filter), (result) => {
     if (result.result) {
       const bundle = result.result.records[0]._fields[0];
