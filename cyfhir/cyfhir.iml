@@ -109,8 +109,4 @@
     <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.48.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.48.Final" level="project" />
   </component>
-  <component name="sonarModuleSettings">
-    <option name="localAnalysisScripName" value="&lt;PROJECT&gt;" />
-    <option name="serverName" value="&lt;PROJECT&gt;" />
-  </component>
 </module>

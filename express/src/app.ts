@@ -30,7 +30,7 @@ morgan.token('content-size-dynamic', function contentSize (req: Request, res: Re
     const bytes = res.req.res[Object.getOwnPropertySymbols(res.req.res)[2]]['content-length'][1] + ' bytes';
     return bytes;
   } catch (error) {
-    console.log(error);
+    // pass
   }
 });
 

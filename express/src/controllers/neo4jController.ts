@@ -2,11 +2,23 @@ import { Request, Response } from 'express';
 import neo4j, { Driver, Session } from 'neo4j-driver';
 import cypher from './cypherController';
 
-function transactionInformation (): { driver: Driver; session: Session} {
+function transactionInformation (): { driver: Driver; session: Session } {
   const uri = process.env.NEO4J_URI;
-  const driver: Driver = neo4j.driver(uri);
+  const auth = process.env.NEO4J_PASSWORD ? neo4j.auth.basic('neo4j', 'password') : null;
+
+  const driver: Driver = neo4j.driver(uri, auth);
   const session: Session = driver.session();
   return { driver, session };
+}
+
+async function verifyConnection () {
+  const { driver, session } = transactionInformation();
+  try {
+    await driver.verifyConnectivity();
+    console.log('Verified Neo4j Connection');
+  } catch (error) {
+    console.log(`Connectivity Verification Failed: ${error}`);
+  }
 }
 
 function startTransaction (cypher: string, res) {
@@ -101,5 +113,8 @@ export = {
     } else {
       return getBundle(_id, res);
     }
+  },
+  verifyConnection: () => {
+    return verifyConnection();
   }
 };

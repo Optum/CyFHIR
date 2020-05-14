@@ -51,8 +51,7 @@ export default router;
    *                type: object
    */
 
-
-   /**
+/**
     * @swagger
     *
     *   /api/BuildBundle/{_id}:
@@ -78,7 +77,7 @@ export default router;
     *                type: object
     */
 
-    /**
+/**
      * @swagger
      *
      *   /api/delete:
@@ -92,7 +91,7 @@ export default router;
      *                type: object
      */
 
-     /**
+/**
       * @swagger
       *
       *   /api/compareJSON:
