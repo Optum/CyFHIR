@@ -25,17 +25,15 @@ app.use(cors({
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Custom Morgan metric for payload size in bytes
-morgan.token('content-size-dynamic', function contentSize (req: Request, res: Response) {
+morgan.token('content-size-dynamic', function contentSize(req: Request, res: Response) {
   try {
     const bytes = res.req.res[Object.getOwnPropertySymbols(res.req.res)[2]]['content-length'][1] + ' bytes';
     return bytes;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) { }
 });
 
 // Custom Morgan metric for Response Time in Seconds
-morgan.token('response-time-seconds', function getResponseTimeInSeconds (req: Request, res: Response) {
+morgan.token('response-time-seconds', function getResponseTimeInSeconds(req: Request, res: Response) {
   return (this['response-time'](req, res) / 1000).toFixed(2);
 });
 
