@@ -72,7 +72,10 @@ public class toStream {
     private static Map<String, Object> filterProperties(Map<String, Object> props, List<String> filters) {
         boolean isExclude = filters.get(0).startsWith("-");
 
-        return props.entrySet().stream().filter(e -> isExclude ? !filters.contains("-" + e.getKey()) : filters.contains(e.getKey())).collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue()));
+        return props.entrySet()
+                .stream()
+                .filter(e -> isExclude ? !filters.contains("-" + e.getKey()) : filters.contains(e.getKey()))
+                .collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue()));
     }
 
     private static Map<String, Object> toMap(Node n, Map<String, List<String>> nodeFilters) {
