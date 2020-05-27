@@ -1,4 +1,4 @@
-# CyFhir
+# com.Optum.CyFHIR.CyFhir
 
 User-defined Procedure & Function package focused on storing fhir bundles in graph databases.
 
