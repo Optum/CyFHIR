@@ -1,18 +1,25 @@
 package com.Optum.CyFHIR.functions;
 
+import apoc.result.MapResult;
+import com.Optum.CyFHIR.procedures.toTree;
+import org.neo4j.graphdb.Path;
 import org.neo4j.procedure.Description;
 import org.neo4j.procedure.Name;
 import org.neo4j.procedure.UserFunction;
-
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class buildBundle {
 
     @UserFunction("cyfhir.buildBundle")
-    @Description("cyfhir.buildBundle(collect(paths) parses nodes into FHIR bundle given a collected Tree of connected entries")
-    public Map buildBundle(@Name("mapResponse") List<Map> mapResponse) throws IOException {
+    @Description("cyfhir.buildBundle(List<Path>)) parses nodes into FHIR bundle given a collected Tree of connected entries")
+    public Map buildBundle(@Name("mapResponse") List<Path> paths) throws IOException {
 
+        final List<Map<String, Object>> mapResponse = toTree.toTree(paths, true, new HashMap<String, Object>())
+                .map(x -> x.value)
+                .collect(Collectors.toList());
         //build empty bundle
         Map bundle = new HashMap();
         if (!mapResponse.get(0).isEmpty()) {

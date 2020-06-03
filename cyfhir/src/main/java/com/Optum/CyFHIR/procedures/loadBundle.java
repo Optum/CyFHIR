@@ -77,7 +77,7 @@ public class loadBundle {
         // Create map for config
         Map<String, Object> responseMap = new HashMap<String, Object>();
         // Return apoc method results
-        Stream<MapResult> stream = toStream.toStream(response, true, responseMap);
+        Stream<MapResult> stream = toTree.toTree(response, true, responseMap);
 
         tx.commit();
         tx.close();

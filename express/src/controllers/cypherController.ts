@@ -22,8 +22,7 @@ function buildBundleAroundIDCypher (_id: string): string {
                     UNWIND entryList AS entry
                     CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
                     WITH collect(path) AS paths
-                    CALL apoc.convert.toTree(paths) YIELD value
-                    RETURN cyfhir.buildBundle(COLLECT(value))`;
+                    RETURN cyfhir.buildBundle(paths)`;
   return cypher;
 }
 
@@ -42,8 +41,7 @@ function buildBundleAroundIDWithFilterCypher (_id: string, _filter: string): str
                     UNWIND entryList AS entry
                     CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
                     WITH collect(path) AS paths
-                    CALL apoc.convert.toTree(paths) YIELD value
-                    RETURN cyfhir.buildBundle(COLLECT(value))`;
+                    RETURN cyfhir.buildBundle(paths)`;
   return cypher;
 }
 
