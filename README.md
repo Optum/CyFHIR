@@ -48,13 +48,20 @@ Currently CyFHIR has 1 procedure and 1 aggregating function:
 
 ##### Procedures:
 
--   `cyfhir.loadBundle()`
+-   `cyfhir.bundle.load()`
     -   To load FHIR into Neo4J, you can easily do this by running `CALL cyfhir.loadBundle()` with the input being a FHIR Bundle JSON that has been formatted as a string (adding escape chars to all double quotes in the JSON).
     -   Another thing to note is if you want to test this way with generated data, we recommend [Synthea](https://github.com/synthetichealth/synthea). BUT if you choose to use Synthea, you must remove the generated html in every resource of the bundle for all entries. The path to the field to remove is: `Bundle.entry[i].resource.text.display`. This is necessary as there are escape chars hidden within the display that Neo4j cannot handle.
+-   `cyfhir.resource.expand()`
+    - Pass an *entry* node into `cyfhir.resource.expand()` to expand out the full resource to be able to pass it into an aggregating function like `cyfhir.bundle.build()`
+    - Example where "entry" is a previously queried node with label type "entry":
+    ```js
+    CALL cyfhir.resource.expand(entry) YIELD path
+    RETURN cyfhir.bundle.build(collect(path))
+    ```
 
 ##### Functions
 
--   `cyfhir.buildBundle()`
+-   `cyfhir.bundle.build()`
     -   Pass an array of expanded, structured FHIR Resources that were the result of your query. To properly pass data into this function, the last few lines of your query will probably end up looking like this:
 
 ```js

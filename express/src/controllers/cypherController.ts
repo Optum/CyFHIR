@@ -1,7 +1,7 @@
 // Cypher that loads a FHIR Bundle
 function loadBundleCypher (_bundle: string): string {
   const _bundleFormatted = _bundle.replace(/"/g, '\\"');
-  const cypher = `CALL cyfhir.loadBundle("${_bundleFormatted}")`;
+  const cypher = `CALL cyfhir.bundle.load("${_bundleFormatted}")`;
   return cypher;
 }
 
@@ -18,11 +18,10 @@ function buildBundleAroundIDCypher (_id: string): string {
                     MATCH (m:entry)-[*]->(n:resource)
                     MATCH (q:resource)-[*2]->()-[r:reference]->(o:entry)
                     WHERE (n.id = _id) AND (o._resourceId = _id)
-                    WITH collect(m)+collect(o) AS entryList
-                    UNWIND entryList AS entry
-                    CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
-                    WITH collect(path) AS paths
-                    RETURN cyfhir.buildBundle(paths)`;
+                    WITH collect(m)+collect(o) AS entries
+                    UNWIND entries AS entry
+                    CALL cyfhir.resource.expand(entry) YIELD path
+                    RETURN cyfhir.bundle.build(collect(path))`;
   return cypher;
 }
 
@@ -37,11 +36,10 @@ function buildBundleAroundIDWithFilterCypher (_id: string, _filter: string): str
                     MATCH (m:entry)-[*1]->(n:resource)
                     WHERE (m in entryList)
                     AND (n.resourceType in filter)
-                    WITH collect(m) AS entryList
-                    UNWIND entryList AS entry
-                    CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
-                    WITH collect(path) AS paths
-                    RETURN cyfhir.buildBundle(paths)`;
+                    WITH collect(m) AS entries
+                    UNWIND entries AS entry
+                    CALL cyfhir.resource.expand(entry) YIELD path
+                    RETURN cyfhir.bundle.build(collect(path))`;
   return cypher;
 }
 
