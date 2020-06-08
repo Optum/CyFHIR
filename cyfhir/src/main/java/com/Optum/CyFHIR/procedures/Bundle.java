@@ -13,14 +13,14 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class loadBundle {
+public class Bundle {
 
     @Context
     public GraphDatabaseService db;
 
-    @Procedure(name = "cyfhir.loadBundle", mode = Mode.WRITE)
-    @Description("cyfhir.loadBundle(bundle) loads a FHIR bundle into the db, must be a stringified JSON")
-    public Stream<MapResult> loadBundle(@Name("json") String json) throws IOException {
+    @Procedure(name = "cyfhir.bundle.load", mode = Mode.WRITE)
+    @Description("cyfhir.bundle.load(bundle) loads a FHIR bundle into the db, must be a stringified JSON")
+    public Stream<MapResult> load(@Name("json") String json) throws IOException {
         Transaction tx = db.beginTx();
         // Generate JSON object from string of json
         Map<String, Object> jsonMap = stringToMap(json);
@@ -77,7 +77,8 @@ public class loadBundle {
         // Create map for config
         Map<String, Object> responseMap = new HashMap<String, Object>();
         // Return apoc method results
-        Stream<MapResult> stream = toStream.toStream(response, true, responseMap);
+        Convert convert = new Convert();
+        Stream<MapResult> stream = convert.toTree(response, true, responseMap);
 
         tx.commit();
         tx.close();

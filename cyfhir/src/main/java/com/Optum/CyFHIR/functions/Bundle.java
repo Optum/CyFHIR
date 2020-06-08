@@ -1,17 +1,24 @@
 package com.Optum.CyFHIR.functions;
 
+import com.Optum.CyFHIR.procedures.Convert;
+import org.neo4j.graphdb.Path;
 import org.neo4j.procedure.Description;
 import org.neo4j.procedure.Name;
 import org.neo4j.procedure.UserFunction;
-
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
-public class buildBundle {
+public class Bundle {
 
-    @UserFunction("cyfhir.buildBundle")
-    @Description("cyfhir.buildBundle(collect(paths) parses nodes into FHIR bundle given a collected Tree of connected entries")
-    public Map buildBundle(@Name("mapResponse") List<Map> mapResponse) throws IOException {
+    @UserFunction("cyfhir.bundle.build")
+    @Description("cyfhir.bundle.build(List<Path>)) parses nodes into FHIR bundle given a collected Tree of connected entries")
+    public Map build(@Name("mapResponse") List<Path> paths) throws IOException {
+
+        Convert tree = new Convert();
+        List<Map<String, Object>> mapResponse = tree.toTree(paths, true, new HashMap<String, Object>())
+                .map(x -> x.value)
+                .collect(Collectors.toList());
 
         //build empty bundle
         Map bundle = new HashMap();
@@ -20,7 +27,7 @@ public class buildBundle {
             bundle.put("type", "transaction");
 
             //create empty list of entries
-            List<Map> entries = new ArrayList<Map>();
+            List<Map> entriesList = new ArrayList<Map>();
 
             //traverse each entry in the mapResponse and map with parseResource
             for (Map entry : mapResponse) {
@@ -32,9 +39,9 @@ public class buildBundle {
                 //map the fullUrl
                 entryMap.put("fullUrl", entry.get("fullUrl"));
                 //add parsed entry to list of entries
-                entries.add(entryMap);
+                entriesList.add(entryMap);
             }
-            bundle.put("entry", entries);
+            bundle.put("entry", entriesList);
         }
         return bundle;
     }

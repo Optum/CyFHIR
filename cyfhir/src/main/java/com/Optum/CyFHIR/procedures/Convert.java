@@ -15,11 +15,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class toStream {
+public class Convert {
 
-    @Procedure(name = "cyfhir.toStream")
-    @Description("cyfhir.toStream([paths],[lowerCaseRels=true], [config]) creates a stream of nested documents representing the at least one root of these paths")
-    public static Stream<MapResult> toStream(@Name("paths") List<Path> paths, @Name(value = "lowerCaseRels", defaultValue = "true") boolean lowerCaseRels, @Name(value = "config", defaultValue = "{}") Map<String, Object> config) {
+    @Procedure(name = "cyfhir.convert.toTree")
+    @Description("cyfhir.convert.toTree([paths],[lowerCaseRels=true], [config]) creates a stream of nested documents representing the at least one root of these paths")
+    public Stream<MapResult> toTree(@Name("paths") List<Path> paths, @Name(value = "lowerCaseRels", defaultValue = "true") boolean lowerCaseRels, @Name(value = "config", defaultValue = "{}") Map<String, Object> config) {
         if (paths.isEmpty()) return Stream.of(new MapResult(Collections.emptyMap()));
         ConvertConfig conf = new ConvertConfig(config);
         Map<String, List<String>> nodes = conf.getNodes();
@@ -58,7 +58,7 @@ public class toStream {
                 .map(MapResult::new);
     }
 
-    private static Map<String, Object> addRelProperties(Map<String, Object> mMap, String typeName, Relationship r, Map<String, List<String>> relFilters) {
+    private Map<String, Object> addRelProperties(Map<String, Object> mMap, String typeName, Relationship r, Map<String, List<String>> relFilters) {
         Map<String, Object> rProps = r.getAllProperties();
         if (rProps.isEmpty()) return mMap;
         String prefix = typeName + ".";
@@ -69,7 +69,7 @@ public class toStream {
         return mMap;
     }
 
-    private static Map<String, Object> filterProperties(Map<String, Object> props, List<String> filters) {
+    private Map<String, Object> filterProperties(Map<String, Object> props, List<String> filters) {
         boolean isExclude = filters.get(0).startsWith("-");
 
         return props.entrySet()
@@ -78,7 +78,7 @@ public class toStream {
                 .collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue()));
     }
 
-    private static Map<String, Object> toMap(Node n, Map<String, List<String>> nodeFilters) {
+    private Map<String, Object> toMap(Node n, Map<String, List<String>> nodeFilters) {
         Map<String, Object> props = n.getAllProperties();
         Map<String, Object> result = new LinkedHashMap<>(props.size() + 2);
         String type = Util.labelString(n);
