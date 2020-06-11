@@ -1,13 +1,16 @@
 package com.Optum.CyFHIR.functions;
 
 import com.Optum.CyFHIR.procedures.Convert;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.neo4j.graphdb.Path;
 import org.neo4j.procedure.Description;
 import org.neo4j.procedure.Name;
 import org.neo4j.procedure.UserFunction;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Bundle {
 
@@ -59,12 +62,13 @@ public class Bundle {
             if (resource.get(key) instanceof ArrayList) {
                 ArrayList<Map> mapList = new ArrayList<Map>();
                 //extract type field to set as the key
-                String type = ((ArrayList<Map>) resource.get(key)).get(0).get("_type").toString();
+                Map nestedData = ((ArrayList<Map>) resource.get(key)).get(0);
+                String type = nestedData.get("_type").toString();
                 //find if array is true array
-                Boolean isArray = (Boolean) ((ArrayList<Map>) resource.get(key)).get(0).get("_isArray");
+                Boolean isArray = (Boolean) nestedData.get("_isArray");
                 //map flat keys if resource is not a true array
                 if (!isArray) {
-                    resourceMap.put(type, parseResources(((ArrayList<Map>) resource.get(key)).get(0)));
+                    resourceMap.put(type, parseResources(nestedData));
                 } else {
                     //if true array map each sub resource
                     for (Map subResource : (ArrayList<Map>) resource.get(key)) {
@@ -73,7 +77,8 @@ public class Bundle {
                         subResource.remove("_id");
                         subResource.remove("_isArray");
                         subResource.remove("_resourceId");
-                        mapList.add(parseResources(subResource));
+                        Map subResourceParsed = parseResources(subResource);
+                        mapList.add(subResourceParsed);
                     }
                     resourceMap.put(type, mapList);
                 }
@@ -82,9 +87,15 @@ public class Bundle {
             else {
                 //to convert arrays stored as Strings in neo4j properties
                 if (resource.get(key).toString().matches("\\[.+(, .+)*]")) {
-                    resourceMap.put(key, Arrays.asList(resource.get(key).toString().substring(1, resource.get(key).toString().length() - 1).split(",")).stream().map(item -> {
-                        return item.trim();
-                    }));
+                    List<String> strings = Arrays.asList(resource.get(key).toString().substring(1, resource.get(key).toString().length() - 1).split(","));
+                    List<Serializable> stringStream = strings.stream().map(item -> {
+                        String trimmed = item.trim();
+                        if (NumberUtils.isCreatable(trimmed)) {
+                            return NumberUtils.createNumber(trimmed);
+                        }
+                        return trimmed;
+                    }).collect(Collectors.toList());
+                    resourceMap.put(key, stringStream);
                 }
                 //map string, long, double, and boolean values
                 else {

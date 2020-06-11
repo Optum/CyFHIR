@@ -6,7 +6,7 @@ function transactionInformation (): { driver: Driver; session: Session } {
   const uri = process.env.NEO4J_URI;
   const auth = process.env.NEO4J_PASSWORD ? neo4j.auth.basic('neo4j', 'password') : null;
 
-  const driver: Driver = neo4j.driver(uri, auth);
+  const driver: Driver = neo4j.driver(uri, auth, { disableLosslessIntegers: true });
   const session: Session = driver.session();
   return { driver, session };
 }
