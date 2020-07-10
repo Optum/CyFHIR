@@ -66,9 +66,8 @@ Currently CyFHIR has 1 procedure and 1 aggregating function:
 
 ```js
 UNWIND entryList AS entry
-CALL apoc.path.expand(entry, ">|relationship", "-entry", 0, 999) YIELD path
-WITH collect(path) AS paths
-RETURN cyfhir.buildBundle(paths)
+CALL cyfhir.resource.expand(entry) YIELD path
+RETURN cyfhir.bundle.build(collect(path))
 ```
 
  The entryList variable above that gets unwound is the list of entry nodes that match a query that you've written above. This expands those entry nodes to get the full resource, converts that to a JSON/tree-like structure, then passes it to CyFHIR to build the bundle and enforce correct cardinality of resource properties.
