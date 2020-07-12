@@ -1,7 +1,5 @@
 package com.Optum.CyFHIR.procedures;
 
-
-
 import apoc.path.LabelSequenceEvaluator;
 import apoc.path.NodeEvaluators;
 import apoc.path.RelationshipSequenceExpander;
@@ -12,10 +10,12 @@ import org.neo4j.graphdb.Path;
 import org.neo4j.graphdb.Transaction;
 import org.neo4j.graphdb.traversal.*;
 import org.neo4j.internal.helpers.collection.Iterables;
-import org.neo4j.kernel.impl.traversal.MonoDirectionalTraversalDescription;
 import org.neo4j.procedure.*;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.EnumMap;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class Resource {
@@ -51,10 +51,10 @@ public class Resource {
             if (list.isEmpty()) return Collections.emptyList();
 
             Object first = list.get(0);
-            if (first instanceof Node) return (List<Node>)list;
+            if (first instanceof Node) return (List<Node>) list;
             if (first instanceof Number) {
                 List<Node> nodes = new ArrayList<>();
-                for (Number n : ((List<Number>)list)) nodes.add(tx.getNodeById(n.longValue()));
+                for (Number n : ((List<Number>) list)) nodes.add(tx.getNodeById(n.longValue()));
                 return nodes;
             }
         }
@@ -85,24 +85,24 @@ public class Resource {
     }
 
     public Traverser traverse(TraversalDescription traversalDescription,
-                                     Iterable<Node> startNodes,
-                                     String pathFilter,
-                                     String labelFilter,
-                                     long minLevel,
-                                     long maxLevel,
-                                     Uniqueness uniqueness,
-                                     boolean bfs,
-                                     boolean filterStartNode,
-                                     EnumMap<NodeFilter, List<Node>> nodeFilter,
-                                     String sequence,
-                                     boolean beginSequenceAtStart) {
+                              Iterable<Node> startNodes,
+                              String pathFilter,
+                              String labelFilter,
+                              long minLevel,
+                              long maxLevel,
+                              Uniqueness uniqueness,
+                              boolean bfs,
+                              boolean filterStartNode,
+                              EnumMap<NodeFilter, List<Node>> nodeFilter,
+                              String sequence,
+                              boolean beginSequenceAtStart) {
         TraversalDescription td = traversalDescription;
         // based on the pathFilter definition now the possible relationships and directions must be shown
 
         td = bfs ? td.breadthFirst() : td.depthFirst();
 
         // if `sequence` is present, it overrides `labelFilter` and `relationshipFilter`
-        if (sequence != null && !sequence.trim().isEmpty())	{
+        if (sequence != null && !sequence.trim().isEmpty()) {
             String[] sequenceSteps = sequence.split(",");
             List<String> labelSequenceList = new ArrayList<>();
             List<String> relSequenceList = new ArrayList<>();

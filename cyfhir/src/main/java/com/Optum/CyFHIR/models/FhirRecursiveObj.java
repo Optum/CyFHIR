@@ -1,8 +1,6 @@
 package com.Optum.CyFHIR.models;
 
-
 import org.neo4j.graphdb.Node;
-
 import java.util.ArrayList;
 
 public class FhirRecursiveObj {
@@ -13,12 +11,12 @@ public class FhirRecursiveObj {
         return node;
     }
 
-    public ArrayList<FhirRelationship> getRelationships() {
-        return relationships;
-    }
-
     public void setNode(Node node) {
         this.node = node;
+    }
+
+    public ArrayList<FhirRelationship> getRelationships() {
+        return relationships;
     }
 
     public void setRelationships(ArrayList<FhirRelationship> relationships) {

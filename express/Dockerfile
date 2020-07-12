@@ -1,5 +1,5 @@
 # base image
-FROM node:12.14.0-alpine
+FROM node:14.5.0-alpine
 WORKDIR /app
 USER root
 ENV DEBIAN_FRONTEND noninteractive

@@ -1,6 +1,5 @@
 package com.Optum.CyFHIR.models;
 
-
 import org.neo4j.graphdb.Node;
 
 public class FhirRelationship {
@@ -12,16 +11,16 @@ public class FhirRelationship {
         return parentNode;
     }
 
+    public void setParentNode(Node node) {
+        parentNode = node;
+    }
+
     public String getChildUUID() {
         return uuidChild;
     }
 
     public String getRelationType() {
         return relationType;
-    }
-
-    public void setParentNode(Node node) {
-        parentNode = node;
     }
 
     public void setChildRelationship(String uuid, String relation) {
