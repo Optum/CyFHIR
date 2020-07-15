@@ -126,3 +126,4 @@ k8s_config.*
 *.idea
 **/target
 **/*.iml
+plugins/

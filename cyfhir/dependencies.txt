@@ -93,7 +93,7 @@
  |  +- com.jayway.jsonpath:json-path:jar:2.4.0
  |  |  +- net.minidev:json-smart:jar:2.3
  |  |  |  \- net.minidev:accessors-smart:jar:1.2
- |  |  \- org.slf4j:slf4j-api:jar:1.7.25
+ |  |  \- org.slf4j:slf4j-api:jar:1.7.30
  |  +- org.hdrhistogram:HdrHistogram:jar:2.1.9
  |  +- com.novell.ldap:jldap:jar:2009-10-07
  |  +- org.jsoup:jsoup:jar:1.11.3
@@ -126,7 +126,6 @@
  |  |  |  +- org.jprocesses:jProcesses:jar:1.6.5
  |  |  |  |  \- com.profesorfalken:WMI4Java:jar:1.6.3
  |  |  |  |     \- com.profesorfalken:jPowerShell:jar:3.0
- |  |  |  +- org.apache.commons:commons-compress:jar:1.20
  |  |  |  \- org.neo4j.licensing-proxy:zstd-proxy:jar:4.1.0
  |  |  |     \- com.github.luben:zstd-jni:jar:1.4.4-11
  |  |  +- org.neo4j:neo4j-import-tool:jar:4.1.0
@@ -135,12 +134,8 @@
  |  +- org.slf4j:slf4j-nop:jar:1.7.30
  |  +- org.neo4j:test-utils:jar:4.1.0
  |  |  +- org.junit.vintage:junit-vintage-engine:jar:5.6.2
- |  |  |  +- org.apiguardian:apiguardian-api:jar:1.1.0
  |  |  |  \- org.junit.platform:junit-platform-engine:jar:1.6.2
- |  |  |     +- org.opentest4j:opentest4j:jar:1.2.0
- |  |  |     \- org.junit.platform:junit-platform-commons:jar:1.6.2
  |  |  +- org.junit.jupiter:junit-jupiter:jar:5.6.2
- |  |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.6.2
  |  |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.6.2
  |  |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.6.2
  |  |  +- org.assertj:assertj-core:jar:3.16.0
@@ -193,5 +188,20 @@
  |     |  \- jakarta.activation:jakarta.activation-api:jar:1.2.1
  |     \- javax.xml.bind:jaxb-api:jar:2.3.0
  +- org.neo4j.driver:neo4j-java-driver:jar:4.1.0
- \- junit:junit:jar:4.13
-    \- org.hamcrest:hamcrest-core:jar:1.3
+ +- org.testcontainers:testcontainers:jar:1.14.3
+ |  +- junit:junit:jar:4.12
+ |  |  \- org.hamcrest:hamcrest-core:jar:1.3
+ |  +- org.jetbrains:annotations:jar:19.0.0
+ |  +- org.apache.commons:commons-compress:jar:1.20
+ |  +- org.rnorth.duct-tape:duct-tape:jar:1.0.8
+ |  +- org.rnorth.visible-assertions:visible-assertions:jar:2.1.2
+ |  +- org.rnorth:tcp-unix-socket-proxy:jar:1.0.2
+ |  |  +- com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4
+ |  |  |  \- org.scijava:native-lib-loader:jar:2.0.2
+ |  |  \- com.kohlschutter.junixsocket:junixsocket-common:jar:2.0.4
+ |  \- net.java.dev.jna:jna-platform:jar:5.5.0
+ \- org.testcontainers:junit-jupiter:jar:1.14.3
+    \- org.junit.jupiter:junit-jupiter-api:jar:5.6.2
+       +- org.apiguardian:apiguardian-api:jar:1.1.0
+       +- org.opentest4j:opentest4j:jar:1.2.0
+       \- org.junit.platform:junit-platform-commons:jar:1.6.2
