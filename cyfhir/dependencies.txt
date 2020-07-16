@@ -134,10 +134,6 @@
  |  +- org.slf4j:slf4j-nop:jar:1.7.30
  |  +- org.neo4j:test-utils:jar:4.1.0
  |  |  +- org.junit.vintage:junit-vintage-engine:jar:5.6.2
- |  |  |  \- org.junit.platform:junit-platform-engine:jar:1.6.2
- |  |  +- org.junit.jupiter:junit-jupiter:jar:5.6.2
- |  |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.6.2
- |  |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.6.2
  |  |  +- org.assertj:assertj-core:jar:3.16.0
  |  |  +- org.mockito:mockito-core:jar:3.3.3
  |  |  |  +- net.bytebuddy:byte-buddy:jar:1.10.5
@@ -200,8 +196,12 @@
  |  |  |  \- org.scijava:native-lib-loader:jar:2.0.2
  |  |  \- com.kohlschutter.junixsocket:junixsocket-common:jar:2.0.4
  |  \- net.java.dev.jna:jna-platform:jar:5.5.0
- \- org.testcontainers:junit-jupiter:jar:1.14.3
-    \- org.junit.jupiter:junit-jupiter-api:jar:5.6.2
-       +- org.apiguardian:apiguardian-api:jar:1.1.0
-       +- org.opentest4j:opentest4j:jar:1.2.0
-       \- org.junit.platform:junit-platform-commons:jar:1.6.2
+ +- org.testcontainers:junit-jupiter:jar:1.14.3
+ |  \- org.junit.jupiter:junit-jupiter-api:jar:5.6.2
+ +- org.junit.jupiter:junit-jupiter:jar:5.6.2
+ |  +- org.junit.jupiter:junit-jupiter-params:jar:5.6.2
+ |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.6.2
+ \- org.junit.platform:junit-platform-engine:jar:1.6.2
+    +- org.apiguardian:apiguardian-api:jar:1.1.0
+    +- org.opentest4j:opentest4j:jar:1.2.0
+    \- org.junit.platform:junit-platform-commons:jar:1.6.2
