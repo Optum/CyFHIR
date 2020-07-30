@@ -8,43 +8,4 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BundleTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @Test
-    void build() {
-    }
-
-    @Test
-    void parseResources() {
-    }
-
-    @Test
-    void removeMetadata() {
-    }
-
-    @Test
-    void parseArrayString() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @Test
-    void testBuild() {
-    }
-
-    @Test
-    void testParseResources() {
-    }
-
-    @Test
-    void testRemoveMetadata() {
-    }
-
-    @Test
-    void testParseArrayString() {
-    }
 }

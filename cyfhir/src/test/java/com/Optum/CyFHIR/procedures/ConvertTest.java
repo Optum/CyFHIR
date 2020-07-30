@@ -8,15 +8,5 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ConvertTest {
 
-    @BeforeEach
-    void setUp() {
-    }
 
-    @AfterEach
-    void tearDown() {
-    }
-
-    @Test
-    void toTree() {
-    }
 }

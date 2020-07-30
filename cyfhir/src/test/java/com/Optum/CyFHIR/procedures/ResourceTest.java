@@ -8,19 +8,4 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ResourceTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @Test
-    void expand() {
-    }
-
-    @Test
-    void traverse() {
-    }
 }
