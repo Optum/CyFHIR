@@ -1,7 +1,15 @@
 package com.Optum.CyFHIR.procedures;
 
+// Don't Optimize org.neo4j.driver imports, prevents type ambiguity
+
+import org.neo4j.driver.AuthTokens;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.GraphDatabase;
+import org.neo4j.driver.Record;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.Session;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import org.neo4j.driver.*;
 import org.testcontainers.containers.BindMode;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.junit.jupiter.Container;
@@ -12,6 +20,7 @@ import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -23,7 +32,7 @@ import static org.assertj.core.api.Assertions.fail;
 class BundleTest {
 
     @Container
-    public GenericContainer neo4j = new GenericContainer<>("neo4j:4.1.0")
+    private static final GenericContainer neo4j = new GenericContainer<>("neo4j:4.1.0")
             .withEnv("NEO4J_AUTH", "neo4j/password")
             .withEnv("NEO4J_dbms_security_procedures_unrestricted", "cyfhir.*,apoc.*")
             .withFileSystemBind("./plugins", "/var/lib/neo4j/plugins", BindMode.READ_ONLY)
@@ -48,6 +57,14 @@ class BundleTest {
         return driver;
     }
 
+    @AfterEach
+    void cleanUp() {
+        Driver driver = getSessionDriver();
+        try (Session session = driver.session()) {
+            Result load = session.run("MATCH (n) DETACH DELETE n");
+        }
+    }
+
     @Test
     void loadBundleWithOneResourceFindEntry() throws IOException {
         Map bundle = loadJsonFromFile("src/test/resources/PatientOnlyBundle.json");
@@ -61,11 +78,11 @@ class BundleTest {
             Result load = session.run("CALL cyfhir.bundle.load(" + bundleString + ")");
             Result result = session.run("MATCH (n:entry) RETURN n");
 
-            List<Record> Records = result.stream().collect(Collectors.toList());
-            if (Records.size() > 1) {
+            List<Record> records = result.stream().collect(Collectors.toList());
+            if (records.size() > 1) {
                 fail("Too many nodes matched the query");
             } else {
-                Map resultNode = Records.get(0).get("n").asNode().asMap();
+                Map resultNode = records.get(0).get("n").asNode().asMap();
 
                 /******************************/
                 assertThat(resultNode).isNotNull();
@@ -92,11 +109,11 @@ class BundleTest {
             Result load = session.run("CALL cyfhir.bundle.load(" + bundleString + ")");
             Result result = session.run("MATCH (n:resource) RETURN n");
 
-            List<Record> Records = result.stream().collect(Collectors.toList());
-            if (Records.size() > 1) {
+            List<Record> records = result.stream().collect(Collectors.toList());
+            if (records.size() > 1) {
                 fail("Too many nodes matched the query");
             } else {
-                Map resultNode = Records.get(0).get("n").asNode().asMap();
+                Map resultNode = records.get(0).get("n").asNode().asMap();
 
                 /******************************/
                 assertThat(resultNode).isNotNull();
@@ -106,6 +123,85 @@ class BundleTest {
 
                 assertThat(resultNode.get("id")).isNotNull();
                 assertThat(resultNode.get("id").toString()).isEqualTo(id);
+            }
+        }
+    }
+
+
+    @Test
+    void loadBundleWithManyResourcesFindPatient() throws IOException {
+        Map bundle = loadJsonFromFile("src/test/resources/ThreeResourceBundle.json");
+        String bundleString = toJsonString(bundle);
+
+        Map patientEntry = ((ArrayList<Map>) bundle.get("entry")).stream().filter(entry -> {
+            Map resource = (Map) entry.get("resource");
+            return resource.get("resourceType").equals("Patient");
+        }).collect(Collectors.toList()).get(0);
+
+        Map patient = (Map) patientEntry.get("resource");
+        String resourceType = patient.get("resourceType").toString();
+        String id = patient.get("id").toString();
+
+        Driver driver = getSessionDriver();
+
+        try (Session session = driver.session()) {
+
+            Result load = session.run("CALL cyfhir.bundle.load(" + bundleString + ")");
+            Result result = session.run("MATCH (n:resource) WHERE n.resourceType = \"" + resourceType + "\" RETURN n");
+
+            List<Record> records = result.stream().collect(Collectors.toList());
+            if (records.size() > 1) {
+                fail("Too many nodes matched the query");
+            } else {
+                Map resultNode = records.get(0).get("n").asNode().asMap();
+
+                /******************************/
+                assertThat(resultNode).isNotNull();
+
+                assertThat(resultNode.get("resourceType")).isNotNull();
+                assertThat(resultNode.get("resourceType").toString()).isEqualTo(resourceType);
+
+                assertThat(resultNode.get("id")).isNotNull();
+                assertThat(resultNode.get("id").toString()).isEqualTo(id);
+            }
+        }
+    }
+
+    @Test
+    void loadBundleWithManyResourcesFindAllEntries() throws IOException {
+        Map bundle = loadJsonFromFile("src/test/resources/ThreeResourceBundle.json");
+        String bundleString = toJsonString(bundle);
+
+        List<String> fullUrls = ((ArrayList<Map>) bundle.get("entry")).stream().map(entry -> {
+            return (String) entry.get("fullUrl");
+        }).collect(Collectors.toList());
+        Collections.sort(fullUrls);
+
+        Driver driver = getSessionDriver();
+
+        try (Session session = driver.session()) {
+
+            Result load = session.run("CALL cyfhir.bundle.load(" + bundleString + ")");
+            Result result = session.run("MATCH (n:entry) RETURN n");
+
+            List<Record> records = result.stream().collect(Collectors.toList());
+            if (records.size() != fullUrls.size()) {
+                fail("Too many nodes matched the query");
+            } else {
+
+                List<String> fullUrlsResult = records.stream().map(record -> {
+                    Map<String, Object> entries = record.get("n").asNode().asMap();
+                    return (String) entries.get("fullUrl");
+                }).collect(Collectors.toList());
+                Collections.sort(fullUrlsResult);
+
+                /******************************/
+                for (int i = 0; i < fullUrls.size(); i++) {
+                    assertThat(fullUrls.get(i)).isNotNull();
+                    assertThat(fullUrlsResult.get(i)).isNotNull();
+
+                    assertThat(fullUrls.get(i)).isEqualTo(fullUrlsResult.get(i));
+                }
             }
         }
     }

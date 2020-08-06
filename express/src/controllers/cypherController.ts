@@ -14,32 +14,46 @@ function deleteAllNodesCypher (): string {
 // Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
 // points to that resource is included in the Bundle
 function buildBundleAroundIDCypher (_id: string): string {
-  const cypher = `WITH "${_id}" as _id
-                    MATCH (m:entry)-[*]->(n:resource)
-                    MATCH (q:resource)-[*2]->()-[r:reference]->(o:entry)
-                    WHERE (n.id = _id) AND (o._resourceId = _id)
-                    WITH collect(m)+collect(o) AS entries
-                    UNWIND entries AS entry
-                    CALL cyfhir.resource.expand(entry) YIELD path
-                    RETURN cyfhir.bundle.build(collect(path))`;
+  const cypher = `CALL {
+                    WITH "${_id}" as _id
+                    MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry)
+                    WHERE (b._resourceId = _id)
+                    RETURN a,b
+                    UNION
+                    WITH "${_id}" as _id
+                    MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry)
+                    WHERE (a._resourceId = _id)
+                    RETURN a,b
+                  }
+                  WITH collect(a)+collect(b) AS entries
+                  UNWIND entries AS entry
+                  CALL cyfhir.resource.expand(entry) YIELD path
+                  RETURN cyfhir.bundle.build(collect(path))`;
   return cypher;
 }
 
 // Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
 // points to that resource is included in the Bundle IF it matches the ResourceType filter
 function buildBundleAroundIDWithFilterCypher (_id: string, _filter: string): string {
-  const cypher = `WITH "${_id}" AS _id
-                    MATCH (m:entry)-[*]->(n:resource)
-                    MATCH (q:resource)-[*2]->()-[r:reference]->(o:entry)
-                    WHERE (n.id = _id) AND (o._resourceId = _id)
-                    WITH collect(m)+collect(o) AS entryList, ${_filter} AS filter
-                    MATCH (m:entry)-[*1]->(n:resource)
-                    WHERE (m in entryList)
-                    AND (n.resourceType in filter)
-                    WITH collect(m) AS entries
-                    UNWIND entries AS entry
-                    CALL cyfhir.resource.expand(entry) YIELD path
-                    RETURN cyfhir.bundle.build(collect(path))`;
+  const cypher = `CALL {
+                    WITH "${_id}" as _id
+                    MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry)
+                    WHERE (b._resourceId = _id)
+                    RETURN a,b
+                    UNION
+                    WITH "${_id}" as _id
+                    MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry)
+                    WHERE (a._resourceId = _id)
+                    RETURN a,b
+                  }
+                  WITH collect(a)+collect(b) AS entryList, ${_filter} AS filter
+                  MATCH (m:entry)-[*1]->(n:resource)
+                  WHERE (m in entryList)
+                  AND (n.resourceType in filter)
+                  WITH collect(m) AS entries
+                  UNWIND entries AS entry
+                  CALL cyfhir.resource.expand(entry) YIELD path
+                  RETURN cyfhir.bundle.build(collect(path))`;
   return cypher;
 }
 
