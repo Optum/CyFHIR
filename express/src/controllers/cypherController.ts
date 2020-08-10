@@ -57,6 +57,13 @@ function buildBundleAroundIDWithFilterCypher(_id: string, _filter: string): stri
   return cypher;
 }
 
+// Cypher that loads a FHIR Resource
+function loadResourceCypher(_resource: string): string {
+  const _resourceFormatted = _resource.replace(/"/g, '\\"');
+  const cypher = `CALL cyfhir.resource.load("${_resourceFormatted}")`;
+  return cypher;
+}
+
 // Cypher that builds a FHIR Resource based off of a ResourceId
 function getResourceCypher(_id: string): string {
   const cypher = `WITH "6aff2910-82fc-44d6-84a6-c29e4b756b11" as _id
@@ -80,6 +87,9 @@ export = {
   },
   buildBundleAroundIDWithFilter: (_id: string, _filter: string) => {
     return buildBundleAroundIDWithFilterCypher(_id, _filter);
+  },
+  loadResource: (_resource) =>{
+    return loadResourceCypher(JSON.stringify(_resource));
   },
   getResource: (_id: string) => {
     return getResourceCypher(_id);

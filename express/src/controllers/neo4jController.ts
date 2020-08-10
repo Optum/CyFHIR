@@ -100,6 +100,18 @@ function getBundleWithFilter(_id: string, _filter: string, res: Response) {
   });
 }
 
+function loadResourceNeo4j(_resource, res: Response) {
+  startTransaction(cypher.loadResource(_resource), (result) => {
+    if (result) {
+      return res.status(200).send(result);
+    } else {
+      return res.status(500).send({
+        error: 'Error'
+      });
+    }
+  });
+}
+
 function getResource(_id: string, res: Response) {
   startTransaction(cypher.getResource(_id), (result) => {
     if (result.result) {
@@ -129,6 +141,9 @@ export = {
     } else {
       return getBundle(_id, res);
     }
+  },
+  loadResource: (resource, res: Response) => {
+    return loadResourceNeo4j(resource, res);
   },
   getFhirResource: (_id: string, res: Response) => {
       return getResource(_id, res);

@@ -19,6 +19,10 @@ router.post('/Bundle/:_id', (req: Request, res: Response) => {
   return neo4jController.buildBundle(req.params._id, req.body.filter, res);
 });
 
+router.post('/Resource', (req: Request, res: Response) => {
+  return neo4jController.loadResource(req.body, res);
+});
+
 router.get('/Resource/:_id', (req: Request, res: Response) => {
   if (!req.params._id) {
     return res.status(400).send({
@@ -63,6 +67,27 @@ export default router;
 /**
 * @swagger
 *
+*   /api/Resource:
+*    post:
+*      summary: Load FHIR Resource into Neo4j
+*      requestBody:
+*        required: true
+*        content:
+*           application/json:
+*             schema:
+*               type: object
+*             example: {"resourceType":"Patient","id":"6aff2910-82fc-44d6-84a6-c29e4b756b11","text":{"status":"generated"},"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName","valueString":"Nydia801 Bashirian201"},{"url":"http://hl7.org/fhir/StructureDefinition/patient-birthPlace","valueAddress":{"city":"Monroe","state":"North Carolina","country":"US"}},{"url":"http://synthetichealth.github.io/synthea/disability-adjusted-life-years","valueDecimal":0.499751031865479},{"url":"http://synthetichealth.github.io/synthea/quality-adjusted-life-years","valueDecimal":56.50024896813452}],"identifier":[{"system":"https://github.com/synthetichealth/synthea","value":"6aff2910-82fc-44d6-84a6-c29e4b756b11"},{"type":{"coding":[{"system":"http://terminology.hl7.org/CodeSystem/v2-0203","code":"MR","display":"Medical Record Number"}],"text":"Medical Record Number"},"system":"http://hospital.smarthealthit.org","value":"6aff2910-82fc-44d6-84a6-c29e4b756b11"},{"type":{"coding":[{"system":"http://terminology.hl7.org/CodeSystem/v2-0203","code":"SS","display":"Social Security Number"}],"text":"Social Security Number"},"system":"http://hl7.org/fhir/sid/us-ssn","value":"999-14-9538"},{"type":{"coding":[{"system":"http://terminology.hl7.org/CodeSystem/v2-0203","code":"DL","display":"Driver's License"}],"text":"Driver's License"},"system":"urn:oid:2.16.840.1.113883.4.3.25","value":"S99997789"},{"type":{"coding":[{"system":"http://terminology.hl7.org/CodeSystem/v2-0203","code":"PPN","display":"Passport Number"}],"text":"Passport Number"},"system":"http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber","value":"X57601805X"}],"name":[{"use":"official","family":"Haag279","given":["Theola421"],"prefix":["Mrs."]},{"use":"maiden","family":"Lehner980","given":["Theola421"],"prefix":["Mrs."]}],"telecom":[{"system":"phone","value":"555-196-9091","use":"home"}],"gender":"female","birthDate":"1962-09-10","address":[{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/geolocation","extension":[{"url":"latitude","valueDecimal":35.84622999061526},{"url":"longitude","valueDecimal":-79.9323600342269}]}],"line":["350 Schimmel Heights"],"city":"Archdale","state":"North Carolina","postalCode":"27263","country":"US"}],"maritalStatus":{"coding":[{"system":"http://terminology.hl7.org/CodeSystem/v3-MaritalStatus","code":"M","display":"M"}],"text":"M"},"multipleBirthBoolean":false,"communication":[{"language":{"coding":[{"system":"urn:ietf:bcp:47","code":"en-US","display":"English"}],"text":"English"}}]}
+*      responses:
+*        "200":
+*          content:
+*            application/json:
+*              schema:
+*                type: object
+*/
+
+/**
+* @swagger
+*
 *   /api/Bundle/{_id}:
 *    post:
 *      summary: Build Bundle Around ID add filter build with certain FHIR Resources
@@ -91,7 +116,7 @@ export default router;
 *
 *   /api/Resource/{_id}:
 *    get:
-*      summary: Build Bundle Around ID add filter build with certain FHIR Resources
+*      summary: Get FHIR Resource from its ID
 *      parameters:
 *          - in: path
 *            name: _id

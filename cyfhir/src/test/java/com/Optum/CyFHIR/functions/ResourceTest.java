@@ -65,7 +65,7 @@ class ResourceTest {
     }
 
     @Test
-    void returnPatientResource() throws IOException {
+    void returnPatientResourceFromBundle() throws IOException {
         Map bundle = loadJsonFromFile("src/test/resources/ThreeResourceBundle.json");
         String bundleString = toJsonString(bundle);
 
@@ -82,6 +82,45 @@ class ResourceTest {
         try (Session session = driver.session()) {
 
             Result load = session.run("CALL cyfhir.bundle.load(" + bundleString + ")");
+            String query = "" +
+                    "WITH \"" + patientId + "\" as _id \n" +
+                    "MATCH (r:resource)\n" +
+                    "WHERE (r.id = _id)\n" +
+                    "CALL cyfhir.resource.expand(r) YIELD path\n" +
+                    "WITH cyfhir.resource.format(collect(path)) AS patient\n" +
+                    "RETURN patient";
+
+            Result result = session.run(query);
+
+            List<Record> records = result.stream().collect(Collectors.toList());
+            if (records.size() != 1) {
+                fail("Wrong number of nodes matched query");
+            } else {
+                Map patientResult = records.get(0).get("patient").asMap();
+                List<Map> address = (List<Map>) patientResult.get("address");
+                String city = (String) address.get(0).get("city");
+                String state = (String) address.get(0).get("state");
+
+                assertThat((String) patientResult.get("id")).isEqualTo(patientId);
+                assertThat((String) patientResult.get("resourceType")).isEqualTo("Patient");
+                assertThat(address.size()).isEqualTo(1);
+                assertThat(city).isEqualTo("Archdale");
+                assertThat(state).isEqualTo("North Carolina");
+            }
+        }
+    }
+
+    @Test
+    void returnPatientResourceFromOnlyPatientResource() throws IOException {
+        Map resource = loadJsonFromFile("src/test/resources/Patient.json");
+        String resourceString = toJsonString(resource);
+
+        String patientId = (String) resource.get("id");
+        Driver driver = getSessionDriver();
+
+        try (Session session = driver.session()) {
+
+            Result load = session.run("CALL cyfhir.resource.load(" + resourceString + ")");
             String query = "" +
                     "WITH \"" + patientId + "\" as _id \n" +
                     "MATCH (r:resource)\n" +
