@@ -52,25 +52,33 @@ Currently CyFHIR has 1 procedure and 1 aggregating function:
     -   To load FHIR into Neo4J, you can easily do this by running `CALL cyfhir.bundle.load()` with the input being a FHIR Bundle JSON that has been formatted as a string (adding escape chars to all double quotes in the JSON).
     -   Another thing to note is if you want to test this way with generated data, we recommend [Synthea](https://github.com/synthetichealth/synthea). BUT if you choose to use Synthea, you must remove the generated html in every resource of the bundle for all entries. The path to the field to remove is: `Bundle.entry[i].resource.text.display`. This is necessary as there are escape chars hidden within the display that Neo4j cannot handle.
 -   `cyfhir.resource.expand()`
-    - Pass an *entry* node into `cyfhir.resource.expand()` to expand out the full resource to be able to pass it into an aggregating function like `cyfhir.bundle.build()`
+    - Pass either a **Resource** node or an **Entry** node into `cyfhir.resource.expand()` to expand out the full resource/entry to be able to pass it into an aggregating function like `cyfhir.resource.format()` or `cyfhir.bundle.format()`
     - Example where "entry" is a previously queried node with label type "entry":
     ```js
     CALL cyfhir.resource.expand(entry) YIELD path
-    RETURN cyfhir.bundle.build(collect(path))
+    RETURN cyfhir.bundle.format(collect(path))
     ```
 
 ##### Functions
 
--   `cyfhir.bundle.build()`
-    -   Pass an array of expanded, structured FHIR Resources that were the result of your query. To properly pass data into this function, the last few lines of your query will probably end up looking like this:
+-   `cyfhir.bundle.format()`
+    -   Pass an array of expanded FHIR Resources as entries that were the result of some query. To properly pass data into this function, the last few lines of your query will probably end up looking like this:
 
-```js
-UNWIND entryList AS entry
-CALL cyfhir.resource.expand(entry) YIELD path
-RETURN cyfhir.bundle.build(collect(path))
-```
+      ```js
+      UNWIND entryList AS entry
+      CALL cyfhir.resource.expand(entry) YIELD path
+      RETURN cyfhir.bundle.format(collect(path))
+      ```
 
- The entryList variable above that gets unwound is the list of entry nodes that match a query that you've written above. This expands those entry nodes to get the full resource, converts that to a JSON/tree-like structure, then passes it to CyFHIR to build the bundle and enforce correct cardinality of resource properties.
+     The entryList variable above that gets unwound is the list of entry nodes that match a query that you've written above. This expands those entry nodes to get the full resource, converts that to a JSON/tree-like structure, then passes it to CyFHIR to build the bundle and enforce correct cardinality of resource properties.
+
+- `cyfhir.resource.format()`
+    - Just like `cyfhir.bundle.format()`, this function will format a fully expanded resource, but only one. As part of some query to find a single Resource, you pass the **Resource** node into the expander,then pass the collected paths into the formatter to build your FHIR Resource.
+
+    ```js
+    CALL cyfhir.resource.expand(resource) YIELD path
+    RETURN cyfhir.resource.format(collect(path))
+    ```
 
 <a name="repo"></a>
 
