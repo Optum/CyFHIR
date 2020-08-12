@@ -103,7 +103,7 @@ class BundleTest {
                     "WITH collect(a)+collect(b) AS entries \n" +
                     "UNWIND entries AS entry \n" +
                     "CALL cyfhir.resource.expand(entry) YIELD path \n" +
-                    "WITH cyfhir.bundle.build(collect(path)) AS bundle " +
+                    "WITH cyfhir.bundle.format(collect(path)) AS bundle " +
                     "RETURN bundle";
 
             Result result = session.run(query);
