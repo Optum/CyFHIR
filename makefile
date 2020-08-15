@@ -18,3 +18,7 @@ backend:
 
 halt:
 	docker-compose -f docker-compose/docker-compose.yaml down
+
+clean:
+	docker system prune -a -f && docker volume prune -f
+
