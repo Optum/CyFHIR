@@ -1,0 +1,2136 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:a32eef05-4c14-3e4a-ae46-a1c5eca0eed9",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "a32eef05-4c14-3e4a-ae46-a1c5eca0eed9",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 202
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "a32eef05-4c14-3e4a-ae46-a1c5eca0eed9"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "NORTH MEMORIAL MEDICAL CENTER",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "7635205200"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3300 OAKDALE NORTH"
+            ],
+            "city": "ROBBINSDALE",
+            "state": "MN",
+            "postalCode": "55422",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cb5de81c-0dce-3cc2-b414-3ffdaeda7974",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "cb5de81c-0dce-3cc2-b414-3ffdaeda7974",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 128
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "cb5de81c-0dce-3cc2-b414-3ffdaeda7974"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "HENNEPIN COUNTY MEDICAL CENTER 1",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6128733629"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "701 PARK AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55415",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b90fc5a-9bd6-3e59-8f1e-4c1c7efa4b8e",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "9b90fc5a-9bd6-3e59-8f1e-4c1c7efa4b8e",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 145
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "9b90fc5a-9bd6-3e59-8f1e-4c1c7efa4b8e"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PARK NICOLLET METHODIST HOSPITAL",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9529935000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6500 EXCELSIOR BLVD"
+            ],
+            "city": "SAINT LOUIS PARK",
+            "state": "MN",
+            "postalCode": "55426",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:510de40b-0f2b-305c-85a7-c8f958463ba1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "510de40b-0f2b-305c-85a7-c8f958463ba1",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 284
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 2
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 3
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "510de40b-0f2b-305c-85a7-c8f958463ba1"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "ABBOTT NORTHWESTERN HOSPITAL",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6128634000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "800 EAST 28TH STREET"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55407",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "55b1ce99-caee-32e7-b38b-26cdd53d1486",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 314
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "55b1ce99-caee-32e7-b38b-26cdd53d1486"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6122733000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2450 RIVERSIDE AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1e192227-18f7-38a8-88cf-0f2c2036e32c",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "1e192227-18f7-38a8-88cf-0f2c2036e32c",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 100
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "1e192227-18f7-38a8-88cf-0f2c2036e32c"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "UNITY HOSPITAL",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "7632365000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "550 OSBORNE ROAD"
+            ],
+            "city": "FRIDLEY",
+            "state": "MN",
+            "postalCode": "55432",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd8b613b-d4f9-3cd1-8adc-8818595b959d",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "bd8b613b-d4f9-3cd1-8adc-8818595b959d",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 297
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "bd8b613b-d4f9-3cd1-8adc-8818595b959d"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PHILLIPS EYE INSTITUTE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6127758815"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2215 PARK AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55404",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e0366437-5913-3ecd-97eb-fc949a301443",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "e0366437-5913-3ecd-97eb-fc949a301443",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 88
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "e0366437-5913-3ecd-97eb-fc949a301443"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "CHILDREN'S HOSPITALS & CLINICS OF MN",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6128136112"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2525 CHICAGO AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55404",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:563b0192-6370-3c4f-9870-0524339ab9b0",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "563b0192-6370-3c4f-9870-0524339ab9b0",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 83
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "563b0192-6370-3c4f-9870-0524339ab9b0"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "SHRINERS HOSPITALS FOR CHILDREN - TWIN CITIES",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6125966100"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2025 EAST RIVER PARKWAY"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55414",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:684417c2-77b2-3cbf-acae-34095fe1f07a",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "684417c2-77b2-3cbf-acae-34095fe1f07a",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 7
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 3
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 3
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 1
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "684417c2-77b2-3cbf-acae-34095fe1f07a"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP60527",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-243-4144"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "7400 LYNDALE AVE S"
+            ],
+            "city": "RICHFIELD",
+            "state": "MN",
+            "postalCode": "55423-4159",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ca53a717-5f33-30fc-9033-ec86817bcc97",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ca53a717-5f33-30fc-9033-ec86817bcc97",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 23
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 14
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 5
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 5
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "ca53a717-5f33-30fc-9033-ec86817bcc97"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "MINNEAPOLIS RADIOLOGY ASSOCIATES LTD",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "763-398-6600"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3366 OAKDALE N AVE"
+            ],
+            "city": "ROBBINSDALE",
+            "state": "MN",
+            "postalCode": "55422-5700",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ee890fe-c35a-3812-9787-ee27c60cf75e",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "9ee890fe-c35a-3812-9787-ee27c60cf75e",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 31
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 23
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 8
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 12
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "9ee890fe-c35a-3812-9787-ee27c60cf75e"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "IN HOUSE SENIOR SERVICES, LLC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-798-0170"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6600 LYNDALE S AVE"
+            ],
+            "city": "RICHFIELD",
+            "state": "MN",
+            "postalCode": "55423-3398",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:65c69598-223a-35c2-bb3b-ffbc6a2f3657",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "65c69598-223a-35c2-bb3b-ffbc6a2f3657",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 48
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 42
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 54
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 14
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "65c69598-223a-35c2-bb3b-ffbc6a2f3657"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP106790",
+        "address": [
+          {
+            "line": [
+              "4111 CENTRAL AVE NE"
+            ],
+            "city": "COLUMBIA HEIGHTS",
+            "state": "MN",
+            "postalCode": "55421-2957",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe77e021-4b27-3c64-800d-db8c3b45adc1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "fe77e021-4b27-3c64-800d-db8c3b45adc1",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 33
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 383
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 9
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 19
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "fe77e021-4b27-3c64-800d-db8c3b45adc1"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP125949",
+        "address": [
+          {
+            "line": [
+              "6640 LYNDALE S AVE"
+            ],
+            "city": "RICHFIELD",
+            "state": "MN",
+            "postalCode": "55423-2385",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b9cfe818-a2f5-3695-ab9e-db5aaa29fdcb",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "b9cfe818-a2f5-3695-ab9e-db5aaa29fdcb",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 107
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 699
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 166
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 281
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "b9cfe818-a2f5-3695-ab9e-db5aaa29fdcb"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP139664",
+        "address": [
+          {
+            "line": [
+              "6944 NICOLLET AVE"
+            ],
+            "city": "RICHFIELD",
+            "state": "MN",
+            "postalCode": "55423-2407",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:141f1423-510f-3c91-abf0-551d76a8cd4f",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "141f1423-510f-3c91-abf0-551d76a8cd4f",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 76
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 257
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 64
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 81
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "141f1423-510f-3c91-abf0-551d76a8cd4f"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP144391",
+        "address": [
+          {
+            "line": [
+              "5372 EDGEWOOD DR"
+            ],
+            "city": "SAINT PAUL",
+            "state": "MN",
+            "postalCode": "55112-1402",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:54d3c57b-d3eb-36ab-a9e8-7a27a1511dc4",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "54d3c57b-d3eb-36ab-a9e8-7a27a1511dc4",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 69
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 134
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 66
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 182
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "54d3c57b-d3eb-36ab-a9e8-7a27a1511dc4"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP163464",
+        "address": [
+          {
+            "line": [
+              "2508 HILLSBORO AVE N"
+            ],
+            "city": "GOLDEN VALLEY",
+            "state": "MN",
+            "postalCode": "55427-3107",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93abd2b4-e050-3775-9c6e-9a569ec27c12",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "93abd2b4-e050-3775-9c6e-9a569ec27c12",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 28
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 25
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 6
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 26
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "93abd2b4-e050-3775-9c6e-9a569ec27c12"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP163466",
+        "address": [
+          {
+            "line": [
+              "615 66TH N AVE"
+            ],
+            "city": "BROOKLYN CENTER",
+            "state": "MN",
+            "postalCode": "55430-1666",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1cc69058-1e4b-396b-b166-a058b271b644",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "1cc69058-1e4b-396b-b166-a058b271b644",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 44
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 59
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 63
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 28
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "1cc69058-1e4b-396b-b166-a058b271b644"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "ACTIVE FEET, FOOT AND ANKLE HEALTH CENTER",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-788-8778"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6600 LYNDALE AVE S"
+            ],
+            "city": "RICHFIELD",
+            "state": "MN",
+            "postalCode": "55423-3398",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:35777591-c32b-30a1-8ab2-18524d4c47d8",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "35777591-c32b-30a1-8ab2-18524d4c47d8",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 99
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 98
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 22
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 57
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "35777591-c32b-30a1-8ab2-18524d4c47d8"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PCP199630",
+        "address": [
+          {
+            "line": [
+              "2443 LARPENTEUR W AVE"
+            ],
+            "city": "LAUDERDALE",
+            "state": "MN",
+            "postalCode": "55113-5234",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49f9fde1-7e71-392e-9cc4-b1c0e4507bb6",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "49f9fde1-7e71-392e-9cc4-b1c0e4507bb6",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 101
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 447
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 207
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 187
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "49f9fde1-7e71-392e-9cc4-b1c0e4507bb6"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "KIDNEY SPECIALISTS OF MINNESOTA PA",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "763-544-0696"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6200 SHINGLE CREEK PKWY"
+            ],
+            "city": "BROOKLYN CENTER",
+            "state": "MN",
+            "postalCode": "55430-2107",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52e907c8-50fc-3ca8-8c7e-cc760a6746dd",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "52e907c8-50fc-3ca8-8c7e-cc760a6746dd",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 56
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 42
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 39
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 27
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "52e907c8-50fc-3ca8-8c7e-cc760a6746dd"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "CHILDRENS HEALTH CARE",
+        "address": [
+          {
+            "line": [
+              "2525 CHICAGO AVE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55404-4518",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:840ee3e5-d3b2-3751-b6ca-3cf1da3b46b3",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "840ee3e5-d3b2-3751-b6ca-3cf1da3b46b3",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 91
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 797
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 340
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 210
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "840ee3e5-d3b2-3751-b6ca-3cf1da3b46b3"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "NORTH MEMORIAL HEALTH CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "763-581-5630"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "5615 XERXES N AVE D"
+            ],
+            "city": "BROOKLYN CENTER",
+            "state": "MN",
+            "postalCode": "55430-2819",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d286b425-66e8-3769-8760-04b229556728",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "d286b425-66e8-3769-8760-04b229556728",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 42
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 178
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 34
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 13
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "d286b425-66e8-3769-8760-04b229556728"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "NORTH MEMORIAL HEALTH CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-379-1119"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "327 CENTRAL AVE SE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55414-1019",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:681fb9a1-a051-38ad-a9c7-4fd631ac25c8",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "681fb9a1-a051-38ad-a9c7-4fd631ac25c8",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 45
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 281
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 16
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 55
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "681fb9a1-a051-38ad-a9c7-4fd631ac25c8"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PERHAM PHYSICAL THERAPY LTD",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "952-467-6629"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "5775 WAYZATA BLVD"
+            ],
+            "city": "ST LOUIS PARK",
+            "state": "MN",
+            "postalCode": "55416-2674",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:27d13dfd-6817-3217-8b33-5a992cdb3ad7",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "27d13dfd-6817-3217-8b33-5a992cdb3ad7",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 16
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 10
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 4
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 11
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "27d13dfd-6817-3217-8b33-5a992cdb3ad7"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "WEST IMAGING, LLC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "763-398-6611"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3366 OAKDALE AVE N"
+            ],
+            "city": "ROBBINSDALE",
+            "state": "MN",
+            "postalCode": "55422-2986",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee049f9b-9030-308a-bb80-f4a7dad97ab9",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ee049f9b-9030-308a-bb80-f4a7dad97ab9",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 29
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "ee049f9b-9030-308a-bb80-f4a7dad97ab9"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "ASPEN MEDICAL GROUP - URGENT CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "651-641-7021"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "7920 OLD CEDAR AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55425",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0dd0fd1-e2fc-3fd7-a586-f326160a17b6",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "c0dd0fd1-e2fc-3fd7-a586-f326160a17b6",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 85
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "c0dd0fd1-e2fc-3fd7-a586-f326160a17b6"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "HEALTHPARTNERS RIVERSIDE CLINIC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-371-1600"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2220 RIVERSIDE AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3c1c1e59-b399-3453-ad75-6a4970e86808",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3c1c1e59-b399-3453-ad75-6a4970e86808",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 1
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "3c1c1e59-b399-3453-ad75-6a4970e86808"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PARK NICOLLET CLINIC - SAINT LOUIS PARK",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "952-993-1000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3850 PARK NICOLLET BOULEVARD"
+            ],
+            "city": "SAINT LOUIS PARK",
+            "state": "MN",
+            "postalCode": "55416",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3b27a2e1-1bee-3bb8-86f7-22bb0ab97b50",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3b27a2e1-1bee-3bb8-86f7-22bb0ab97b50",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 5
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "3b27a2e1-1bee-3bb8-86f7-22bb0ab97b50"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "NOW MEDICAL CENTERS - ROSEVILLE URGENT CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "651-635-0054"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1955 COUNTY ROAD B2 WEST"
+            ],
+            "city": "ROSEVILLE",
+            "state": "MN",
+            "postalCode": "55113",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8f422579-ff54-3499-9c64-bed4bf99cbd6",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "8f422579-ff54-3499-9c64-bed4bf99cbd6",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 2
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "8f422579-ff54-3499-9c64-bed4bf99cbd6"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "URGENT CARE CENTER",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "952-924-5030"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6401 FRANCE AVENUE SOUTH"
+            ],
+            "city": "EDINA",
+            "state": "MN",
+            "postalCode": "55435",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5840e2d6-b0fc-33d0-9e59-2b1120d61d60",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "5840e2d6-b0fc-33d0-9e59-2b1120d61d60",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 4
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "5840e2d6-b0fc-33d0-9e59-2b1120d61d60"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "CRYSTAL GALLERY URGENT CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "763-287-6599"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "5502 WEST BROADWAY AVENUE"
+            ],
+            "city": "CRYSTAL",
+            "state": "MN",
+            "postalCode": "55428",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:efeae86c-0a43-368d-bae3-280d62a40cbf",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "efeae86c-0a43-368d-bae3-280d62a40cbf",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 8
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "efeae86c-0a43-368d-bae3-280d62a40cbf"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "NOW MEDICAL CENTERS - NORTH MEMORIAL CLINIC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-379-1254"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "327 CENTRAL AVENUE SOUTHEAST"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55414",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    }
+  ]
+}
