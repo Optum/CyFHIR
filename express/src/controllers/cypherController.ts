@@ -66,7 +66,7 @@ function loadResourceCypher(_resource: string): string {
 
 // Cypher that builds a FHIR Resource based off of a ResourceId
 function getResourceCypher(_id: string): string {
-  const cypher = `WITH "6aff2910-82fc-44d6-84a6-c29e4b756b11" as _id
+  const cypher = `WITH "${_id}" as _id
                   MATCH (r:resource)
                   WHERE (r.id = _id)
                   CALL cyfhir.resource.expand(r) YIELD path
