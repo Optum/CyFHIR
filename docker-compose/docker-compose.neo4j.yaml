@@ -14,6 +14,8 @@ services:
       NEO4J_HOST: 0.0.0.0
       NEO4J_AUTH: none
       NEO4J_dbms_security_procedures_unrestricted: apoc.*,cyfhir.*,gds.*
+      NEO4J_dbms_memory_pagecache_size: 2G
+      NEO4J_dbms_memory_heap_max__size: 2G
     ports:
       - '7474:7474'
       - '7473:7473'

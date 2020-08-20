@@ -1,0 +1,6154 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Aundrea980 Boyle917"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Eagan",
+              "state": "Minnesota",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 0.013001913983722295
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 21.98699808601628
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-47-8660"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver's License"
+                }
+              ],
+              "text": "Driver's License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99974224"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X65824651X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Lebsack687",
+            "given": [
+              "Antone63"
+            ],
+            "prefix": [
+              "Mr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-821-3099",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1997-06-03",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 45.00038710324195
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -93.23557864641013
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "253 Wunsch Green"
+            ],
+            "city": "Minneapolis",
+            "state": "Minnesota",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ],
+          "text": "Never Married"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "CHILDRENS HEALTH CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-813-6125"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2425 CHICAGO AVE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55404-3845",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "15517718-7362-3c10-8747-405e5c8c1f45",
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999959"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Fay398",
+            "given": [
+              "Loren192"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Loren192.Fay398@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2425 CHICAGO AVE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55404-3845",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "64a6ac83-0016-832e-b5cc-dbe2eb6d6a45",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "162673000",
+                "display": "General examination of patient (procedure)"
+              }
+            ],
+            "text": "General examination of patient (procedure)"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Mr. Antone63 Lebsack687"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2016-08-02T19:55:12-05:00",
+              "end": "2016-08-02T20:10:12-05:00"
+            },
+            "individual": {
+              "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45",
+              "display": "Dr. Loren192 Fay398"
+            }
+          }
+        ],
+        "period": {
+          "start": "2016-08-02T19:55:12-05:00",
+          "end": "2016-08-02T20:10:12-05:00"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+          "display": "CHILDRENS HEALTH CARE"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb7d4b06-bcbd-48f0-2b34-85e737baa70b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bb7d4b06-bcbd-48f0-2b34-85e737baa70b",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 176.1,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2af2db6f-94eb-451c-9b0c-8dba56e14441",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2af2db6f-94eb-451c-9b0c-8dba56e14441",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 1,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:271be98d-6849-c478-94c3-eb2cf3b6dabe",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "271be98d-6849-c478-94c3-eb2cf3b6dabe",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 87,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b361d9ba-fa0e-6290-df43-d7b349893ace",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b361d9ba-fa0e-6290-df43-d7b349893ace",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body Mass Index"
+            }
+          ],
+          "text": "Body Mass Index"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 28.05,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:86db1e52-8980-041e-6eb4-42eb19f10735",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "86db1e52-8980-041e-6eb4-42eb19f10735",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59576-9",
+              "display": "Body mass index (BMI) [Percentile] Per age and gender"
+            }
+          ],
+          "text": "Body mass index (BMI) [Percentile] Per age and gender"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 91.254,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4decd061-d0e6-93b2-733a-7c7ba8047c74",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "4decd061-d0e6-93b2-733a-7c7ba8047c74",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood Pressure"
+            }
+          ],
+          "text": "Blood Pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic Blood Pressure"
+                }
+              ],
+              "text": "Diastolic Blood Pressure"
+            },
+            "valueQuantity": {
+              "value": 84,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic Blood Pressure"
+                }
+              ],
+              "text": "Systolic Blood Pressure"
+            },
+            "valueQuantity": {
+              "value": 120,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e8a09f9e-92a7-648e-d118-27281a58e84a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e8a09f9e-92a7-648e-d118-27281a58e84a",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 71,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1c554d99-7c0a-5fd2-aa5d-c91b6f25957d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1c554d99-7c0a-5fd2-aa5d-c91b6f25957d",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 14,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:371f282e-de42-5fd8-a1c5-8d8449c32fd9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "371f282e-de42-5fd8-a1c5-8d8449c32fd9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status NHIS"
+            }
+          ],
+          "text": "Tobacco smoking status NHIS"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "effectiveDateTime": "2016-08-02T19:55:12-05:00",
+        "issued": "2016-08-02T19:55:12.884-05:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "8517006",
+              "display": "Former smoker"
+            }
+          ],
+          "text": "Former smoker"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae913745-4315-5de1-8a80-0b66eaeee479",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "ae913745-4315-5de1-8a80-0b66eaeee479",
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "140",
+              "display": "Influenza, seasonal, injectable, preservative free"
+            }
+          ],
+          "text": "Influenza, seasonal, injectable, preservative free"
+        },
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+        },
+        "occurrenceDateTime": "2016-08-02T19:55:12-05:00",
+        "primarySource": true
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d9ff11b3-c927-55f0-cb06-25afbde8c244",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "d9ff11b3-c927-55f0-cb06-25afbde8c244",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Antone63 Lebsack687"
+        },
+        "billablePeriod": {
+          "start": "2016-08-02T19:55:12-05:00",
+          "end": "2016-08-02T20:10:12-05:00"
+        },
+        "created": "2016-08-02T20:10:12-05:00",
+        "provider": {
+          "reference": "urn:uuid:1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+          "display": "CHILDRENS HEALTH CARE"
+        },
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+              "code": "normal"
+            }
+          ]
+        },
+        "supportingInfo": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                  "code": "info"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "urn:uuid:ae913745-4315-5de1-8a80-0b66eaeee479"
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "sequence": 1,
+            "focal": true,
+            "coverage": {
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "162673000",
+                  "display": "General examination of patient (procedure)"
+                }
+              ],
+              "text": "General examination of patient (procedure)"
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "informationSequence": [
+              1
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "140",
+                  "display": "Influenza, seasonal, injectable, preservative free"
+                }
+              ],
+              "text": "Influenza, seasonal, injectable, preservative free"
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            }
+          }
+        ],
+        "total": {
+          "value": 108.57,
+          "currency": "USD"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Claim"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c4d28d82-36b5-04f6-9ea0-5889eff91eba",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "c4d28d82-36b5-04f6-9ea0-5889eff91eba",
+        "contained": [
+          {
+            "resourceType": "ServiceRequest",
+            "id": "referral",
+            "status": "completed",
+            "intent": "order",
+            "subject": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "requester": {
+              "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+            },
+            "performer": [
+              {
+                "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+              }
+            ]
+          },
+          {
+            "resourceType": "Coverage",
+            "id": "coverage",
+            "status": "active",
+            "type": {
+              "text": "Blue Cross Blue Shield"
+            },
+            "beneficiary": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "payor": [
+              {
+                "display": "Blue Cross Blue Shield"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://bluebutton.cms.gov/resources/variables/clm_id",
+            "value": "d9ff11b3-c927-55f0-cb06-25afbde8c244"
+          },
+          {
+            "system": "https://bluebutton.cms.gov/resources/identifier/claim-group",
+            "value": "99999999999"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "billablePeriod": {
+          "start": "2016-08-02T20:10:12-05:00",
+          "end": "2017-08-02T20:10:12-05:00"
+        },
+        "created": "2016-08-02T20:10:12-05:00",
+        "insurer": {
+          "display": "Blue Cross Blue Shield"
+        },
+        "provider": {
+          "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+        },
+        "referral": {
+          "reference": "#referral"
+        },
+        "claim": {
+          "reference": "urn:uuid:d9ff11b3-c927-55f0-cb06-25afbde8c244"
+        },
+        "outcome": "complete",
+        "careTeam": [
+          {
+            "sequence": 1,
+            "provider": {
+              "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+            },
+            "role": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claimcareteamrole",
+                  "code": "primary",
+                  "display": "Primary Care Practitioner"
+                }
+              ]
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "focal": true,
+            "coverage": {
+              "reference": "#coverage",
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "162673000",
+                  "display": "General examination of patient (procedure)"
+                }
+              ],
+              "text": "General examination of patient (procedure)"
+            },
+            "servicedPeriod": {
+              "start": "2016-08-02T19:55:12-05:00",
+              "end": "2016-08-02T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "19",
+                  "display": "Off Campus-Outpatient Hospital"
+                }
+              ]
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:64a6ac83-0016-832e-b5cc-dbe2eb6d6a45"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "informationSequence": [
+              1
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "140",
+                  "display": "Influenza, seasonal, injectable, preservative free"
+                }
+              ],
+              "text": "Influenza, seasonal, injectable, preservative free"
+            },
+            "servicedPeriod": {
+              "start": "2016-08-02T19:55:12-05:00",
+              "end": "2016-08-02T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "19",
+                  "display": "Off Campus-Outpatient Hospital"
+                }
+              ]
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            },
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt",
+                      "display": "Line Beneficiary Coinsurance Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 23.624000000000002,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt",
+                      "display": "Line Provider Payment Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 94.49600000000001,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+                      "display": "Line Submitted Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+                      "display": "Line Allowed Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt",
+                      "display": "Line Beneficiary Part B Deductible Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd",
+                      "display": "Line Processing Indicator Code"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "total": [
+          {
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                  "code": "submitted",
+                  "display": "Submitted Amount"
+                }
+              ],
+              "text": "Submitted Amount"
+            },
+            "amount": {
+              "value": 108.57,
+              "currency": "USD"
+            }
+          }
+        ],
+        "payment": {
+          "amount": {
+            "value": 94.49600000000001,
+            "currency": "USD"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "ExplanationOfBenefit"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "55b1ce99-caee-32e7-b38b-26cdd53d1486",
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "55b1ce99-caee-32e7-b38b-26cdd53d1486"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6122733000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2450 RIVERSIDE AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999989"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Gleason633",
+            "given": [
+              "Mariam937"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Mariam937.Gleason633@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2450 RIVERSIDE AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:678fbf52-eeb9-e52e-fb85-07f16e6102f0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "678fbf52-eeb9-e52e-fb85-07f16e6102f0",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185345009",
+                "display": "Encounter for symptom"
+              }
+            ],
+            "text": "Encounter for symptom"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Mr. Antone63 Lebsack687"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2017-05-22T19:55:12-05:00",
+              "end": "2017-05-22T20:10:12-05:00"
+            },
+            "individual": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+              "display": "Dr. Mariam937 Gleason633"
+            }
+          }
+        ],
+        "period": {
+          "start": "2017-05-22T19:55:12-05:00",
+          "end": "2017-05-22T20:10:12-05:00"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "444814009",
+                "display": "Viral sinusitis (disorder)"
+              }
+            ]
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+          "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0d4fd1e-2e4f-0cca-6774-a3849475e4d9",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "c0d4fd1e-2e4f-0cca-6774-a3849475e4d9",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "444814009",
+              "display": "Viral sinusitis (disorder)"
+            }
+          ],
+          "text": "Viral sinusitis (disorder)"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:678fbf52-eeb9-e52e-fb85-07f16e6102f0"
+        },
+        "onsetDateTime": "2017-05-22T19:55:12-05:00",
+        "abatementDateTime": "2017-06-12T19:55:12-05:00",
+        "recordedDate": "2017-05-22T19:55:12-05:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a24bd821-d4c6-d2cf-bbd3-b3a178e930c6",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "a24bd821-d4c6-d2cf-bbd3-b3a178e930c6",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Antone63 Lebsack687"
+        },
+        "billablePeriod": {
+          "start": "2017-05-22T19:55:12-05:00",
+          "end": "2017-05-22T20:10:12-05:00"
+        },
+        "created": "2017-05-22T20:10:12-05:00",
+        "provider": {
+          "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+          "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+        },
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+              "code": "normal"
+            }
+          ]
+        },
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisReference": {
+              "reference": "urn:uuid:c0d4fd1e-2e4f-0cca-6774-a3849475e4d9"
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "sequence": 1,
+            "focal": true,
+            "coverage": {
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "185345009",
+                  "display": "Encounter for symptom"
+                }
+              ],
+              "text": "Encounter for symptom"
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:678fbf52-eeb9-e52e-fb85-07f16e6102f0"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "diagnosisSequence": [
+              1
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "444814009",
+                  "display": "Viral sinusitis (disorder)"
+                }
+              ],
+              "text": "Viral sinusitis (disorder)"
+            }
+          }
+        ],
+        "total": {
+          "value": 108.57,
+          "currency": "USD"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Claim"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1b5b421b-42e3-5e3c-61b0-23ab9a40672f",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "1b5b421b-42e3-5e3c-61b0-23ab9a40672f",
+        "contained": [
+          {
+            "resourceType": "ServiceRequest",
+            "id": "referral",
+            "status": "completed",
+            "intent": "order",
+            "subject": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "requester": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+            },
+            "performer": [
+              {
+                "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+              }
+            ]
+          },
+          {
+            "resourceType": "Coverage",
+            "id": "coverage",
+            "status": "active",
+            "type": {
+              "text": "Blue Cross Blue Shield"
+            },
+            "beneficiary": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "payor": [
+              {
+                "display": "Blue Cross Blue Shield"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://bluebutton.cms.gov/resources/variables/clm_id",
+            "value": "a24bd821-d4c6-d2cf-bbd3-b3a178e930c6"
+          },
+          {
+            "system": "https://bluebutton.cms.gov/resources/identifier/claim-group",
+            "value": "99999999999"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "billablePeriod": {
+          "start": "2017-05-22T20:10:12-05:00",
+          "end": "2018-05-22T20:10:12-05:00"
+        },
+        "created": "2017-05-22T20:10:12-05:00",
+        "insurer": {
+          "display": "Blue Cross Blue Shield"
+        },
+        "provider": {
+          "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+        },
+        "referral": {
+          "reference": "#referral"
+        },
+        "claim": {
+          "reference": "urn:uuid:a24bd821-d4c6-d2cf-bbd3-b3a178e930c6"
+        },
+        "outcome": "complete",
+        "careTeam": [
+          {
+            "sequence": 1,
+            "provider": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+            },
+            "role": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claimcareteamrole",
+                  "code": "primary",
+                  "display": "Primary Care Practitioner"
+                }
+              ]
+            }
+          }
+        ],
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisReference": {
+              "reference": "urn:uuid:c0d4fd1e-2e4f-0cca-6774-a3849475e4d9"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+                    "code": "principal"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "insurance": [
+          {
+            "focal": true,
+            "coverage": {
+              "reference": "#coverage",
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "185345009",
+                  "display": "Encounter for symptom"
+                }
+              ],
+              "text": "Encounter for symptom"
+            },
+            "servicedPeriod": {
+              "start": "2017-05-22T19:55:12-05:00",
+              "end": "2017-05-22T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:678fbf52-eeb9-e52e-fb85-07f16e6102f0"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "diagnosisSequence": [
+              1
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "444814009",
+                  "display": "Viral sinusitis (disorder)"
+                }
+              ],
+              "text": "Viral sinusitis (disorder)"
+            },
+            "servicedPeriod": {
+              "start": "2017-05-22T19:55:12-05:00",
+              "end": "2017-05-22T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            }
+          }
+        ],
+        "total": [
+          {
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                  "code": "submitted",
+                  "display": "Submitted Amount"
+                }
+              ],
+              "text": "Submitted Amount"
+            },
+            "amount": {
+              "value": 108.57,
+              "currency": "USD"
+            }
+          }
+        ],
+        "payment": {
+          "amount": {
+            "value": 0.0,
+            "currency": "USD"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "ExplanationOfBenefit"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "3bba51b0-c2c4-8372-1720-5dae1f8ad2b3",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "162673000",
+                "display": "General examination of patient (procedure)"
+              }
+            ],
+            "text": "General examination of patient (procedure)"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Mr. Antone63 Lebsack687"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2019-08-06T19:55:12-05:00",
+              "end": "2019-08-06T20:10:12-05:00"
+            },
+            "individual": {
+              "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45",
+              "display": "Dr. Loren192 Fay398"
+            }
+          }
+        ],
+        "period": {
+          "start": "2019-08-06T19:55:12-05:00",
+          "end": "2019-08-06T20:10:12-05:00"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+          "display": "CHILDRENS HEALTH CARE"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:26065a31-3d0b-93cf-df40-0b25b7ae1a5d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "26065a31-3d0b-93cf-df40-0b25b7ae1a5d",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 176.3,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd764a7e-767a-039b-6df7-8f1997733428",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bd764a7e-767a-039b-6df7-8f1997733428",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 4,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7cf08748-863a-0a27-9df8-8d6e31117bc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7cf08748-863a-0a27-9df8-8d6e31117bc4",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 93,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8867b47e-e64e-a033-4b2b-1379078df19a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "8867b47e-e64e-a033-4b2b-1379078df19a",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body Mass Index"
+            }
+          ],
+          "text": "Body Mass Index"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 29.93,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ceb62203-4f9a-8090-1b6c-35d4c120e60e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ceb62203-4f9a-8090-1b6c-35d4c120e60e",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood Pressure"
+            }
+          ],
+          "text": "Blood Pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic Blood Pressure"
+                }
+              ],
+              "text": "Diastolic Blood Pressure"
+            },
+            "valueQuantity": {
+              "value": 83,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic Blood Pressure"
+                }
+              ],
+              "text": "Systolic Blood Pressure"
+            },
+            "valueQuantity": {
+              "value": 122,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1176cf9d-47c4-0f06-3c38-377626349503",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1176cf9d-47c4-0f06-3c38-377626349503",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 94,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0cd63c30-cb36-4977-22e7-8dfca2b375a3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0cd63c30-cb36-4977-22e7-8dfca2b375a3",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 14,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:62447433-1edd-2743-bfc7-574dbd85425f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "62447433-1edd-2743-bfc7-574dbd85425f",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 5.5147,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a9951359-863e-0aee-f7cb-145eaa85fd35",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a9951359-863e-0aee-f7cb-145eaa85fd35",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "789-8",
+              "display": "Erythrocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Erythrocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 4.4868,
+          "unit": "10*6/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*6/uL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6bb12d93-3173-2a00-561e-bd52fe327430",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6bb12d93-3173-2a00-561e-bd52fe327430",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 13.144,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:43ca5338-2d9b-0f2c-cbbd-82c5c3fa0a35",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "43ca5338-2d9b-0f2c-cbbd-82c5c3fa0a35",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4544-3",
+              "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+            }
+          ],
+          "text": "Hematocrit [Volume Fraction] of Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 47.699,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e73d2480-d7bb-9ab4-a0a2-d069f0ddc7fb",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e73d2480-d7bb-9ab4-a0a2-d069f0ddc7fb",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "787-2",
+              "display": "MCV [Entitic volume] by Automated count"
+            }
+          ],
+          "text": "MCV [Entitic volume] by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 94.066,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0445283a-482a-250b-e570-64d1d000f95b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0445283a-482a-250b-e570-64d1d000f95b",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "785-6",
+              "display": "MCH [Entitic mass] by Automated count"
+            }
+          ],
+          "text": "MCH [Entitic mass] by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 27.646,
+          "unit": "pg",
+          "system": "http://unitsofmeasure.org",
+          "code": "pg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b8ad9b6-4980-a7bb-46bd-928c864fdac9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5b8ad9b6-4980-a7bb-46bd-928c864fdac9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "786-4",
+              "display": "MCHC [Mass/volume] by Automated count"
+            }
+          ],
+          "text": "MCHC [Mass/volume] by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 35.611,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fbb02202-bc42-1089-f9f0-fe76d9a51b21",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "fbb02202-bc42-1089-f9f0-fe76d9a51b21",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21000-5",
+              "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+            }
+          ],
+          "text": "Erythrocyte distribution width [Entitic volume] by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 41.261,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:578eb05e-35ce-22d6-07c7-6f4abf1f35a7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "578eb05e-35ce-22d6-07c7-6f4abf1f35a7",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Platelets [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 423.92,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:031ee5e9-4867-8b47-bfbf-827acfe2e849",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "031ee5e9-4867-8b47-bfbf-827acfe2e849",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "32207-3",
+              "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 221.68,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f35489a-2915-09a8-facb-5a4323984a26",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1f35489a-2915-09a8-facb-5a4323984a26",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "32623-1",
+              "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueQuantity": {
+          "value": 10.762,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fcafb177-7150-d50d-b026-98fb78c44653",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "fcafb177-7150-d50d-b026-98fb78c44653",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status NHIS"
+            }
+          ],
+          "text": "Tobacco smoking status NHIS"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "8517006",
+              "display": "Former smoker"
+            }
+          ],
+          "text": "Former smoker"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d38aa9ff-0407-9e3a-7e40-3dac4cf87edb",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "d38aa9ff-0407-9e3a-7e40-3dac4cf87edb",
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "140",
+              "display": "Influenza, seasonal, injectable, preservative free"
+            }
+          ],
+          "text": "Influenza, seasonal, injectable, preservative free"
+        },
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "occurrenceDateTime": "2019-08-06T19:55:12-05:00",
+        "primarySource": true
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d4eaacea-c99a-d444-408d-35e61defdc08",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "d4eaacea-c99a-d444-408d-35e61defdc08",
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "113",
+              "display": "Td (adult) preservative free"
+            }
+          ],
+          "text": "Td (adult) preservative free"
+        },
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "occurrenceDateTime": "2019-08-06T19:55:12-05:00",
+        "primarySource": true
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:97ac3e16-0bb0-0f77-c311-b8cf914e4be0",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "97ac3e16-0bb0-0f77-c311-b8cf914e4be0",
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "43",
+              "display": "Hep B, adult"
+            }
+          ],
+          "text": "Hep B, adult"
+        },
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "occurrenceDateTime": "2019-08-06T19:55:12-05:00",
+        "primarySource": true
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50c90db7-e1d1-c67a-9abc-bf7f871e75f2",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "50c90db7-e1d1-c67a-9abc-bf7f871e75f2",
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "114",
+              "display": "meningococcal MCV4P"
+            }
+          ],
+          "text": "meningococcal MCV4P"
+        },
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "occurrenceDateTime": "2019-08-06T19:55:12-05:00",
+        "primarySource": true
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:530f9ad9-e983-b1b1-2f92-2e8cfb906752",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "530f9ad9-e983-b1b1-2f92-2e8cfb906752",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "Complete blood count (hemogram) panel - Blood by Automated count"
+            }
+          ],
+          "text": "Complete blood count (hemogram) panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+        },
+        "effectiveDateTime": "2019-08-06T19:55:12-05:00",
+        "issued": "2019-08-06T19:55:12.884-05:00",
+        "result": [
+          {
+            "reference": "urn:uuid:62447433-1edd-2743-bfc7-574dbd85425f",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:a9951359-863e-0aee-f7cb-145eaa85fd35",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:6bb12d93-3173-2a00-561e-bd52fe327430",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:43ca5338-2d9b-0f2c-cbbd-82c5c3fa0a35",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:e73d2480-d7bb-9ab4-a0a2-d069f0ddc7fb",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:0445283a-482a-250b-e570-64d1d000f95b",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:5b8ad9b6-4980-a7bb-46bd-928c864fdac9",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:fbb02202-bc42-1089-f9f0-fe76d9a51b21",
+            "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:578eb05e-35ce-22d6-07c7-6f4abf1f35a7",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:031ee5e9-4867-8b47-bfbf-827acfe2e849",
+            "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:1f35489a-2915-09a8-facb-5a4323984a26",
+            "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:878e0904-a1af-80e2-0055-84e133287ae1",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "878e0904-a1af-80e2-0055-84e133287ae1",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Antone63 Lebsack687"
+        },
+        "billablePeriod": {
+          "start": "2019-08-06T19:55:12-05:00",
+          "end": "2019-08-06T20:10:12-05:00"
+        },
+        "created": "2019-08-06T20:10:12-05:00",
+        "provider": {
+          "reference": "urn:uuid:1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+          "display": "CHILDRENS HEALTH CARE"
+        },
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+              "code": "normal"
+            }
+          ]
+        },
+        "supportingInfo": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                  "code": "info"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "urn:uuid:d38aa9ff-0407-9e3a-7e40-3dac4cf87edb"
+            }
+          },
+          {
+            "sequence": 2,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                  "code": "info"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "urn:uuid:d4eaacea-c99a-d444-408d-35e61defdc08"
+            }
+          },
+          {
+            "sequence": 3,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                  "code": "info"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "urn:uuid:97ac3e16-0bb0-0f77-c311-b8cf914e4be0"
+            }
+          },
+          {
+            "sequence": 4,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                  "code": "info"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "urn:uuid:50c90db7-e1d1-c67a-9abc-bf7f871e75f2"
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "sequence": 1,
+            "focal": true,
+            "coverage": {
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "162673000",
+                  "display": "General examination of patient (procedure)"
+                }
+              ],
+              "text": "General examination of patient (procedure)"
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "informationSequence": [
+              1
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "140",
+                  "display": "Influenza, seasonal, injectable, preservative free"
+                }
+              ],
+              "text": "Influenza, seasonal, injectable, preservative free"
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            }
+          },
+          {
+            "sequence": 3,
+            "informationSequence": [
+              2
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "113",
+                  "display": "Td (adult) preservative free"
+                }
+              ],
+              "text": "Td (adult) preservative free"
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            }
+          },
+          {
+            "sequence": 4,
+            "informationSequence": [
+              3
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "43",
+                  "display": "Hep B, adult"
+                }
+              ],
+              "text": "Hep B, adult"
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            }
+          },
+          {
+            "sequence": 5,
+            "informationSequence": [
+              4
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "114",
+                  "display": "meningococcal MCV4P"
+                }
+              ],
+              "text": "meningococcal MCV4P"
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            }
+          }
+        ],
+        "total": {
+          "value": 108.57,
+          "currency": "USD"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Claim"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:78e81d3d-4874-c71a-1030-23d299be01d1",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "78e81d3d-4874-c71a-1030-23d299be01d1",
+        "contained": [
+          {
+            "resourceType": "ServiceRequest",
+            "id": "referral",
+            "status": "completed",
+            "intent": "order",
+            "subject": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "requester": {
+              "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+            },
+            "performer": [
+              {
+                "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+              }
+            ]
+          },
+          {
+            "resourceType": "Coverage",
+            "id": "coverage",
+            "status": "active",
+            "type": {
+              "text": "Blue Cross Blue Shield"
+            },
+            "beneficiary": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "payor": [
+              {
+                "display": "Blue Cross Blue Shield"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://bluebutton.cms.gov/resources/variables/clm_id",
+            "value": "878e0904-a1af-80e2-0055-84e133287ae1"
+          },
+          {
+            "system": "https://bluebutton.cms.gov/resources/identifier/claim-group",
+            "value": "99999999999"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "billablePeriod": {
+          "start": "2019-08-06T20:10:12-05:00",
+          "end": "2020-08-06T20:10:12-05:00"
+        },
+        "created": "2019-08-06T20:10:12-05:00",
+        "insurer": {
+          "display": "Blue Cross Blue Shield"
+        },
+        "provider": {
+          "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+        },
+        "referral": {
+          "reference": "#referral"
+        },
+        "claim": {
+          "reference": "urn:uuid:878e0904-a1af-80e2-0055-84e133287ae1"
+        },
+        "outcome": "complete",
+        "careTeam": [
+          {
+            "sequence": 1,
+            "provider": {
+              "reference": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45"
+            },
+            "role": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claimcareteamrole",
+                  "code": "primary",
+                  "display": "Primary Care Practitioner"
+                }
+              ]
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "focal": true,
+            "coverage": {
+              "reference": "#coverage",
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "162673000",
+                  "display": "General examination of patient (procedure)"
+                }
+              ],
+              "text": "General examination of patient (procedure)"
+            },
+            "servicedPeriod": {
+              "start": "2019-08-06T19:55:12-05:00",
+              "end": "2019-08-06T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "19",
+                  "display": "Off Campus-Outpatient Hospital"
+                }
+              ]
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:3bba51b0-c2c4-8372-1720-5dae1f8ad2b3"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "informationSequence": [
+              1
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "140",
+                  "display": "Influenza, seasonal, injectable, preservative free"
+                }
+              ],
+              "text": "Influenza, seasonal, injectable, preservative free"
+            },
+            "servicedPeriod": {
+              "start": "2019-08-06T19:55:12-05:00",
+              "end": "2019-08-06T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "19",
+                  "display": "Off Campus-Outpatient Hospital"
+                }
+              ]
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            },
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt",
+                      "display": "Line Beneficiary Coinsurance Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 23.624000000000002,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt",
+                      "display": "Line Provider Payment Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 94.49600000000001,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+                      "display": "Line Submitted Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+                      "display": "Line Allowed Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt",
+                      "display": "Line Beneficiary Part B Deductible Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd",
+                      "display": "Line Processing Indicator Code"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "sequence": 3,
+            "informationSequence": [
+              2
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "113",
+                  "display": "Td (adult) preservative free"
+                }
+              ],
+              "text": "Td (adult) preservative free"
+            },
+            "servicedPeriod": {
+              "start": "2019-08-06T19:55:12-05:00",
+              "end": "2019-08-06T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "19",
+                  "display": "Off Campus-Outpatient Hospital"
+                }
+              ]
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            },
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt",
+                      "display": "Line Beneficiary Coinsurance Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 23.624000000000002,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt",
+                      "display": "Line Provider Payment Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 94.49600000000001,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+                      "display": "Line Submitted Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+                      "display": "Line Allowed Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt",
+                      "display": "Line Beneficiary Part B Deductible Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd",
+                      "display": "Line Processing Indicator Code"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "sequence": 4,
+            "informationSequence": [
+              3
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "43",
+                  "display": "Hep B, adult"
+                }
+              ],
+              "text": "Hep B, adult"
+            },
+            "servicedPeriod": {
+              "start": "2019-08-06T19:55:12-05:00",
+              "end": "2019-08-06T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "19",
+                  "display": "Off Campus-Outpatient Hospital"
+                }
+              ]
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            },
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt",
+                      "display": "Line Beneficiary Coinsurance Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 23.624000000000002,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt",
+                      "display": "Line Provider Payment Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 94.49600000000001,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+                      "display": "Line Submitted Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+                      "display": "Line Allowed Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt",
+                      "display": "Line Beneficiary Part B Deductible Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd",
+                      "display": "Line Processing Indicator Code"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "sequence": 5,
+            "informationSequence": [
+              4
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/cvx",
+                  "code": "114",
+                  "display": "meningococcal MCV4P"
+                }
+              ],
+              "text": "meningococcal MCV4P"
+            },
+            "servicedPeriod": {
+              "start": "2019-08-06T19:55:12-05:00",
+              "end": "2019-08-06T20:10:12-05:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "19",
+                  "display": "Off Campus-Outpatient Hospital"
+                }
+              ]
+            },
+            "net": {
+              "value": 118.12,
+              "currency": "USD"
+            },
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt",
+                      "display": "Line Beneficiary Coinsurance Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 23.624000000000002,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt",
+                      "display": "Line Provider Payment Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 94.49600000000001,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+                      "display": "Line Submitted Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+                      "display": "Line Allowed Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 118.12,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt",
+                      "display": "Line Beneficiary Part B Deductible Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd",
+                      "display": "Line Processing Indicator Code"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "total": [
+          {
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                  "code": "submitted",
+                  "display": "Submitted Amount"
+                }
+              ],
+              "text": "Submitted Amount"
+            },
+            "amount": {
+              "value": 108.57,
+              "currency": "USD"
+            }
+          }
+        ],
+        "payment": {
+          "amount": {
+            "value": 377.98400000000004,
+            "currency": "USD"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "ExplanationOfBenefit"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "e2db962d-45b1-40d1-92eb-8474649d7067",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185345009",
+                "display": "Encounter for symptom (procedure)"
+              }
+            ],
+            "text": "Encounter for symptom (procedure)"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Mr. Antone63 Lebsack687"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "individual": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+              "display": "Dr. Mariam937 Gleason633"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-03-06T18:55:12-06:00",
+          "end": "2020-03-06T19:44:12-06:00"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+          "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:abb553a2-9a44-d84c-2d08-ee27d31a1303",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "abb553a2-9a44-d84c-2d08-ee27d31a1303",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "84229001",
+              "display": "Fatigue (finding)"
+            }
+          ],
+          "text": "Fatigue (finding)"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "onsetDateTime": "2020-03-06T18:55:12-06:00",
+        "abatementDateTime": "2020-04-10T20:44:12-05:00",
+        "recordedDate": "2020-03-06T18:55:12-06:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a2ad013d-be67-0c42-2f85-827883178f5d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "a2ad013d-be67-0c42-2f85-827883178f5d",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "386661006",
+              "display": "Fever (finding)"
+            }
+          ],
+          "text": "Fever (finding)"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "onsetDateTime": "2020-03-06T18:55:12-06:00",
+        "abatementDateTime": "2020-04-10T20:44:12-05:00",
+        "recordedDate": "2020-03-06T18:55:12-06:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2b443863-f699-9cc2-e4b2-b226e8d3b610",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "2b443863-f699-9cc2-e4b2-b226e8d3b610",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "36955009",
+              "display": "Loss of taste (finding)"
+            }
+          ],
+          "text": "Loss of taste (finding)"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "onsetDateTime": "2020-03-06T18:55:12-06:00",
+        "abatementDateTime": "2020-04-10T20:44:12-05:00",
+        "recordedDate": "2020-03-06T18:55:12-06:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2e214d79-b91e-a253-6978-6f8286bd685c",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "2e214d79-b91e-a253-6978-6f8286bd685c",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "840544004",
+              "display": "Suspected COVID-19"
+            }
+          ],
+          "text": "Suspected COVID-19"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "onsetDateTime": "2020-03-06T18:55:12-06:00",
+        "abatementDateTime": "2020-03-06T19:44:12-06:00",
+        "recordedDate": "2020-03-06T18:55:12-06:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:baad3c4e-f396-735c-5dd7-b1fbfbad9627",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "baad3c4e-f396-735c-5dd7-b1fbfbad9627",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "840539006",
+              "display": "COVID-19"
+            }
+          ],
+          "text": "COVID-19"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "onsetDateTime": "2020-03-06T19:44:12-06:00",
+        "abatementDateTime": "2020-04-10T20:44:12-05:00",
+        "recordedDate": "2020-03-06T19:44:12-06:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ed3f67d8-2bcb-fbc6-75d9-1ef99fa39845",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ed3f67d8-2bcb-fbc6-75d9-1ef99fa39845",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8331-1",
+              "display": "Oral temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T18:55:12-06:00",
+        "issued": "2020-03-06T18:55:12.884-06:00",
+        "valueQuantity": {
+          "value": 38.94,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:13192121-cdfc-6adf-3a7c-ebe9f1766af8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "13192121-cdfc-6adf-3a7c-ebe9f1766af8",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T18:55:12-06:00",
+        "issued": "2020-03-06T18:55:12.884-06:00",
+        "valueQuantity": {
+          "value": 15.933,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:031e2982-d851-5b81-05fe-4d990f008cba",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "031e2982-d851-5b81-05fe-4d990f008cba",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T18:55:12-06:00",
+        "issued": "2020-03-06T18:55:12.884-06:00",
+        "valueQuantity": {
+          "value": 83.586,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0756a413-3512-da73-f90e-08c55d648539",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0756a413-3512-da73-f90e-08c55d648539",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen saturation in Arterial blood"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T18:55:12-06:00",
+        "issued": "2020-03-06T18:55:12.884-06:00",
+        "valueQuantity": {
+          "value": 85.22,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:031a2a59-dd88-ef0e-a4cc-f7f1346458a2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "031a2a59-dd88-ef0e-a4cc-f7f1346458a2",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood Pressure"
+            }
+          ],
+          "text": "Blood Pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T18:55:12-06:00",
+        "issued": "2020-03-06T18:55:12.884-06:00",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic Blood Pressure"
+                }
+              ],
+              "text": "Diastolic Blood Pressure"
+            },
+            "valueQuantity": {
+              "value": 82,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic Blood Pressure"
+                }
+              ],
+              "text": "Systolic Blood Pressure"
+            },
+            "valueQuantity": {
+              "value": 108,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:338af849-94da-8a23-d888-9a781ea66b22",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "338af849-94da-8a23-d888-9a781ea66b22",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T18:55:12-06:00",
+        "issued": "2020-03-06T18:55:12.884-06:00",
+        "valueQuantity": {
+          "value": 93,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a703636f-16b1-ff1c-27c9-00e5256698a9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a703636f-16b1-ff1c-27c9-00e5256698a9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "80382-5",
+              "display": "Influenza virus A Ag [Presence] in Nasopharynx by Rapid immunoassay"
+            }
+          ],
+          "text": "Influenza virus A Ag [Presence] in Nasopharynx by Rapid immunoassay"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T19:06:12-06:00",
+        "issued": "2020-03-06T19:06:12.884-06:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260415000",
+              "display": "Not detected (qualifier value)"
+            }
+          ],
+          "text": "Not detected (qualifier value)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:73871163-c74d-6b61-a660-aa80c0ba84f0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "73871163-c74d-6b61-a660-aa80c0ba84f0",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "80383-3",
+              "display": "Influenza virus B Ag [Presence] in Nasopharynx by Rapid immunoassay"
+            }
+          ],
+          "text": "Influenza virus B Ag [Presence] in Nasopharynx by Rapid immunoassay"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T19:06:12-06:00",
+        "issued": "2020-03-06T19:06:12.884-06:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260415000",
+              "display": "Not detected (qualifier value)"
+            }
+          ],
+          "text": "Not detected (qualifier value)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f6ca187-bc23-affc-2a24-282bc27c67bd",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "9f6ca187-bc23-affc-2a24-282bc27c67bd",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "94531-1",
+              "display": "SARS-CoV-2 RNA Pnl Resp NAA+probe"
+            }
+          ],
+          "text": "SARS-CoV-2 RNA Pnl Resp NAA+probe"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T19:44:12-06:00",
+        "issued": "2020-03-06T19:44:12.884-06:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260373001",
+              "display": "Detected (qualifier value)"
+            }
+          ],
+          "text": "Detected (qualifier value)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:618bbdf1-abac-e17f-55f8-986fc95fd965",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "618bbdf1-abac-e17f-55f8-986fc95fd965",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "261352009",
+              "display": "Face mask (physical object)"
+            }
+          ],
+          "text": "Face mask (physical object)"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "performedPeriod": {
+          "start": "2020-03-06T18:55:12-06:00",
+          "end": "2020-03-06T19:06:12-06:00"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:2e214d79-b91e-a253-6978-6f8286bd685c",
+            "display": "Suspected COVID-19"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d286c7a1-7267-5224-5545-50d31fe86392",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "d286c7a1-7267-5224-5545-50d31fe86392",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "261352009",
+              "display": "Face mask (physical object)"
+            }
+          ],
+          "text": "Face mask (physical object)"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "performedPeriod": {
+          "start": "2020-03-10T19:55:12-05:00",
+          "end": "2020-03-10T20:10:12-05:00"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:2e214d79-b91e-a253-6978-6f8286bd685c",
+            "display": "Suspected COVID-19"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Procedure"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce8691f8-4120-9a36-a2c6-486c0831da46",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ce8691f8-4120-9a36-a2c6-486c0831da46",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "80381-7",
+              "display": "Influenza virus A and B Ag panel - Nasopharynx by Rapid immunoassay"
+            }
+          ],
+          "text": "Influenza virus A and B Ag panel - Nasopharynx by Rapid immunoassay"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T19:06:12-06:00",
+        "issued": "2020-03-06T19:06:12.884-06:00",
+        "result": [
+          {
+            "reference": "urn:uuid:a703636f-16b1-ff1c-27c9-00e5256698a9",
+            "display": "Influenza virus A Ag [Presence] in Nasopharynx by Rapid immunoassay"
+          },
+          {
+            "reference": "urn:uuid:73871163-c74d-6b61-a660-aa80c0ba84f0",
+            "display": "Influenza virus B Ag [Presence] in Nasopharynx by Rapid immunoassay"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c131e167-b71c-42b0-6f82-17b845f6c11f",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "c131e167-b71c-42b0-6f82-17b845f6c11f",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "94531-1",
+              "display": "SARS-CoV-2 RNA Pnl Resp NAA+probe"
+            }
+          ],
+          "text": "SARS-CoV-2 RNA Pnl Resp NAA+probe"
+        },
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "effectiveDateTime": "2020-03-06T19:44:12-06:00",
+        "issued": "2020-03-06T19:44:12.884-06:00",
+        "result": [
+          {
+            "reference": "urn:uuid:9f6ca187-bc23-affc-2a24-282bc27c67bd",
+            "display": "SARS-CoV-2 RNA Pnl Resp NAA+probe"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c11a16d-8827-f623-477f-a1acac4140dc",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "7c11a16d-8827-f623-477f-a1acac4140dc",
+        "status": "inactive",
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "period": {
+          "start": "2020-03-06T19:06:12-06:00",
+          "end": "2020-03-06T19:44:12-06:00"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "116154003",
+                    "display": "Patient"
+                  }
+                ],
+                "text": "Patient"
+              }
+            ],
+            "member": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+              "display": "Mr. Antone63 Lebsack687"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "223366009",
+                    "display": "Healthcare professional (occupation)"
+                  }
+                ],
+                "text": "Healthcare professional (occupation)"
+              }
+            ],
+            "member": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+              "display": "Dr. Mariam937 Gleason633"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "224891009",
+                    "display": "Healthcare services (qualifier value)"
+                  }
+                ],
+                "text": "Healthcare services (qualifier value)"
+              }
+            ],
+            "member": {
+              "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+              "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+            }
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "840544004",
+                "display": "Suspected COVID-19"
+              }
+            ],
+            "text": "Suspected COVID-19"
+          }
+        ],
+        "managingOrganization": [
+          {
+            "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+            "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "CareTeam"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:552e05c0-6547-5bdc-c704-ba0fbff7711f",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "552e05c0-6547-5bdc-c704-ba0fbff7711f",
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "736376001",
+                "display": "Infectious disease care plan (record artifact)"
+              }
+            ],
+            "text": "Infectious disease care plan (record artifact)"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "period": {
+          "start": "2020-03-06T19:06:12-06:00",
+          "end": "2020-03-06T19:44:12-06:00"
+        },
+        "careTeam": [
+          {
+            "reference": "urn:uuid:7c11a16d-8827-f623-477f-a1acac4140dc"
+          }
+        ],
+        "addresses": [
+          {
+            "reference": "urn:uuid:2e214d79-b91e-a253-6978-6f8286bd685c"
+          }
+        ],
+        "activity": [
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "409524006",
+                    "display": "Airborne precautions (procedure)"
+                  }
+                ],
+                "text": "Airborne precautions (procedure)"
+              },
+              "status": "completed",
+              "location": {
+                "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+              }
+            }
+          },
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "409526008",
+                    "display": "Personal protective equipment (physical object)"
+                  }
+                ],
+                "text": "Personal protective equipment (physical object)"
+              },
+              "status": "completed",
+              "location": {
+                "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "CarePlan"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5fc00ac1-9ca0-0145-85e8-5d035c3bfa74",
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "5fc00ac1-9ca0-0145-85e8-5d035c3bfa74",
+        "status": "inactive",
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "period": {
+          "start": "2020-03-06T19:44:12-06:00",
+          "end": "2020-04-10T20:44:12-05:00"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "116154003",
+                    "display": "Patient"
+                  }
+                ],
+                "text": "Patient"
+              }
+            ],
+            "member": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+              "display": "Mr. Antone63 Lebsack687"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "223366009",
+                    "display": "Healthcare professional (occupation)"
+                  }
+                ],
+                "text": "Healthcare professional (occupation)"
+              }
+            ],
+            "member": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+              "display": "Dr. Mariam937 Gleason633"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "224891009",
+                    "display": "Healthcare services (qualifier value)"
+                  }
+                ],
+                "text": "Healthcare services (qualifier value)"
+              }
+            ],
+            "member": {
+              "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+              "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+            }
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "840539006",
+                "display": "COVID-19"
+              }
+            ],
+            "text": "COVID-19"
+          }
+        ],
+        "managingOrganization": [
+          {
+            "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+            "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "CareTeam"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0e96093e-dcef-f58b-9418-4be12da85491",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "0e96093e-dcef-f58b-9418-4be12da85491",
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "736376001",
+                "display": "Infectious disease care plan (record artifact)"
+              }
+            ],
+            "text": "Infectious disease care plan (record artifact)"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+        },
+        "period": {
+          "start": "2020-03-06T19:44:12-06:00",
+          "end": "2020-04-10T20:44:12-05:00"
+        },
+        "careTeam": [
+          {
+            "reference": "urn:uuid:5fc00ac1-9ca0-0145-85e8-5d035c3bfa74"
+          }
+        ],
+        "addresses": [
+          {
+            "reference": "urn:uuid:baad3c4e-f396-735c-5dd7-b1fbfbad9627"
+          }
+        ],
+        "activity": [
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "409524006",
+                    "display": "Airborne precautions (procedure)"
+                  }
+                ],
+                "text": "Airborne precautions (procedure)"
+              },
+              "status": "completed",
+              "location": {
+                "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+              }
+            }
+          },
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "361235007",
+                    "display": "Isolation of infected patient (procedure)"
+                  }
+                ],
+                "text": "Isolation of infected patient (procedure)"
+              },
+              "status": "completed",
+              "location": {
+                "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+              }
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "CarePlan"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e815155-305f-fb81-d41b-234dcdf624df",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "5e815155-305f-fb81-d41b-234dcdf624df",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7",
+          "display": "Antone63 Lebsack687"
+        },
+        "billablePeriod": {
+          "start": "2020-03-06T18:55:12-06:00",
+          "end": "2020-03-06T19:44:12-06:00"
+        },
+        "created": "2020-03-06T19:44:12-06:00",
+        "provider": {
+          "reference": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+          "display": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW"
+        },
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+              "code": "normal"
+            }
+          ]
+        },
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisReference": {
+              "reference": "urn:uuid:abb553a2-9a44-d84c-2d08-ee27d31a1303"
+            }
+          },
+          {
+            "sequence": 2,
+            "diagnosisReference": {
+              "reference": "urn:uuid:a2ad013d-be67-0c42-2f85-827883178f5d"
+            }
+          },
+          {
+            "sequence": 3,
+            "diagnosisReference": {
+              "reference": "urn:uuid:2b443863-f699-9cc2-e4b2-b226e8d3b610"
+            }
+          },
+          {
+            "sequence": 4,
+            "diagnosisReference": {
+              "reference": "urn:uuid:2e214d79-b91e-a253-6978-6f8286bd685c"
+            }
+          },
+          {
+            "sequence": 5,
+            "diagnosisReference": {
+              "reference": "urn:uuid:baad3c4e-f396-735c-5dd7-b1fbfbad9627"
+            }
+          }
+        ],
+        "procedure": [
+          {
+            "sequence": 1,
+            "procedureReference": {
+              "reference": "urn:uuid:618bbdf1-abac-e17f-55f8-986fc95fd965"
+            }
+          },
+          {
+            "sequence": 2,
+            "procedureReference": {
+              "reference": "urn:uuid:d286c7a1-7267-5224-5545-50d31fe86392"
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "sequence": 1,
+            "focal": true,
+            "coverage": {
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "185345009",
+                  "display": "Encounter for symptom (procedure)"
+                }
+              ],
+              "text": "Encounter for symptom (procedure)"
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "diagnosisSequence": [
+              1
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "84229001",
+                  "display": "Fatigue (finding)"
+                }
+              ],
+              "text": "Fatigue (finding)"
+            }
+          },
+          {
+            "sequence": 3,
+            "diagnosisSequence": [
+              2
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "386661006",
+                  "display": "Fever (finding)"
+                }
+              ],
+              "text": "Fever (finding)"
+            }
+          },
+          {
+            "sequence": 4,
+            "diagnosisSequence": [
+              3
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "36955009",
+                  "display": "Loss of taste (finding)"
+                }
+              ],
+              "text": "Loss of taste (finding)"
+            }
+          },
+          {
+            "sequence": 5,
+            "diagnosisSequence": [
+              4
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "840544004",
+                  "display": "Suspected COVID-19"
+                }
+              ],
+              "text": "Suspected COVID-19"
+            }
+          },
+          {
+            "sequence": 6,
+            "procedureSequence": [
+              1
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "261352009",
+                  "display": "Face mask (physical object)"
+                }
+              ],
+              "text": "Face mask (physical object)"
+            },
+            "net": {
+              "value": 434.30,
+              "currency": "USD"
+            }
+          },
+          {
+            "sequence": 7,
+            "procedureSequence": [
+              2
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "261352009",
+                  "display": "Face mask (physical object)"
+                }
+              ],
+              "text": "Face mask (physical object)"
+            },
+            "net": {
+              "value": 434.30,
+              "currency": "USD"
+            }
+          },
+          {
+            "sequence": 8,
+            "diagnosisSequence": [
+              5
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "840539006",
+                  "display": "COVID-19"
+                }
+              ],
+              "text": "COVID-19"
+            }
+          }
+        ],
+        "total": {
+          "value": 108.57,
+          "currency": "USD"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Claim"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:620e00af-342c-75c3-5b55-3e890f018139",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "620e00af-342c-75c3-5b55-3e890f018139",
+        "contained": [
+          {
+            "resourceType": "ServiceRequest",
+            "id": "referral",
+            "status": "completed",
+            "intent": "order",
+            "subject": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "requester": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+            },
+            "performer": [
+              {
+                "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+              }
+            ]
+          },
+          {
+            "resourceType": "Coverage",
+            "id": "coverage",
+            "status": "active",
+            "type": {
+              "text": "Blue Cross Blue Shield"
+            },
+            "beneficiary": {
+              "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+            },
+            "payor": [
+              {
+                "display": "Blue Cross Blue Shield"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://bluebutton.cms.gov/resources/variables/clm_id",
+            "value": "5e815155-305f-fb81-d41b-234dcdf624df"
+          },
+          {
+            "system": "https://bluebutton.cms.gov/resources/identifier/claim-group",
+            "value": "99999999999"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "urn:uuid:a7fefb0a-e326-b7ef-ce3c-2f97e77f15c7"
+        },
+        "billablePeriod": {
+          "start": "2020-03-06T19:44:12-06:00",
+          "end": "2021-03-06T19:44:12-06:00"
+        },
+        "created": "2020-03-06T19:44:12-06:00",
+        "insurer": {
+          "display": "Blue Cross Blue Shield"
+        },
+        "provider": {
+          "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+        },
+        "referral": {
+          "reference": "#referral"
+        },
+        "claim": {
+          "reference": "urn:uuid:5e815155-305f-fb81-d41b-234dcdf624df"
+        },
+        "outcome": "complete",
+        "careTeam": [
+          {
+            "sequence": 1,
+            "provider": {
+              "reference": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe"
+            },
+            "role": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claimcareteamrole",
+                  "code": "primary",
+                  "display": "Primary Care Practitioner"
+                }
+              ]
+            }
+          }
+        ],
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisReference": {
+              "reference": "urn:uuid:abb553a2-9a44-d84c-2d08-ee27d31a1303"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+                    "code": "principal"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "diagnosisReference": {
+              "reference": "urn:uuid:a2ad013d-be67-0c42-2f85-827883178f5d"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+                    "code": "principal"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sequence": 3,
+            "diagnosisReference": {
+              "reference": "urn:uuid:2b443863-f699-9cc2-e4b2-b226e8d3b610"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+                    "code": "principal"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sequence": 4,
+            "diagnosisReference": {
+              "reference": "urn:uuid:2e214d79-b91e-a253-6978-6f8286bd685c"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+                    "code": "principal"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sequence": 5,
+            "diagnosisReference": {
+              "reference": "urn:uuid:baad3c4e-f396-735c-5dd7-b1fbfbad9627"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+                    "code": "principal"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "insurance": [
+          {
+            "focal": true,
+            "coverage": {
+              "reference": "#coverage",
+              "display": "Blue Cross Blue Shield"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "185345009",
+                  "display": "Encounter for symptom (procedure)"
+                }
+              ],
+              "text": "Encounter for symptom (procedure)"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            },
+            "encounter": [
+              {
+                "reference": "urn:uuid:e2db962d-45b1-40d1-92eb-8474649d7067"
+              }
+            ]
+          },
+          {
+            "sequence": 2,
+            "diagnosisSequence": [
+              1
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "84229001",
+                  "display": "Fatigue (finding)"
+                }
+              ],
+              "text": "Fatigue (finding)"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 3,
+            "diagnosisSequence": [
+              2
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "386661006",
+                  "display": "Fever (finding)"
+                }
+              ],
+              "text": "Fever (finding)"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 4,
+            "diagnosisSequence": [
+              3
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "36955009",
+                  "display": "Loss of taste (finding)"
+                }
+              ],
+              "text": "Loss of taste (finding)"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 5,
+            "diagnosisSequence": [
+              4
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "840544004",
+                  "display": "Suspected COVID-19"
+                }
+              ],
+              "text": "Suspected COVID-19"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            }
+          },
+          {
+            "sequence": 6,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "261352009",
+                  "display": "Face mask (physical object)"
+                }
+              ],
+              "text": "Face mask (physical object)"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            },
+            "net": {
+              "value": 434.30,
+              "currency": "USD"
+            },
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt",
+                      "display": "Line Beneficiary Coinsurance Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 86.86000000000001,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt",
+                      "display": "Line Provider Payment Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 347.44000000000005,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+                      "display": "Line Submitted Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 434.30,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+                      "display": "Line Allowed Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 434.30,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt",
+                      "display": "Line Beneficiary Part B Deductible Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd",
+                      "display": "Line Processing Indicator Code"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "sequence": 7,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "261352009",
+                  "display": "Face mask (physical object)"
+                }
+              ],
+              "text": "Face mask (physical object)"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            },
+            "net": {
+              "value": 434.30,
+              "currency": "USD"
+            },
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt",
+                      "display": "Line Beneficiary Coinsurance Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 86.86000000000001,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt",
+                      "display": "Line Provider Payment Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 347.44000000000005,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+                      "display": "Line Submitted Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 434.30,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+                      "display": "Line Allowed Charge Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 434.30,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt",
+                      "display": "Line Beneficiary Part B Deductible Amount"
+                    }
+                  ]
+                },
+                "amount": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              },
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
+                      "code": "https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd",
+                      "display": "Line Processing Indicator Code"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "sequence": 8,
+            "diagnosisSequence": [
+              5
+            ],
+            "category": {
+              "coding": [
+                {
+                  "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd",
+                  "code": "1",
+                  "display": "Medical care"
+                }
+              ]
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "840539006",
+                  "display": "COVID-19"
+                }
+              ],
+              "text": "COVID-19"
+            },
+            "servicedPeriod": {
+              "start": "2020-03-06T18:55:12-06:00",
+              "end": "2020-03-06T19:44:12-06:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                  "code": "21",
+                  "display": "Inpatient Hospital"
+                }
+              ]
+            }
+          }
+        ],
+        "total": [
+          {
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                  "code": "submitted",
+                  "display": "Submitted Amount"
+                }
+              ],
+              "text": "Submitted Amount"
+            },
+            "amount": {
+              "value": 108.57,
+              "currency": "USD"
+            }
+          }
+        ],
+        "payment": {
+          "amount": {
+            "value": 694.8800000000001,
+            "currency": "USD"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "ExplanationOfBenefit"
+      }
+    }
+  ]
+}
