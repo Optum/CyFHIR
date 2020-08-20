@@ -14,13 +14,14 @@ function deleteAllNodesCypher(): string {
 // Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
 // points to that resource is included in the Bundle
 function buildBundleAroundIDCypher(_id: string): string {
-  const cypher = `CALL {
-                    WITH "${_id}" as _id
+  const cypher = `WITH "${_id}" as _id
+                  CALL {
+                    WITH _id
                     MATCH (a:entry)-[*1..3]->()-[r:reference]->(b:entry)
                     WHERE (b._resourceId = _id)
                     RETURN a,b
                     UNION
-                    WITH "${_id}" as _id
+                    WITH _id
                     MATCH (a:entry)-[*1..3]->()-[r:reference]->(b:entry)
                     WHERE (a._resourceId = _id)
                     RETURN a,b
@@ -35,13 +36,14 @@ function buildBundleAroundIDCypher(_id: string): string {
 // Cypher that builds a FHIR Bundle based off of a ResourceId, every resource that at max depth
 // points to that resource is included in the Bundle IF it matches the ResourceType filter
 function buildBundleAroundIDWithFilterCypher(_id: string, _filter: string): string {
-  const cypher = `CALL {
-                    WITH "${_id}" as _id
+  const cypher = `WITH "${_id}" as _id
+                  CALL {
+                    WITH _id
                     MATCH (a:entry)-[*1..3]->()-[r:reference]->(b:entry)
                     WHERE (b._resourceId = _id)
                     RETURN a,b
                     UNION
-                    WITH "${_id}" as _id
+                    WITH _id
                     MATCH (a:entry)-[*1..3]->()-[r:reference]->(b:entry)
                     WHERE (a._resourceId = _id)
                     RETURN a,b
