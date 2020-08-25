@@ -1,0 +1,600 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:f711b6bf-830c-31f9-bece-cb53ac7e7af3",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "f711b6bf-830c-31f9-bece-cb53ac7e7af3",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 1249
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999999"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Dibbert990",
+            "given": [
+              "Noe500"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Noe500.Dibbert990@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "701 PARK AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55415",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "d3e8e7b5-14de-3fef-ba67-bf4c420ecefe",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 1316
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999989"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Gleason633",
+            "given": [
+              "Mariam937"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Mariam937.Gleason633@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2450 RIVERSIDE AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da133b82-357a-3173-9d8a-a91eadcf6242",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "da133b82-357a-3173-9d8a-a91eadcf6242",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 632
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999979"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Schoen8",
+            "given": [
+              "Chauncey770"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Chauncey770.Schoen8@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1221 W LAKE ST"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55408-3565",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:41d3f8fc-a1a7-31dc-b738-282ffbd7010a",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "41d3f8fc-a1a7-31dc-b738-282ffbd7010a",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 325
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999969"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Torphy630",
+            "given": [
+              "Aide521"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Aide521.Torphy630@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3100 W LAKE ST"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55416-4597",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:15517718-7362-3c10-8747-405e5c8c1f45",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "15517718-7362-3c10-8747-405e5c8c1f45",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 365
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999959"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Fay398",
+            "given": [
+              "Loren192"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Loren192.Fay398@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2425 CHICAGO AVE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55404-3845",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:167674a5-cdad-38f9-9eac-2c3a9daa3fe5",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "167674a5-cdad-38f9-9eac-2c3a9daa3fe5",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 296
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999949"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Leannon79",
+            "given": [
+              "Ines699"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Ines699.Leannon79@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "420 DELAWARE ST SE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55455-0302",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:94ff3d10-8ed4-3f04-8f97-8fb31c1dc277",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "94ff3d10-8ed4-3f04-8f97-8fb31c1dc277",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 5
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999929"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Weissnat378",
+            "given": [
+              "Pandora807"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Pandora807.Weissnat378@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6000 EARLE BROWN DRIVE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55430",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f34c1f1-bee1-321d-9d58-815e4f2cc5db",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1f34c1f1-bee1-321d-9d58-815e4f2cc5db",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 19
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999919"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Kub800",
+            "given": [
+              "Zachariah133"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Zachariah133.Kub800@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "7920 OLD CEDAR AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55425",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6677a800-4181-3ea8-94d0-dbac86259343",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "6677a800-4181-3ea8-94d0-dbac86259343",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 6
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999909"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Maggio310",
+            "given": [
+              "Caridad510"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Caridad510.Maggio310@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3264 WEST LAKE STREET"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55416",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46680124-9d04-3653-9955-dc678a216a5f",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "46680124-9d04-3653-9955-dc678a216a5f",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 16
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999899"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Upton904",
+            "given": [
+              "Meridith488"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Meridith488.Upton904@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2220 RIVERSIDE AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f4a23547-207f-3edb-98f3-813031cebbc2",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "f4a23547-207f-3edb-98f3-813031cebbc2",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 17
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999889"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Yundt842",
+            "given": [
+              "Keeley419"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Keeley419.Yundt842@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "327 CENTRAL AVENUE SOUTHEAST"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55414",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    }
+  ]
+}

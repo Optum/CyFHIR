@@ -3,7 +3,7 @@
 set -e
 
 (
-cd synthea-bundles
+cd demo/synthea-bundles
 start=`ruby -e 'puts Time.now.to_f.round(3)*1000' | cut -d'.' -f1`
 resourceCount="0"
 bundleCount="0"

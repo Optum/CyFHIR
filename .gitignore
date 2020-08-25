@@ -127,3 +127,4 @@ k8s_config.*
 **/target
 **/*.iml
 plugins/
+**/.**ipynb_checkpoints

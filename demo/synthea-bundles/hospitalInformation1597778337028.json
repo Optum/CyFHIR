@@ -1,0 +1,732 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:cb5de81c-0dce-3cc2-b414-3ffdaeda7974",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "cb5de81c-0dce-3cc2-b414-3ffdaeda7974",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 1249
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 2
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 3
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "cb5de81c-0dce-3cc2-b414-3ffdaeda7974"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "HENNEPIN COUNTY MEDICAL CENTER 1",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6128733629"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "701 PARK AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55415",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55b1ce99-caee-32e7-b38b-26cdd53d1486",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "55b1ce99-caee-32e7-b38b-26cdd53d1486",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 1316
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 8
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 15
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "55b1ce99-caee-32e7-b38b-26cdd53d1486"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "UNIVERSITY OF MINNESOTA  MEDICAL CENTER, FAIRVIEW",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6122733000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2450 RIVERSIDE AVENUE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:410a9bc9-2dfe-332e-9662-9377baa65697",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "410a9bc9-2dfe-332e-9662-9377baa65697",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 632
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 1628
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 492
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 606
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "410a9bc9-2dfe-332e-9662-9377baa65697"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "ALLINA HEALTH SYSTEM",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-775-4800"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1221 W LAKE ST"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55408-3565",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:21114ec6-b854-3b33-8f12-1d7c68f30901",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "21114ec6-b854-3b33-8f12-1d7c68f30901",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 325
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 1225
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 417
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 307
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "21114ec6-b854-3b33-8f12-1d7c68f30901"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "ASSOCIATED CLINIC OF PSYCHOLOGY INC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-925-6033"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3100 W LAKE ST"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55416-4597",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 365
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 1456
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 319
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 494
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "1c4f6a9c-bd09-31cd-ae0c-058a308ac9bd"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "CHILDRENS HEALTH CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-813-6125"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2425 CHICAGO AVE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55404-3845",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fcdcd5a0-1dec-3544-9784-089fd0863ddc",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "fcdcd5a0-1dec-3544-9784-089fd0863ddc",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 296
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 982
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 371
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 573
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "fcdcd5a0-1dec-3544-9784-089fd0863ddc"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "MINNEAPOLIS RADIATION ONCOLOGY PA",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-273-8637"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "420 DELAWARE ST SE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55455-0302",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:75061d15-80bd-39b8-a63b-3c11359e5de1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "75061d15-80bd-39b8-a63b-3c11359e5de1",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 5
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "75061d15-80bd-39b8-a63b-3c11359e5de1"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "PARK NICOLLET CLINIC - BROOKDALE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "952-993-4900"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6000 EARLE BROWN DRIVE"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55430",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee049f9b-9030-308a-bb80-f4a7dad97ab9",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ee049f9b-9030-308a-bb80-f4a7dad97ab9",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 19
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 4
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "ee049f9b-9030-308a-bb80-f4a7dad97ab9"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "ASPEN MEDICAL GROUP - URGENT CARE",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "651-641-7021"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "7920 OLD CEDAR AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55425",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b9d2934-0fa6-333a-a4e4-82bc20c906f1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "9b9d2934-0fa6-333a-a4e4-82bc20c906f1",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 6
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "9b9d2934-0fa6-333a-a4e4-82bc20c906f1"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "FASTCARE OF TWIN CITIES MEDICAL CLINIC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-285-9996"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3264 WEST LAKE STREET"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55416",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0dd0fd1-e2fc-3fd7-a586-f326160a17b6",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "c0dd0fd1-e2fc-3fd7-a586-f326160a17b6",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 16
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "c0dd0fd1-e2fc-3fd7-a586-f326160a17b6"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "HEALTHPARTNERS RIVERSIDE CLINIC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-371-1600"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2220 RIVERSIDE AVENUE SOUTH"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55454",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:efeae86c-0a43-368d-bae3-280d62a40cbf",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "efeae86c-0a43-368d-bae3-280d62a40cbf",
+        "extension": [
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+            "valueInteger": 17
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-procedures-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-labs-extension",
+            "valueInteger": 0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/utilization-prescriptions-extension",
+            "valueInteger": 0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "efeae86c-0a43-368d-bae3-280d62a40cbf"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "NOW MEDICAL CENTERS - NORTH MEMORIAL CLINIC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "612-379-1254"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "327 CENTRAL AVENUE SOUTHEAST"
+            ],
+            "city": "MINNEAPOLIS",
+            "state": "MN",
+            "postalCode": "55414",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    }
+  ]
+}
