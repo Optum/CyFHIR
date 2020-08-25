@@ -2,7 +2,7 @@ build:
 	bash bin/build-cyfhir.sh
 
 test:
-	bash bin/build-cyfhir.sh && bash bin/get-apoc.sh && (cd cyfhir && mvn clean test)
+	bash bin/build-cyfhir.sh && bash bin/get-plugins.sh && (cd cyfhir && mvn clean test)
 
 server:
 	(cd express && open http://localhost:3000/docs && npm start)
