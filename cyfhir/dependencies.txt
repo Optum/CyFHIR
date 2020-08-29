@@ -1,7 +1,6 @@
  cyfhir:cyfhir:jar:WIP
  +- org.neo4j:neo4j-graphdb-api:jar:4.1.0
  |  +- org.neo4j:annotations:jar:4.1.0
- |  |  \- org.apache.commons:commons-lang3:jar:3.10
  |  +- org.neo4j:neo4j-common:jar:4.1.0
  |  +- org.neo4j:neo4j-resource:jar:4.1.0
  |  \- org.neo4j:neo4j-collections:jar:4.1.0
@@ -14,8 +13,7 @@
  |  |  +- org.ow2.asm:asm:jar:8.0.1
  |  |  +- org.ow2.asm:asm-util:jar:8.0.1
  |  |  +- org.ow2.asm:asm-analysis:jar:8.0.1
- |  |  +- org.ow2.asm:asm-tree:jar:8.0.1
- |  |  \- org.apache.commons:commons-text:jar:1.8
+ |  |  \- org.ow2.asm:asm-tree:jar:8.0.1
  |  +- org.neo4j:neo4j-cypher-expression-evaluator:jar:4.1.0
  |  |  +- org.neo4j:neo4j-parser:jar:4.1.0
  |  |  |  +- org.neo4j:neo4j-util:jar:4.1.0
@@ -91,9 +89,8 @@
  +- org.neo4j.procedure:apoc:jar:4.0.0.15
  |  +- commons-codec:commons-codec:jar:1.14
  |  +- com.jayway.jsonpath:json-path:jar:2.4.0
- |  |  +- net.minidev:json-smart:jar:2.3
- |  |  |  \- net.minidev:accessors-smart:jar:1.2
- |  |  \- org.slf4j:slf4j-api:jar:1.7.30
+ |  |  \- net.minidev:json-smart:jar:2.3
+ |  |     \- net.minidev:accessors-smart:jar:1.2
  |  +- org.hdrhistogram:HdrHistogram:jar:2.1.9
  |  +- com.novell.ldap:jldap:jar:2009-10-07
  |  +- org.jsoup:jsoup:jar:1.11.3
@@ -113,6 +110,23 @@
  |     +- org.antlr:antlr-runtime:jar:3.5.2
  |     \- org.antlr:ST4:jar:4.1
  +- io.netty:netty-all:jar:4.1.51.Final
+ +- ca.uhn.hapi.fhir:hapi-fhir-base:jar:5.1.0
+ |  +- org.apache.commons:commons-lang3:jar:3.9
+ |  +- org.apache.commons:commons-text:jar:1.7
+ |  +- commons-io:commons-io:jar:2.6
+ |  +- com.google.guava:guava:jar:29.0-jre
+ |  |  +- com.google.guava:failureaccess:jar:1.0.1
+ |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava
+ |  |  +- org.checkerframework:checker-qual:jar:2.11.1
+ |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4
+ |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3
+ |  +- org.slf4j:slf4j-api:jar:1.7.28
+ |  \- org.slf4j:jcl-over-slf4j:jar:1.7.28
+ +- ca.uhn.hapi.fhir:hapi-fhir-structures-r4:jar:5.1.0
+ |  +- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:5.1.0
+ |  +- ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:5.1.0
+ |  \- com.google.code.findbugs:jsr305:jar:3.0.2
+ +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-R4:jar:5.1.0
  +- org.neo4j.test:neo4j-harness:jar:4.1.0
  |  +- org.neo4j:neo4j:jar:4.1.0
  |  |  +- org.neo4j:neo4j-data-collector:jar:4.1.0
@@ -171,7 +185,6 @@
  |     |  \- org.javassist:javassist:jar:3.25.0-GA
  |     +- org.glassfish.jersey.containers:jersey-container-servlet:jar:2.30.1
  |     |  \- org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.30.1
- |     +- commons-io:commons-io:jar:2.6
  |     +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.11.0
  |     |  +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.11.0
  |     |  \- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.11.0

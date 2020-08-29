@@ -1,12 +1,9 @@
 package com.Optum.CyFHIR.procedures;
 
-import apoc.create.Create;
 import apoc.result.MapResult;
-import apoc.result.RelationshipResult;
 import com.Optum.CyFHIR.models.Entry;
-import com.Optum.CyFHIR.models.FhirRecursiveObj;
 import com.Optum.CyFHIR.models.FhirRelationship;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.Optum.CyFHIR.models.Validator;
 import org.neo4j.graphdb.*;
 import org.neo4j.procedure.*;
 
@@ -16,12 +13,21 @@ import java.util.stream.Stream;
 
 public class Bundle {
 
+    public static Validator validator;
     @Context
     public GraphDatabaseService db;
+
+    public Bundle() {
+        validator = new Validator();
+    }
 
     @Procedure(name = "cyfhir.bundle.load", mode = Mode.WRITE)
     @Description("cyfhir.bundle.load(bundle) loads a FHIR bundle into the db, must be a stringified JSON")
     public Stream<MapResult> load(@Name("json") String json) throws IOException {
+
+        Boolean bundle = validator.validateBundle(json);
+        System.out.println(bundle);
+
         Transaction tx = db.beginTx();
         Resource resourceClass = new Resource();
         // Generate JSON object from string of json
