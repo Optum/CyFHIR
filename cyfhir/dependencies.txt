@@ -126,7 +126,13 @@
  |  +- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:5.1.0
  |  +- ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:5.1.0
  |  \- com.google.code.findbugs:jsr305:jar:3.0.2
- +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-R4:jar:5.1.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:jar:5.1.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:5.1.0
+ |  \- ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:5.1.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:5.1.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:5.1.0
+ |  \- ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:5.1.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r5:jar:5.1.0
  +- org.neo4j.test:neo4j-harness:jar:4.1.0
  |  +- org.neo4j:neo4j:jar:4.1.0
  |  |  +- org.neo4j:neo4j-data-collector:jar:4.1.0

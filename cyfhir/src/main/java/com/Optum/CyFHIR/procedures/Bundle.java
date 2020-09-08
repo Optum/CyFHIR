@@ -4,6 +4,7 @@ import apoc.result.MapResult;
 import com.Optum.CyFHIR.models.Entry;
 import com.Optum.CyFHIR.models.FhirRelationship;
 import com.Optum.CyFHIR.models.Validator;
+import org.hl7.fhir.instance.model.api.IAnyResource;
 import org.neo4j.graphdb.*;
 import org.neo4j.procedure.*;
 
@@ -25,13 +26,12 @@ public class Bundle {
     @Description("cyfhir.bundle.load(bundle) loads a FHIR bundle into the db, must be a stringified JSON")
     public Stream<MapResult> load(@Name("json") String json) throws IOException {
 
-        Boolean bundle = validator.validateBundle(json);
-        System.out.println(bundle);
-
         Transaction tx = db.beginTx();
         Resource resourceClass = new Resource();
         // Generate JSON object from string of json
         Map<String, Object> jsonMap = resourceClass.stringToMap(json);
+        IAnyResource bundle = validator.validate(json, (String) jsonMap.get("resourceType"));
+        System.out.println(bundle);
         /* Get entries from bundle */
         ArrayList<Map<String, Object>> entries = (ArrayList<Map<String, Object>>) jsonMap.get("entry");
         // Relationship Array

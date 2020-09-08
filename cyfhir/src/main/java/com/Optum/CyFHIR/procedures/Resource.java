@@ -10,7 +10,9 @@ import apoc.result.RelationshipResult;
 import com.Optum.CyFHIR.models.Entry;
 import com.Optum.CyFHIR.models.FhirRecursiveObj;
 import com.Optum.CyFHIR.models.FhirRelationship;
+import com.Optum.CyFHIR.models.Validator;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hl7.fhir.instance.model.api.IAnyResource;
 import org.neo4j.graphdb.*;
 import org.neo4j.graphdb.traversal.*;
 import org.neo4j.internal.helpers.collection.Iterables;
@@ -23,6 +25,12 @@ import java.util.stream.Stream;
 public class Resource {
     public static final Uniqueness UNIQUENESS = Uniqueness.RELATIONSHIP_PATH;
     public static final boolean BFS = true;
+
+    public static Validator validator;
+
+    public Resource() {
+        validator = new Validator();
+    }
     @Context
     public GraphDatabaseService db;
 
@@ -37,7 +45,8 @@ public class Resource {
         // Relationship Array
         ArrayList<FhirRelationship> relationships = addToDatabase(entry, tx);
         createRelationships(relationships, tx);
-
+        IAnyResource resourceObject = validator.validate(json, (String) resource.get("resourceType"));
+        System.out.println(resourceObject);
         // Create paths list
         List<Path> response = new ArrayList<Path>();
         // Create map for config
