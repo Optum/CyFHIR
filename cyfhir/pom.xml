@@ -181,6 +181,7 @@
                                 <includes>
                                     <include>ca.uhn.hapi.fhir</include>
                                     <include>org.hl7.fhir:*:*</include>
+                                    <include>com.google.guava:*:*</include>
                                 </includes>
                             </artifactSet>
                             <filters>

@@ -18,22 +18,36 @@ public class Bundle {
     @Context
     public GraphDatabaseService db;
 
-    public Bundle() {
+    public Bundle() throws Exception {
         validator = new Validator();
     }
 
     @Procedure(name = "cyfhir.bundle.load", mode = Mode.WRITE)
-    @Description("cyfhir.bundle.load(bundle) loads a FHIR bundle into the db, must be a stringified JSON")
-    public Stream<MapResult> load(@Name("json") String json) throws IOException {
+    @Description("cyfhir.bundle.load(String bundle, config: { validation: Boolean, version: String }) loads a FHIR bundle into the neo4j, must be a stringified JSON. " +
+            "The config allows you to turn on FHIR validation and pick a version with choices being DSTU3, R4, and R5. If validation == true, the default for fhir version is R4")
+    public Stream<MapResult> load(@Name("json") String json, @Name(value = "config", defaultValue = "{}") Map<String, Object> configMap) throws Exception {
 
         Transaction tx = db.beginTx();
         Resource resourceClass = new Resource();
         // Generate JSON object from string of json
-        Map<String, Object> jsonMap = resourceClass.stringToMap(json);
-        IAnyResource bundle = validator.validate(json, (String) jsonMap.get("resourceType"));
-        System.out.println(bundle);
+        Map<String, Object> bundleMap = resourceClass.stringToMap(json);
+        String resourceType = (String) bundleMap.get("resourceType");
+        resourceClass.validateFHIR(json, resourceType, configMap );
+        if (!configMap.isEmpty()) {
+            if (configMap.containsKey("validation")) {
+                Boolean validation = (Boolean) configMap.get("validation");
+                if (validation) {
+                    IAnyResource bundle;
+                    if (configMap.containsKey("version")) {
+                        validator = new Validator((String) configMap.get("version"));
+                    }
+                    validator.validate(json, (String) bundleMap.get("resourceType"));
+                }
+            }
+        }
+
         /* Get entries from bundle */
-        ArrayList<Map<String, Object>> entries = (ArrayList<Map<String, Object>>) jsonMap.get("entry");
+        ArrayList<Map<String, Object>> entries = (ArrayList<Map<String, Object>>) bundleMap.get("entry");
         // Relationship Array
         ArrayList<FhirRelationship> relationships = new ArrayList<FhirRelationship>();
         // Iterate over entries

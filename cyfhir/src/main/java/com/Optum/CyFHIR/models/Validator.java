@@ -12,11 +12,11 @@ public class Validator {
     FhirValidator hapiValidator;
     Version fhirVersion;
 
-    public Validator() {
+    public Validator() throws Exception {
         this("r4");
     }
 
-    public Validator(String version) {
+    public Validator(String version) throws Exception {
         version = version.toLowerCase();
         if (version.equals("dstu3")) {
             this.fhirVersion = Version.DSTU3;
@@ -27,6 +27,8 @@ public class Validator {
         } else if (version.equals("r5")) {
             this.fhirVersion = Version.R5;
             this.ctx = FhirContext.forR5();
+        } else {
+            throw new Exception("Unsupported FHIR Version");
         }
         this.hapiValidator = this.ctx.newValidator();
         this.parser = ctx.newJsonParser();

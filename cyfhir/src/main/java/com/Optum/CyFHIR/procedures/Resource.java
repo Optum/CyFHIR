@@ -27,26 +27,29 @@ public class Resource {
     public static final boolean BFS = true;
 
     public static Validator validator;
-
-    public Resource() {
-        validator = new Validator();
-    }
     @Context
     public GraphDatabaseService db;
 
+    public Resource() throws Exception {
+        validator = new Validator();
+    }
+
     @Procedure(name = "cyfhir.resource.load", mode = Mode.WRITE)
-    @Description("cyfhir.resource.load(resource) loads a FHIR resource into Neo4j, must be a stringified JSON")
-    public Stream<MapResult> load(@Name("json") String json) throws IOException {
+    @Description("cyfhir.resource.load(resource, config: { validation: Boolean, version: String }) loads a FHIR resource into Neo4j, must be a stringified JSON" +
+            "The config allows you to turn on FHIR validation and pick a version with choices being DSTU3, R4, and R5. If validation == true, the default for fhir version is R4")
+    public Stream<MapResult> load(@Name("json") String json, @Name(value = "config", defaultValue = "{}") Map<String, Object> configMap) throws Exception {
         Transaction tx = db.beginTx();
         // Generate JSON object from string of json
-        Map<String, Object> resource = stringToMap(json);
+        Map<String, Object> resourceMap = stringToMap(json);
+        // Validate
+        String resourceType = (String) resourceMap.get("resourceType");
+        this.validateFHIR(json, resourceType, configMap);
+
         Entry entry = new Entry();
-        entry.setResource(resource);
+        entry.setResource(resourceMap);
         // Relationship Array
         ArrayList<FhirRelationship> relationships = addToDatabase(entry, tx);
         createRelationships(relationships, tx);
-        IAnyResource resourceObject = validator.validate(json, (String) resource.get("resourceType"));
-        System.out.println(resourceObject);
         // Create paths list
         List<Path> response = new ArrayList<Path>();
         // Create map for config
@@ -58,6 +61,22 @@ public class Resource {
         tx.commit();
         tx.close();
         return stream;
+    }
+
+    public IAnyResource validateFHIR(String json, String resourceType, Map<String, Object> configMap) throws Exception {
+        if (!configMap.isEmpty()) {
+            if (configMap.containsKey("validation")) {
+                Boolean validation = (Boolean) configMap.get("validation");
+                if (validation) {
+                    IAnyResource bundle;
+                    if (configMap.containsKey("version")) {
+                        validator = new Validator((String) configMap.get("version"));
+                    }
+                    return validator.validate(json, resourceType);
+                }
+            }
+        }
+        return null;
     }
 
     public ArrayList<FhirRelationship> addToDatabase(Entry entry, Transaction tx) {
