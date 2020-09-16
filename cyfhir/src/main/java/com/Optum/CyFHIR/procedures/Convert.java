@@ -19,8 +19,11 @@ public class Convert {
 
     @Procedure(name = "cyfhir.convert.toTree")
     @Description("cyfhir.convert.toTree([paths],[lowerCaseRels=true], [config]) creates a stream of nested documents representing the at least one root of these paths")
-    public Stream<MapResult> toTree(@Name("paths") List<Path> paths, @Name(value = "lowerCaseRels", defaultValue = "true") boolean lowerCaseRels, @Name(value = "config", defaultValue = "{}") Map<String, Object> config) {
-        if (paths.isEmpty()) return Stream.of(new MapResult(Collections.emptyMap()));
+    public Stream<MapResult> toTree(@Name("paths") List<Path> paths,
+            @Name(value = "lowerCaseRels", defaultValue = "true") boolean lowerCaseRels,
+            @Name(value = "config", defaultValue = "{}") Map<String, Object> config) {
+        if (paths.isEmpty())
+            return Stream.of(new MapResult(Collections.emptyMap()));
         ConvertConfig conf = new ConvertConfig(config);
         Map<String, List<String>> nodes = conf.getNodes();
         Map<String, List<String>> rels = conf.getRels();
@@ -36,11 +39,11 @@ public class Convert {
                     Node m = r.getOtherNode(n);
                     String typeName = lowerCaseRels ? r.getType().name().toLowerCase() : r.getType().name();
                     // parent-[:HAS_CHILD]->(child) vs. (parent)<-[:PARENT_OF]-(child)
-                    if (!nMap.containsKey(typeName)) nMap.put(typeName, new ArrayList<>(16));
+                    if (!nMap.containsKey(typeName))
+                        nMap.put(typeName, new ArrayList<>(16));
                     List<Map<String, Object>> list = (List) nMap.get(typeName);
                     Optional<Map<String, Object>> optMap = list.stream()
-                            .filter(elem -> elem.get("_id").equals(m.getId()))
-                            .findFirst();
+                            .filter(elem -> elem.get("_id").equals(m.getId())).findFirst();
                     if (!optMap.isPresent()) {
                         Map<String, Object> mMap = toMap(m, nodes);
                         mMap = addRelProperties(mMap, typeName, r, rels);
@@ -50,17 +53,15 @@ public class Convert {
                 }
             }
         }
-        return paths.stream()
-                .map(Path::startNode)
-                .distinct()
-                .map(n -> maps.remove(n.getId()))
-                .map(m -> m == null ? Collections.<String, Object>emptyMap() : m)
-                .map(MapResult::new);
+        return paths.stream().map(Path::startNode).distinct().map(n -> maps.remove(n.getId()))
+                .map(m -> m == null ? Collections.<String, Object> emptyMap() : m).map(MapResult::new);
     }
 
-    private Map<String, Object> addRelProperties(Map<String, Object> mMap, String typeName, Relationship r, Map<String, List<String>> relFilters) {
+    private Map<String, Object> addRelProperties(Map<String, Object> mMap, String typeName, Relationship r,
+            Map<String, List<String>> relFilters) {
         Map<String, Object> rProps = r.getAllProperties();
-        if (rProps.isEmpty()) return mMap;
+        if (rProps.isEmpty())
+            return mMap;
         String prefix = typeName + ".";
         if (relFilters.containsKey(typeName)) {
             rProps = filterProperties(rProps, relFilters.get(typeName));
@@ -72,8 +73,7 @@ public class Convert {
     private Map<String, Object> filterProperties(Map<String, Object> props, List<String> filters) {
         boolean isExclude = filters.get(0).startsWith("-");
 
-        return props.entrySet()
-                .stream()
+        return props.entrySet().stream()
                 .filter(e -> isExclude ? !filters.contains("-" + e.getKey()) : filters.contains(e.getKey()))
                 .collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue()));
     }
@@ -84,7 +84,7 @@ public class Convert {
         String type = Util.labelString(n);
         result.put("_id", n.getId());
         result.put("_type", type);
-        if (nodeFilters.containsKey(type)) { //Check if list contains LABEL
+        if (nodeFilters.containsKey(type)) { // Check if list contains LABEL
             props = filterProperties(props, nodeFilters.get(type));
         }
         result.putAll(props);

@@ -32,8 +32,7 @@ class BundleTest {
     private static final GenericContainer neo4j = new GenericContainer<>("neo4j:4.1.0")
             .withEnv("NEO4J_AUTH", "neo4j/password")
             .withEnv("NEO4J_dbms_security_procedures_unrestricted", "cyfhir.*,apoc.*")
-            .withFileSystemBind("./plugins", "/var/lib/neo4j/plugins", BindMode.READ_ONLY)
-            .withExposedPorts(7687);
+            .withFileSystemBind("./plugins", "/var/lib/neo4j/plugins", BindMode.READ_ONLY).withExposedPorts(7687);
 
     Map loadJsonFromFile(String location) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
@@ -46,7 +45,6 @@ class BundleTest {
         String json = mapper.writeValueAsString(map);
         return mapper.writeValueAsString(json);
     }
-
 
     Driver getSessionDriver() {
         String uri = "bolt://" + neo4j.getContainerIpAddress() + ":" + neo4j.getMappedPort(7687);
@@ -64,7 +62,7 @@ class BundleTest {
 
     @Test
     void returnFullBundleCenteredAroundPatient() throws IOException {
-        Map bundle = loadJsonFromFile("src/test/resources/ThreeResourceBundle.json");
+        Map bundle = loadJsonFromFile("src/test/resources/R4Bundle.json");
         String bundleString = toJsonString(bundle);
 
         Map<String, String> hash = new HashMap();
@@ -88,23 +86,13 @@ class BundleTest {
         try (Session session = driver.session()) {
 
             Result load = session.run("CALL cyfhir.bundle.load(" + bundleString + ")");
-            String query = "" +
-                    "CALL { \n" +
-                    "WITH \"" + patientId + "\" as _id \n" +
-                    "MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry) \n" +
-                    "WHERE (b._resourceId = _id) \n" +
-                    "RETURN a,b \n" +
-                    "UNION \n" +
-                    "WITH \"" + patientId + "\" as _id \n" +
-                    "MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry) \n" +
-                    "WHERE (a._resourceId = _id) \n" +
-                    "RETURN a,b \n" +
-                    "} \n" +
-                    "WITH collect(a)+collect(b) AS entries \n" +
-                    "UNWIND entries AS entry \n" +
-                    "CALL cyfhir.resource.expand(entry) YIELD path \n" +
-                    "WITH cyfhir.bundle.format(collect(path)) AS bundle " +
-                    "RETURN bundle";
+            String query = "" + "CALL { \n" + "WITH \"" + patientId + "\" as _id \n"
+                    + "MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry) \n" + "WHERE (b._resourceId = _id) \n"
+                    + "RETURN a,b \n" + "UNION \n" + "WITH \"" + patientId + "\" as _id \n"
+                    + "MATCH path=(a:entry)-[*1..3]->()-[r:reference]->(b:entry) \n" + "WHERE (a._resourceId = _id) \n"
+                    + "RETURN a,b \n" + "} \n" + "WITH collect(a)+collect(b) AS entries \n"
+                    + "UNWIND entries AS entry \n" + "CALL cyfhir.resource.expand(entry) YIELD path \n"
+                    + "WITH cyfhir.bundle.format(collect(path)) AS bundle " + "RETURN bundle";
 
             Result result = session.run(query);
 
