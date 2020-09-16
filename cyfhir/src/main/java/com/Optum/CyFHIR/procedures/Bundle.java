@@ -4,11 +4,9 @@ import apoc.result.MapResult;
 import com.Optum.CyFHIR.models.Entry;
 import com.Optum.CyFHIR.models.FhirRelationship;
 import com.Optum.CyFHIR.models.Validator;
-import org.hl7.fhir.instance.model.api.IAnyResource;
 import org.neo4j.graphdb.*;
 import org.neo4j.procedure.*;
 
-import java.io.IOException;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -34,18 +32,6 @@ public class Bundle {
         Map<String, Object> bundleMap = resourceClass.stringToMap(json);
         String resourceType = (String) bundleMap.get("resourceType");
         resourceClass.validateFHIR(json, resourceType, configMap);
-        if (!configMap.isEmpty()) {
-            if (configMap.containsKey("validation")) {
-                Boolean validation = (Boolean) configMap.get("validation");
-                if (validation) {
-                    IAnyResource bundle;
-                    if (configMap.containsKey("version")) {
-                        validator = new Validator((String) configMap.get("version"));
-                    }
-                    validator.validate(json, (String) bundleMap.get("resourceType"));
-                }
-            }
-        }
 
         /* Get entries from bundle */
         ArrayList<Map<String, Object>> entries = (ArrayList<Map<String, Object>>) bundleMap.get("entry");
