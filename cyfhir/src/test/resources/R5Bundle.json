@@ -7,9 +7,6 @@
       "resource": {
         "resourceType": "Patient",
         "id": "6aff2910-82fc-44d6-84a6-c29e4b756b11",
-        "text": {
-          "status": "generated"
-        },
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
@@ -187,7 +184,7 @@
       "resource": {
         "resourceType": "Encounter",
         "id": "6ed0d1c0-f189-42a3-b0bc-deb2a8ac72e8",
-        "status": "finished",
+        "status": "completed",
         "class": {
           "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
           "code": "AMB"
@@ -236,15 +233,17 @@
           "start": "2001-08-31T13:26:41-04:00",
           "end": "2001-08-31T13:41:41-04:00"
         },
-        "reasonCode": [
+        "reason": [
           {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "239873007",
-                "display": "Osteoarthritis of knee"
+            "concept": {
+                "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "239873007",
+                      "display": "Osteoarthritis of knee"
+                    }
+                  ]
               }
-            ]
           }
         ],
         "serviceProvider": {

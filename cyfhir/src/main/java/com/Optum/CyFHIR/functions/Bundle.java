@@ -21,26 +21,26 @@ public class Bundle {
 
         Convert tree = new Convert();
         List<Map<String, Object>> mapResponse = tree.toTree(paths, true, new HashMap<String, Object>())
-                .map(x -> x.value)
-                .collect(Collectors.toList());
+                .map(x -> x.value).collect(Collectors.toList());
 
-        //build empty bundle
+        // build empty bundle
         Map bundle = new HashMap();
         bundle.put("resourceType", "Bundle");
         bundle.put("type", "transaction");
         List<Map> entriesList = new ArrayList<Map>();
         if (!mapResponse.get(0).isEmpty()) {
-            //traverse each entry in the mapResponse and map with parseResource
+            // traverse each entry in the mapResponse and map with parseResource
             for (Map entry : mapResponse) {
                 Resource entryFormatter = new Resource();
                 Map entryMap = new HashMap();
-                //map the resource
-                entryMap.put("resource", entryFormatter.parseResources((Map) ((ArrayList) entry.get("resource")).get(0)));
-                //map the request
+                // map the resource
+                entryMap.put("resource",
+                        entryFormatter.parseResources((Map) ((ArrayList) entry.get("resource")).get(0)));
+                // map the request
                 entryMap.put("request", entryFormatter.parseResources((Map) ((ArrayList) entry.get("request")).get(0)));
-                //map the fullUrl
+                // map the fullUrl
                 entryMap.put("fullUrl", entry.get("fullUrl"));
-                //add parsed entry to list of entries
+                // add parsed entry to list of entries
                 entriesList.add(entryMap);
             }
         }

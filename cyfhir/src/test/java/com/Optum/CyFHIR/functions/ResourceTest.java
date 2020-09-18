@@ -34,8 +34,7 @@ class ResourceTest {
     private static final GenericContainer neo4j = new GenericContainer<>("neo4j:4.1.0")
             .withEnv("NEO4J_AUTH", "neo4j/password")
             .withEnv("NEO4J_dbms_security_procedures_unrestricted", "cyfhir.*,apoc.*")
-            .withFileSystemBind("./plugins", "/var/lib/neo4j/plugins", BindMode.READ_ONLY)
-            .withExposedPorts(7687);
+            .withFileSystemBind("./plugins", "/var/lib/neo4j/plugins", BindMode.READ_ONLY).withExposedPorts(7687);
 
     Map loadJsonFromFile(String location) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
@@ -48,7 +47,6 @@ class ResourceTest {
         String json = mapper.writeValueAsString(map);
         return mapper.writeValueAsString(json);
     }
-
 
     Driver getSessionDriver() {
         String uri = "bolt://" + neo4j.getContainerIpAddress() + ":" + neo4j.getMappedPort(7687);
@@ -66,7 +64,7 @@ class ResourceTest {
 
     @Test
     void returnPatientResourceFromBundle() throws IOException {
-        Map bundle = loadJsonFromFile("src/test/resources/ThreeResourceBundle.json");
+        Map bundle = loadJsonFromFile("src/test/resources/R4Bundle.json");
         String bundleString = toJsonString(bundle);
 
         Map patientEntry = ((ArrayList<Map>) bundle.get("entry")).stream().filter(entry -> {
@@ -82,13 +80,9 @@ class ResourceTest {
         try (Session session = driver.session()) {
 
             Result load = session.run("CALL cyfhir.bundle.load(" + bundleString + ")");
-            String query = "" +
-                    "WITH \"" + patientId + "\" as _id \n" +
-                    "MATCH (r:resource)\n" +
-                    "WHERE (r.id = _id)\n" +
-                    "CALL cyfhir.resource.expand(r) YIELD path\n" +
-                    "WITH cyfhir.resource.format(collect(path)) AS patient\n" +
-                    "RETURN patient";
+            String query = "" + "WITH \"" + patientId + "\" as _id \n" + "MATCH (r:resource)\n" + "WHERE (r.id = _id)\n"
+                    + "CALL cyfhir.resource.expand(r) YIELD path\n"
+                    + "WITH cyfhir.resource.format(collect(path)) AS patient\n" + "RETURN patient";
 
             Result result = session.run(query);
 
@@ -121,13 +115,9 @@ class ResourceTest {
         try (Session session = driver.session()) {
 
             Result load = session.run("CALL cyfhir.resource.load(" + resourceString + ")");
-            String query = "" +
-                    "WITH \"" + patientId + "\" as _id \n" +
-                    "MATCH (r:resource)\n" +
-                    "WHERE (r.id = _id)\n" +
-                    "CALL cyfhir.resource.expand(r) YIELD path\n" +
-                    "WITH cyfhir.resource.format(collect(path)) AS patient\n" +
-                    "RETURN patient";
+            String query = "" + "WITH \"" + patientId + "\" as _id \n" + "MATCH (r:resource)\n" + "WHERE (r.id = _id)\n"
+                    + "CALL cyfhir.resource.expand(r) YIELD path\n"
+                    + "WITH cyfhir.resource.format(collect(path)) AS patient\n" + "RETURN patient";
 
             Result result = session.run(query);
 

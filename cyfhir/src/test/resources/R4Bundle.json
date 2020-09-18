@@ -1,0 +1,303 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:6aff2910-82fc-44d6-84a6-c29e4b756b11",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "6aff2910-82fc-44d6-84a6-c29e4b756b11",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Nydia801 Bashirian201"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Monroe",
+              "state": "North Carolina",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 0.499751031865479
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 56.50024896813452
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "6aff2910-82fc-44d6-84a6-c29e4b756b11"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "6aff2910-82fc-44d6-84a6-c29e4b756b11"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-14-9538"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver's License"
+                }
+              ],
+              "text": "Driver's License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99997789"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X57601805X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Haag279",
+            "given": [
+              "Theola421"
+            ],
+            "prefix": [
+              "Mrs."
+            ]
+          },
+          {
+            "use": "maiden",
+            "family": "Lehner980",
+            "given": [
+              "Theola421"
+            ],
+            "prefix": [
+              "Mrs."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-196-9091",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1962-09-10",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 35.84622999061526
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -79.9323600342269
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "350 Schimmel Heights"
+            ],
+            "city": "Archdale",
+            "state": "North Carolina",
+            "postalCode": "27263",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "M"
+            }
+          ],
+          "text": "M"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ed0d1c0-f189-42a3-b0bc-deb2a8ac72e8",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "6ed0d1c0-f189-42a3-b0bc-deb2a8ac72e8",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185347001",
+                "display": "Encounter for problem"
+              }
+            ],
+            "text": "Encounter for problem"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:6aff2910-82fc-44d6-84a6-c29e4b756b11",
+          "display": "Mrs. Theola421 Haag279"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2001-08-31T13:26:41-04:00",
+              "end": "2001-08-31T13:41:41-04:00"
+            },
+            "individual": {
+              "reference": "urn:uuid:e47ccc52-d9b7-3589-b220-d0f9b38048d0",
+              "display": "Dr. Latricia419 Spencer878"
+            }
+          }
+        ],
+        "period": {
+          "start": "2001-08-31T13:26:41-04:00",
+          "end": "2001-08-31T13:41:41-04:00"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "239873007",
+                "display": "Osteoarthritis of knee"
+              }
+            ]
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:2864a135-87f9-316b-a6b7-a272636846b6",
+          "display": "HIGH POINT REGIONAL HOSPITAL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4e96085-e006-4f9a-8eb9-00bc41b0ab15",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "a4e96085-e006-4f9a-8eb9-00bc41b0ab15",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "239873007",
+              "display": "Osteoarthritis of knee"
+            }
+          ],
+          "text": "Osteoarthritis of knee"
+        },
+        "subject": {
+          "reference": "urn:uuid:6aff2910-82fc-44d6-84a6-c29e4b756b11"
+        },
+        "encounter": {
+          "reference": "urn:uuid:6ed0d1c0-f189-42a3-b0bc-deb2a8ac72e8"
+        },
+        "onsetDateTime": "2001-08-31T13:26:41-04:00",
+        "recordedDate": "2001-08-31T13:26:41-04:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    }
+  ]
+}

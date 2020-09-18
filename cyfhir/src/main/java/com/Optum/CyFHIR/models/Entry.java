@@ -15,7 +15,7 @@ public class Entry extends HashMap {
         this.put("request", request);
     }
 
-    private Object getRequest(Object resourceType){
+    private Object getRequest(Object resourceType) {
         Map request = new HashMap();
         request.put("method", "POST");
         request.put("url", resourceType);

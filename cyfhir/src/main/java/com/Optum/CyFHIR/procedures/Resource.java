@@ -10,7 +10,9 @@ import apoc.result.RelationshipResult;
 import com.Optum.CyFHIR.models.Entry;
 import com.Optum.CyFHIR.models.FhirRecursiveObj;
 import com.Optum.CyFHIR.models.FhirRelationship;
+import com.Optum.CyFHIR.models.Validator;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hl7.fhir.instance.model.api.IAnyResource;
 import org.neo4j.graphdb.*;
 import org.neo4j.graphdb.traversal.*;
 import org.neo4j.internal.helpers.collection.Iterables;
@@ -23,21 +25,32 @@ import java.util.stream.Stream;
 public class Resource {
     public static final Uniqueness UNIQUENESS = Uniqueness.RELATIONSHIP_PATH;
     public static final boolean BFS = true;
+
+    public static Validator validator;
     @Context
     public GraphDatabaseService db;
 
+    public Resource() throws Exception {
+        validator = new Validator();
+    }
+
     @Procedure(name = "cyfhir.resource.load", mode = Mode.WRITE)
-    @Description("cyfhir.resource.load(resource) loads a FHIR resource into Neo4j, must be a stringified JSON")
-    public Stream<MapResult> load(@Name("json") String json) throws IOException {
+    @Description("cyfhir.resource.load(resource, config: { validation: Boolean, version: String }) loads a FHIR resource into Neo4j, must be a stringified JSON"
+            + "The config allows you to turn on FHIR validation and pick a version with choices being DSTU3, R4, and R5. If validation == true, the default for fhir version is R4")
+    public Stream<MapResult> load(@Name("json") String json,
+            @Name(value = "config", defaultValue = "{}") Map<String, Object> configMap) throws Exception {
         Transaction tx = db.beginTx();
         // Generate JSON object from string of json
-        Map<String, Object> resource = stringToMap(json);
+        Map<String, Object> resourceMap = stringToMap(json);
+        // Validate
+        String resourceType = (String) resourceMap.get("resourceType");
+        this.validateFHIR(json, resourceType, configMap);
+
         Entry entry = new Entry();
-        entry.setResource(resource);
+        entry.setResource(resourceMap);
         // Relationship Array
         ArrayList<FhirRelationship> relationships = addToDatabase(entry, tx);
         createRelationships(relationships, tx);
-
         // Create paths list
         List<Path> response = new ArrayList<Path>();
         // Create map for config
@@ -49,6 +62,22 @@ public class Resource {
         tx.commit();
         tx.close();
         return stream;
+    }
+
+    public IAnyResource validateFHIR(String json, String resourceType, Map<String, Object> configMap) throws Exception {
+        if (!configMap.isEmpty()) {
+            if (configMap.containsKey("validation")) {
+                Boolean validation = (Boolean) configMap.get("validation");
+                if (validation) {
+                    IAnyResource bundle;
+                    if (configMap.containsKey("version")) {
+                        validator = new Validator((String) configMap.get("version"));
+                    }
+                    return validator.validate(json, resourceType);
+                }
+            }
+        }
+        return null;
     }
 
     public ArrayList<FhirRelationship> addToDatabase(Entry entry, Transaction tx) {
@@ -103,8 +132,8 @@ public class Resource {
         return map;
     }
 
-
-    public ArrayList<FhirRelationship> getRelationshipsFromMap(Transaction tx, Map<String, Object> json, String key, Node parentNode, Boolean isArray, String resourceId) {
+    public ArrayList<FhirRelationship> getRelationshipsFromMap(Transaction tx, Map<String, Object> json, String key,
+            Node parentNode, Boolean isArray, String resourceId) {
         // Add class for relationship creation
         Create create = new Create();
         // Create Properties List
@@ -127,7 +156,8 @@ public class Resource {
         return relationships;
     }
 
-    public FhirRecursiveObj nodeRecursion(Transaction tx, Map<String, Object> json, String objectType, Boolean isArray, String resourceId) {
+    public FhirRecursiveObj nodeRecursion(Transaction tx, Map<String, Object> json, String objectType, Boolean isArray,
+            String resourceId) {
         // Create map that will be returned
         FhirRecursiveObj recursionObject = new FhirRecursiveObj();
         // Create relationship array
@@ -148,7 +178,8 @@ public class Resource {
                         // Cast object as map
                         Map<String, Object> map = (Map<String, Object>) t;
                         // Get relationships
-                        ArrayList<FhirRelationship> relations = getRelationshipsFromMap(tx, map, key, n, true, resourceId);
+                        ArrayList<FhirRelationship> relations = getRelationshipsFromMap(tx, map, key, n, true,
+                                resourceId);
                         // Add relationships to parent array
                         relationships.addAll(relations);
                     });
@@ -194,17 +225,18 @@ public class Resource {
     public Stream<PathResult> expand(@Name("start") Object start) throws Exception {
         Transaction tx = db.beginTx();
         List<Node> nodes = startToNodes(start, tx);
-        Stream<PathResult> expandedResource = explorePathPrivate(nodes, ">|relationship", "-entry", 0, 999, BFS, UNIQUENESS, false, -1, null, null, true, tx).map(PathResult::new);
+        Stream<PathResult> expandedResource = explorePathPrivate(nodes, ">|relationship", "-entry", 0, 999, BFS,
+                UNIQUENESS, false, -1, null, null, true, tx).map(PathResult::new);
 
         tx.commit();
         tx.close();
         return expandedResource;
     }
 
-
     @SuppressWarnings("unchecked")
     private List<Node> startToNodes(Object start, Transaction tx) throws Exception {
-        if (start == null) return Collections.emptyList();
+        if (start == null)
+            return Collections.emptyList();
         if (start instanceof Node) {
             return Collections.singletonList((Node) start);
         }
@@ -213,34 +245,29 @@ public class Resource {
         }
         if (start instanceof List) {
             List list = (List) start;
-            if (list.isEmpty()) return Collections.emptyList();
+            if (list.isEmpty())
+                return Collections.emptyList();
 
             Object first = list.get(0);
-            if (first instanceof Node) return (List<Node>) list;
+            if (first instanceof Node)
+                return (List<Node>) list;
             if (first instanceof Number) {
                 List<Node> nodes = new ArrayList<>();
-                for (Number n : ((List<Number>) list)) nodes.add(tx.getNodeById(n.longValue()));
+                for (Number n : ((List<Number>) list))
+                    nodes.add(tx.getNodeById(n.longValue()));
                 return nodes;
             }
         }
-        throw new Exception("Unsupported data type for start parameter a Node or an Identifier (long) of a Node must be given!");
+        throw new Exception(
+                "Unsupported data type for start parameter a Node or an Identifier (long) of a Node must be given!");
     }
 
-    private Stream<Path> explorePathPrivate(Iterable<Node> startNodes,
-                                            String pathFilter,
-                                            String labelFilter,
-                                            long minLevel,
-                                            long maxLevel,
-                                            boolean bfs,
-                                            Uniqueness uniqueness,
-                                            boolean filterStartNode,
-                                            long limit,
-                                            EnumMap<NodeFilter, List<Node>> nodeFilter,
-                                            String sequence,
-                                            boolean beginSequenceAtStart,
-                                            Transaction tx) {
+    private Stream<Path> explorePathPrivate(Iterable<Node> startNodes, String pathFilter, String labelFilter,
+            long minLevel, long maxLevel, boolean bfs, Uniqueness uniqueness, boolean filterStartNode, long limit,
+            EnumMap<NodeFilter, List<Node>> nodeFilter, String sequence, boolean beginSequenceAtStart, Transaction tx) {
 
-        Traverser traverser = traverse(tx.traversalDescription(), startNodes, pathFilter, labelFilter, minLevel, maxLevel, uniqueness, bfs, filterStartNode, nodeFilter, sequence, beginSequenceAtStart);
+        Traverser traverser = traverse(tx.traversalDescription(), startNodes, pathFilter, labelFilter, minLevel,
+                maxLevel, uniqueness, bfs, filterStartNode, nodeFilter, sequence, beginSequenceAtStart);
 
         if (limit == -1) {
             return Iterables.stream(traverser);
@@ -249,18 +276,10 @@ public class Resource {
         }
     }
 
-    public Traverser traverse(TraversalDescription traversalDescription,
-                              Iterable<Node> startNodes,
-                              String pathFilter,
-                              String labelFilter,
-                              long minLevel,
-                              long maxLevel,
-                              Uniqueness uniqueness,
-                              boolean bfs,
-                              boolean filterStartNode,
-                              EnumMap<NodeFilter, List<Node>> nodeFilter,
-                              String sequence,
-                              boolean beginSequenceAtStart) {
+    public Traverser traverse(TraversalDescription traversalDescription, Iterable<Node> startNodes, String pathFilter,
+            String labelFilter, long minLevel, long maxLevel, Uniqueness uniqueness, boolean bfs,
+            boolean filterStartNode, EnumMap<NodeFilter, List<Node>> nodeFilter, String sequence,
+            boolean beginSequenceAtStart) {
         TraversalDescription td = traversalDescription;
         // based on the pathFilter definition now the possible relationships and directions must be shown
 
@@ -273,25 +292,29 @@ public class Resource {
             List<String> relSequenceList = new ArrayList<>();
 
             for (int index = 0; index < sequenceSteps.length; index++) {
-                List<String> seq = (beginSequenceAtStart ? index : index - 1) % 2 == 0 ? labelSequenceList : relSequenceList;
+                List<String> seq = (beginSequenceAtStart ? index : index - 1) % 2 == 0 ? labelSequenceList
+                        : relSequenceList;
                 seq.add(sequenceSteps[index]);
             }
 
             td = td.expand(new RelationshipSequenceExpander(relSequenceList, beginSequenceAtStart));
-            td = td.evaluator(new LabelSequenceEvaluator(labelSequenceList, filterStartNode, beginSequenceAtStart, (int) minLevel));
+            td = td.evaluator(new LabelSequenceEvaluator(labelSequenceList, filterStartNode, beginSequenceAtStart,
+                    (int) minLevel));
         } else {
             if (pathFilter != null && !pathFilter.trim().isEmpty()) {
                 td = td.expand(new RelationshipSequenceExpander(pathFilter.trim(), beginSequenceAtStart));
             }
 
             if (labelFilter != null && sequence == null && !labelFilter.trim().isEmpty()) {
-                td = td.evaluator(new LabelSequenceEvaluator(labelFilter.trim(), filterStartNode, beginSequenceAtStart, (int) minLevel));
+                td = td.evaluator(new LabelSequenceEvaluator(labelFilter.trim(), filterStartNode, beginSequenceAtStart,
+                        (int) minLevel));
             }
         }
 
-        if (minLevel != -1) td = td.evaluator(Evaluators.fromDepth((int) minLevel));
-        if (maxLevel != -1) td = td.evaluator(Evaluators.toDepth((int) maxLevel));
-
+        if (minLevel != -1)
+            td = td.evaluator(Evaluators.fromDepth((int) minLevel));
+        if (maxLevel != -1)
+            td = td.evaluator(Evaluators.toDepth((int) maxLevel));
 
         if (nodeFilter != null && !nodeFilter.isEmpty()) {
             List<Node> endNodes = nodeFilter.getOrDefault(NodeFilter.END_NODES, Collections.EMPTY_LIST);
@@ -308,10 +331,12 @@ public class Resource {
             }
 
             if (!blacklistNodes.isEmpty()) {
-                td = td.evaluator(NodeEvaluators.blacklistNodeEvaluator(filterStartNode, (int) minLevel, blacklistNodes));
+                td = td.evaluator(
+                        NodeEvaluators.blacklistNodeEvaluator(filterStartNode, (int) minLevel, blacklistNodes));
             }
 
-            Evaluator endAndTerminatorNodeEvaluator = NodeEvaluators.endAndTerminatorNodeEvaluator(filterStartNode, (int) minLevel, endNodes, terminatorNodes);
+            Evaluator endAndTerminatorNodeEvaluator = NodeEvaluators.endAndTerminatorNodeEvaluator(filterStartNode,
+                    (int) minLevel, endNodes, terminatorNodes);
             if (endAndTerminatorNodeEvaluator != null) {
                 td = td.evaluator(endAndTerminatorNodeEvaluator);
             }
@@ -320,7 +345,8 @@ public class Resource {
                 // ensure endNodes and terminatorNodes are whitelisted
                 whitelistNodes.addAll(endNodes);
                 whitelistNodes.addAll(terminatorNodes);
-                td = td.evaluator(NodeEvaluators.whitelistNodeEvaluator(filterStartNode, (int) minLevel, whitelistNodes));
+                td = td.evaluator(
+                        NodeEvaluators.whitelistNodeEvaluator(filterStartNode, (int) minLevel, whitelistNodes));
             }
         }
 
@@ -331,10 +357,7 @@ public class Resource {
 
     // keys to node filter map
     enum NodeFilter {
-        WHITELIST_NODES,
-        BLACKLIST_NODES,
-        END_NODES,
-        TERMINATOR_NODES
+        WHITELIST_NODES, BLACKLIST_NODES, END_NODES, TERMINATOR_NODES
     }
 
 }
