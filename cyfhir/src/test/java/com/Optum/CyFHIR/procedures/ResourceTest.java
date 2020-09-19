@@ -2,7 +2,6 @@ package com.Optum.CyFHIR.procedures;
 
 // Don't Optimize org.neo4j.driver imports, prevents type ambiguity
 
-import org.junit.Assert;
 import org.neo4j.driver.AuthTokens;
 import org.neo4j.driver.Driver;
 import org.neo4j.driver.GraphDatabase;
@@ -20,8 +19,6 @@ import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
