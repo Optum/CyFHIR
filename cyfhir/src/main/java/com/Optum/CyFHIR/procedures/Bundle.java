@@ -37,21 +37,25 @@ public class Bundle {
         ArrayList<Map<String, Object>> entries = (ArrayList<Map<String, Object>>) bundleMap.get("entry");
         // Relationship Array
         ArrayList<FhirRelationship> relationships = new ArrayList<FhirRelationship>();
+        ArrayList<String> fullUrls = new ArrayList<>();
         // Iterate over entries
         entries.forEach((entry) -> {
             Map<String, Object> resource = (Map<String, Object>) entry.get("resource");
             Entry entryObj = new Entry();
             entryObj.setResource(resource);
             relationships.addAll(resourceClass.addToDatabase(entryObj, tx));
+            fullUrls.add((String) entry.get("fullUrl"));
         });
         resourceClass.createRelationships(relationships, tx);
-        // Create paths list
-        List<Path> response = new ArrayList<Path>();
-        // Create map for config
-        Map<String, Object> responseMap = new HashMap<String, Object>();
-        // Return apoc method results
-        Convert convert = new Convert();
-        Stream<MapResult> stream = convert.toTree(response, true, responseMap);
+        // Create map for response
+        Map<String, Object> responseMap = new HashMap<>();
+        responseMap.put("fullUrls", fullUrls);
+        Stream<MapResult> stream = Stream.of(new MapResult(responseMap));
+
+        // This function attaches references to all of the resources currently being loaded from previously loaded
+        // resources.
+        // It runs a Cypher Query due to there being >700 possible node labels that can have a reference as a property
+        resourceClass.attachLooseReferences(fullUrls, tx);
 
         tx.commit();
         tx.close();

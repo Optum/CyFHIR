@@ -1,9 +1,6 @@
 {
   "resourceType": "Patient",
   "id": "6aff2910-82fc-44d6-84a6-c29e4b756b11",
-  "text": {
-    "status": "generated"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",

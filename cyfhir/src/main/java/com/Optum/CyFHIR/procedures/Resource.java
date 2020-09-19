@@ -20,6 +20,7 @@ import org.neo4j.procedure.*;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Resource {
@@ -44,24 +45,36 @@ public class Resource {
         Map<String, Object> resourceMap = stringToMap(json);
         // Validate
         String resourceType = (String) resourceMap.get("resourceType");
-        this.validateFHIR(json, resourceType, configMap);
+        validateFHIR(json, resourceType, configMap);
 
         Entry entry = new Entry();
         entry.setResource(resourceMap);
         // Relationship Array
         ArrayList<FhirRelationship> relationships = addToDatabase(entry, tx);
         createRelationships(relationships, tx);
-        // Create paths list
-        List<Path> response = new ArrayList<Path>();
-        // Create map for config
-        Map<String, Object> responseMap = new HashMap<String, Object>();
-        // Return apoc method results
-        Convert convert = new Convert();
-        Stream<MapResult> stream = convert.toTree(response, true, responseMap);
+        // Array for FullUrl
+        ArrayList<String> fullUrls = new ArrayList<>();
+        fullUrls.add((String) entry.get("fullUrl"));
+
+        Map<String, Object> responseMap = new HashMap<>();
+        responseMap.put("fullUrls", fullUrls);
+        Stream<MapResult> stream = Stream.of(new MapResult(responseMap));
+
+        // This function attaches references to a resource being loaded from previously loaded resources.
+        // It runs a Cypher Query due to there being >700 possible node labels that can have a reference as a property
+        attachLooseReferences(fullUrls, tx);
 
         tx.commit();
         tx.close();
         return stream;
+    }
+
+    public void attachLooseReferences(ArrayList<String> fullUrls, Transaction tx) {
+        String collect = fullUrls.stream().collect(Collectors.joining("\", \"", "[\"", "\"]"));
+        String cypher = "MATCH (a)\n" + "MATCH (b:entry {fullUrl: a.reference}) \n" + "WHERE NOT (a)-[:reference]->()\n"
+                + "AND b.fullUrl IN " + collect + " \n CREATE (a)-[:reference]->(b)";
+
+        tx.execute(cypher);
     }
 
     public IAnyResource validateFHIR(String json, String resourceType, Map<String, Object> configMap) throws Exception {
@@ -85,8 +98,7 @@ public class Resource {
         ResourceIterator<Node> nodes = tx.findNodes(Label.label(resourceType), "fullUrl", entry.get("fullUrl"));
         ArrayList<FhirRelationship> rels = new ArrayList<>();
         try {
-            Node duplicate = nodes.next();
-            System.out.println("Duplicate Node: " + duplicate.toString());
+            System.out.println("Duplicate Resource With ID: " + nodes.next().getProperty("_resourceId").toString());
         } catch (Exception e) {
             // Get resource ID
             Map<String, Object> resourceMap = (Map<String, Object>) entry.get("resource");
@@ -109,9 +121,8 @@ public class Resource {
         relationships.forEach((o) -> {
             Label label = Label.label("entry");
             String childID = o.getChildUUID();
-            String childURN = "urn:uuid:" + childID;
             // Retrieve child node
-            Node childNode = tx.findNode(label, "fullUrl", childURN);
+            Node childNode = tx.findNode(label, "fullUrl", childID);
             // Get parent node
             Node parentNode = o.getParentNode();
             // Get relationship string
@@ -202,7 +213,7 @@ public class Resource {
         // Create relationship if we have a reference
         if (json.containsKey("reference")) {
             // Get child node reference
-            String referenceID = json.get("reference").toString().substring(9);
+            String referenceID = json.get("reference").toString();
             // Create relationship object
             FhirRelationship ref = new FhirRelationship();
             // Set parent id
