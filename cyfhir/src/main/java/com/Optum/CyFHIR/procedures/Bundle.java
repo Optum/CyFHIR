@@ -11,8 +11,8 @@ import java.util.*;
 import java.util.stream.Stream;
 
 public class Bundle {
-
     public static Validator validator;
+
     @Context
     public GraphDatabaseService db;
 

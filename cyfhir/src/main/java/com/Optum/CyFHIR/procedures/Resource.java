@@ -26,8 +26,8 @@ import java.util.stream.Stream;
 public class Resource {
     public static final Uniqueness UNIQUENESS = Uniqueness.RELATIONSHIP_PATH;
     public static final boolean BFS = true;
-
     public static Validator validator;
+
     @Context
     public GraphDatabaseService db;
 
@@ -73,7 +73,6 @@ public class Resource {
         String collect = fullUrls.stream().collect(Collectors.joining("\", \"", "[\"", "\"]"));
         String cypher = "MATCH (a)\n" + "MATCH (b:entry {fullUrl: a.reference}) \n" + "WHERE NOT (a)-[:reference]->()\n"
                 + "AND b.fullUrl IN " + collect + " \n CREATE (a)-[:reference]->(b)";
-
         tx.execute(cypher);
     }
 
