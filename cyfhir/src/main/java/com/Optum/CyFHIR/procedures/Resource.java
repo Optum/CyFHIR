@@ -70,9 +70,9 @@ public class Resource {
     }
 
     public void attachLooseReferences(ArrayList<String> fullUrls, Transaction tx) {
-        String collect = fullUrls.stream().collect(Collectors.joining("\", \"", "[\"", "\"]"));
-        String cypher = "MATCH (a)\n" + "MATCH (b:entry {fullUrl: a.reference}) \n" + "WHERE NOT (a)-[:reference]->()\n"
-                + "AND b.fullUrl IN " + collect + " \n CREATE (a)-[:reference]->(b)";
+        String prefix = "MATCH (a) MATCH (b:entry {fullUrl: a.reference}) WHERE NOT (a)-[:reference]->() AND b.fullUrl IN [\"";
+        String suffix = "\"] CREATE (a)-[:reference]->(b)";
+        String cypher = fullUrls.stream().collect(Collectors.joining("\", \"", prefix, suffix));
         tx.execute(cypher);
     }
 
