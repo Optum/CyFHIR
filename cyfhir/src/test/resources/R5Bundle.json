@@ -236,14 +236,14 @@
         "reason": [
           {
             "concept": {
-                "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "239873007",
-                      "display": "Osteoarthritis of knee"
-                    }
-                  ]
-              }
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "239873007",
+                  "display": "Osteoarthritis of knee"
+                }
+              ]
+            }
           }
         ],
         "serviceProvider": {

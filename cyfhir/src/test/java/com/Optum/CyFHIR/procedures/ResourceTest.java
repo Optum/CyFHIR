@@ -19,8 +19,6 @@ import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -88,6 +86,58 @@ class ResourceTest {
                 assertThat(resultNode.get("id")).isNotNull();
                 assertThat(resultNode.get("id").toString()).isEqualTo(id);
             }
+        }
+    }
+
+    @Test
+    void testLoadSequence() throws IOException {
+        Map patient = loadJsonFromFile("src/test/resources/Patient.json");
+        String patientString = toJsonString(patient);
+
+        Map encounter = loadJsonFromFile("src/test/resources/Encounter.json");
+        String encounterString = toJsonString(encounter);
+
+        Map condition = loadJsonFromFile("src/test/resources/Condition.json");
+        String conditionString = toJsonString(condition);
+
+        Driver driver = getSessionDriver();
+        try (Session session = driver.session()) {
+            // Run in order that automatically links references due to nature of the order
+            session.run("CALL cyfhir.resource.load(" + patientString + ")");
+            session.run("CALL cyfhir.resource.load(" + encounterString + ")");
+            session.run("CALL cyfhir.resource.load(" + conditionString + ")");
+
+            String metricQuery = "MATCH (n) \n" + " WITH COUNT(n) as node_count\n" + " MATCH ()-[r]->()\n"
+                    + " WITH node_count, COUNT(r) as relationship_count\n" + " RETURN node_count, relationship_count";
+
+            Result result1 = session.run(metricQuery);
+
+            List<Record> records1 = result1.stream().collect(Collectors.toList());
+            Record record1 = records1.get(0);
+            Integer node_count1 = record1.get("node_count").asInt();
+            Integer relationship_count1 = record1.get("relationship_count").asInt();
+
+            // Clean up from first part of the test
+            session.run("MATCH (n) DETACH DELETE n");
+
+            // Run in order that normally wouldn't link references due to reverse order, but now should
+            session.run("CALL cyfhir.resource.load(" + conditionString + ")");
+            session.run("CALL cyfhir.resource.load(" + encounterString + ")");
+            session.run("CALL cyfhir.resource.load(" + patientString + ")");
+
+            String metricQuery2 = "MATCH (n) \n" + " WITH COUNT(n) as node_count\n" + " MATCH ()-[r]->()\n"
+                    + " WITH node_count, COUNT(r) as relationship_count\n" + " RETURN node_count, relationship_count";
+
+            Result result2 = session.run(metricQuery);
+
+            List<Record> records2 = result2.stream().collect(Collectors.toList());
+            Record record2 = records2.get(0);
+            Integer node_count2 = record2.get("node_count").asInt();
+            Integer relationship_count2 = record2.get("relationship_count").asInt();
+
+            assertThat(node_count1).isEqualTo(relationship_count1);
+            assertThat(node_count1).isEqualTo(node_count2);
+            assertThat(relationship_count1).isEqualTo(relationship_count2);
         }
     }
 }
