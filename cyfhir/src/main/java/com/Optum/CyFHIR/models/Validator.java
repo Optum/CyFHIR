@@ -1,16 +1,16 @@
 package com.Optum.CyFHIR.models;
 
-import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
 import ca.uhn.fhir.parser.StrictErrorHandler;
+import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.validation.FhirValidator;
 import org.hl7.fhir.instance.model.api.IAnyResource;
 
 public class Validator {
-    FhirContext ctx;
     IParser parser;
-    FhirValidator hapiValidator;
+    FhirContext ctx;
     Version fhirVersion;
+    FhirValidator hapiValidator;
 
     public Validator() throws Exception {
         this("r4");
@@ -1596,10 +1596,10 @@ public class Validator {
                     .parseResource(org.hl7.fhir.r5.model.DeviceRequest.class, fhirResourceJson);
             return _DeviceRequest;
 
-        case "DeviceUseStatement":
-            org.hl7.fhir.r5.model.DeviceUseStatement _DeviceUseStatement = parser
-                    .parseResource(org.hl7.fhir.r5.model.DeviceUseStatement.class, fhirResourceJson);
-            return _DeviceUseStatement;
+        case "DeviceUsage":
+            org.hl7.fhir.r5.model.DeviceUsage _DeviceUsage = parser
+                    .parseResource(org.hl7.fhir.r5.model.DeviceUsage.class, fhirResourceJson);
+            return _DeviceUsage;
 
         case "DiagnosticReport":
             org.hl7.fhir.r5.model.DiagnosticReport _DiagnosticReport = parser
@@ -1651,10 +1651,10 @@ public class Validator {
                     fhirResourceJson);
             return _Evidence;
 
-        case "EvidenceFocus":
-            org.hl7.fhir.r5.model.EvidenceFocus _EvidenceFocus = parser
-                    .parseResource(org.hl7.fhir.r5.model.EvidenceFocus.class, fhirResourceJson);
-            return _EvidenceFocus;
+        case "EvidenceReport":
+            org.hl7.fhir.r5.model.EvidenceReport _EvidenceReport = parser
+                    .parseResource(org.hl7.fhir.r5.model.EvidenceReport.class, fhirResourceJson);
+            return _EvidenceReport;
 
         case "EvidenceVariable":
             org.hl7.fhir.r5.model.EvidenceVariable _EvidenceVariable = parser

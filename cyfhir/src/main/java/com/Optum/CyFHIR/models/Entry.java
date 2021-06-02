@@ -2,8 +2,8 @@ package com.Optum.CyFHIR.models;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.HashMap;
 
 public class Entry extends HashMap {
 

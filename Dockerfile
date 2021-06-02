@@ -1,13 +1,13 @@
-FROM neo4j:4.1.0
+FROM neo4j:4.2.7
 
 # APOC Plugin for Neo4j
-ENV APOC_VERSION 4.1.0.0
+ENV APOC_VERSION 4.2.0.4
 ENV APOC_URL https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/${APOC_VERSION}/apoc-${APOC_VERSION}-all.jar
 RUN (cd $NEO4J_HOME/plugins && wget --quiet $APOC_URL)
 
 # GDS Plugin for Neo4j
-ENV GDS_VERSION 1.3.1
-ENV GDS_URL https://github.com/neo4j/graph-data-science/releases/download/${GDS_VERSION}/neo4j-graph-data-science-${GDS_VERSION}-standalone.jar
+ENV GDS_VERSION 1.6.0
+ENV GDS_URL https://github.com/neo4j/graph-data-science/releases/download/${GDS_VERSION}/neo4j-graph-data-science-${GDS_VERSION}.jar
 RUN (cd $NEO4J_HOME/plugins && wget --quiet $GDS_URL)
 
 # CyFHIR Plugin for Neo4j

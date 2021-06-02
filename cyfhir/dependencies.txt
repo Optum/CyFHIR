@@ -1,93 +1,96 @@
- cyfhir:cyfhir:jar:WIP
- +- org.neo4j:neo4j-graphdb-api:jar:4.1.0
- |  +- org.neo4j:annotations:jar:4.1.0
- |  +- org.neo4j:neo4j-common:jar:4.1.0
- |  +- org.neo4j:neo4j-resource:jar:4.1.0
- |  \- org.neo4j:neo4j-collections:jar:4.1.0
- |     \- org.neo4j:neo4j-unsafe:jar:4.1.0
- +- org.neo4j:neo4j-procedure:jar:4.1.0
- |  +- org.neo4j:neo4j-procedure-api:jar:4.1.0
- |  +- org.neo4j:neo4j-codegen:jar:4.1.0
+ +- org.neo4j:neo4j-graphdb-api:jar:4.2.7
+ |  +- org.neo4j:annotations:jar:4.2.7
+ |  +- org.neo4j:neo4j-common:jar:4.2.7
+ |  +- org.neo4j:neo4j-resource:jar:4.2.7
+ |  \- org.neo4j:neo4j-collections:jar:4.2.7
+ |     \- org.neo4j:neo4j-unsafe:jar:4.2.7
+ +- org.neo4j:neo4j-procedure:jar:4.2.7
+ |  +- org.neo4j:neo4j-procedure-api:jar:4.2.7
+ |  +- org.neo4j:neo4j-codegen:jar:4.2.7
  |  |  +- org.scala-lang:scala-library:jar:2.12.10
  |  |  +- org.scala-lang:scala-reflect:jar:2.12.10
  |  |  +- org.ow2.asm:asm:jar:8.0.1
  |  |  +- org.ow2.asm:asm-util:jar:8.0.1
  |  |  +- org.ow2.asm:asm-analysis:jar:8.0.1
  |  |  \- org.ow2.asm:asm-tree:jar:8.0.1
- |  +- org.neo4j:neo4j-cypher-expression-evaluator:jar:4.1.0
- |  |  +- org.neo4j:neo4j-parser:jar:4.1.0
- |  |  |  +- org.neo4j:neo4j-util:jar:4.1.0
+ |  +- org.neo4j:neo4j-cypher-expression-evaluator:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-parser:jar:4.2.7
+ |  |  |  +- org.neo4j:neo4j-util:jar:4.2.7
  |  |  |  \- org.parboiled:parboiled-scala_2.12:jar:1.2.0
  |  |  |     \- org.parboiled:parboiled-core:jar:1.2.0
- |  |  +- org.neo4j:neo4j-ast:jar:4.1.0
- |  |  +- org.neo4j:neo4j-expressions:jar:4.1.0
- |  |  +- org.neo4j:neo4j-cypher-runtime-util:jar:4.1.0
- |  |  |  +- org.neo4j:neo4j-cypher-logical-plans:jar:4.1.0
- |  |  |  |  \- org.neo4j:neo4j-cypher-ir:jar:4.1.0
- |  |  |  +- org.neo4j:neo4j-cypher-planner-spi:jar:4.1.0
- |  |  |  +- org.neo4j:neo4j-cypher-macros:jar:4.1.0
+ |  |  +- org.neo4j:neo4j-ast:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-expressions:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-cypher-runtime-util:jar:4.2.7
+ |  |  |  +- org.neo4j:neo4j-cypher-logical-plans:jar:4.2.7
+ |  |  |  |  \- org.neo4j:neo4j-cypher-ir:jar:4.2.7
+ |  |  |  +- org.neo4j:neo4j-cypher-planner-spi:jar:4.2.7
+ |  |  |  +- org.neo4j:neo4j-cypher-macros:jar:4.2.7
  |  |  |  \- com.github.jbellis:jamm:jar:0.3.3
- |  |  \- org.neo4j:neo4j-cypher-interpreted-runtime:jar:4.1.0
- |  |     +- org.neo4j:neo4j-csv:jar:4.1.0
- |  |     \- org.neo4j:neo4j-graph-algo:jar:4.1.0
- |  +- org.eclipse.collections:eclipse-collections:jar:10.2.0
- |  |  \- org.eclipse.collections:eclipse-collections-api:jar:10.2.0
- |  \- org.neo4j:neo4j-fabric:jar:4.1.0
- |     +- io.projectreactor:reactor-core:jar:3.3.5.RELEASE
+ |  |  \- org.neo4j:neo4j-cypher-interpreted-runtime:jar:4.2.7
+ |  |     +- org.neo4j:neo4j-csv:jar:4.2.7
+ |  |     \- org.neo4j:neo4j-graph-algo:jar:4.2.7
+ |  +- org.eclipse.collections:eclipse-collections:jar:10.3.0
+ |  |  \- org.eclipse.collections:eclipse-collections-api:jar:10.3.0
+ |  \- org.neo4j:neo4j-fabric:jar:4.2.7
+ |     +- io.projectreactor:reactor-core:jar:3.3.15.RELEASE
  |     |  \- org.reactivestreams:reactive-streams:jar:1.0.3
- |     +- org.neo4j:neo4j-bolt:jar:4.1.0
- |     |  +- org.neo4j:neo4j-ssl:jar:4.1.0
- |     |  \- org.bouncycastle:bcpkix-jdk15on:jar:1.65
- |     |     \- org.bouncycastle:bcprov-jdk15on:jar:1.65
- |     +- org.neo4j:neo4j-cypher:jar:4.1.0
- |     |  +- org.neo4j:neo4j-cypher-planner:jar:4.1.0
- |     |  |  \- com.github.ben-manes.caffeine:caffeine:jar:2.8.2
- |     |  \- org.apache.shiro:shiro-core:jar:1.5.3
- |     |     +- org.apache.shiro:shiro-lang:jar:1.5.3
- |     |     +- org.apache.shiro:shiro-cache:jar:1.5.3
- |     |     +- org.apache.shiro:shiro-crypto-hash:jar:1.5.3
- |     |     |  \- org.apache.shiro:shiro-crypto-core:jar:1.5.3
- |     |     +- org.apache.shiro:shiro-crypto-cipher:jar:1.5.3
- |     |     +- org.apache.shiro:shiro-config-core:jar:1.5.3
- |     |     +- org.apache.shiro:shiro-config-ogdl:jar:1.5.3
- |     |     \- org.apache.shiro:shiro-event:jar:1.5.3
- |     \- org.neo4j:neo4j-front-end:jar:4.1.0
- |        \- org.neo4j:neo4j-rewriting:jar:4.1.0
- +- org.neo4j:neo4j-kernel:jar:4.1.0
- |  +- org.neo4j:neo4j-native:jar:4.1.0
- |  |  \- net.java.dev.jna:jna:jar:5.5.0
- |  +- org.neo4j:neo4j-storage-engine-api:jar:4.1.0
- |  |  +- org.neo4j:neo4j-lock:jar:4.1.0
- |  |  +- org.neo4j:neo4j-diagnostics:jar:4.1.0
- |  |  +- org.neo4j:neo4j-token-api:jar:4.1.0
- |  |  +- org.neo4j:neo4j-schema:jar:4.1.0
- |  |  \- org.neo4j:neo4j-monitoring:jar:4.1.0
- |  +- org.neo4j:neo4j-kernel-api:jar:4.1.0
- |  +- org.neo4j:neo4j-values:jar:4.1.0
- |  |  \- org.neo4j:neo4j-exceptions:jar:4.1.0
- |  +- org.neo4j:neo4j-io:jar:4.1.0
- |  |  \- org.neo4j:neo4j-concurrent:jar:4.1.0
- |  +- org.neo4j:neo4j-logging:jar:4.1.0
+ |     +- org.neo4j:neo4j-bolt:jar:4.2.7
+ |     |  +- org.neo4j:neo4j-ssl:jar:4.2.7
+ |     |  \- org.bouncycastle:bcpkix-jdk15on:jar:1.68
+ |     |     \- org.bouncycastle:bcprov-jdk15on:jar:1.68
+ |     +- org.neo4j:neo4j-cypher:jar:4.2.7
+ |     |  +- org.neo4j:neo4j-cypher-planner:jar:4.2.7
+ |     |  |  +- org.neo4j:neo4j-cypher-javacc-parser:jar:4.2.7
+ |     |  |  |  \- org.neo4j:cypher-ast-factory:jar:4.2.7
+ |     |  |  +- org.neo4j:neo4j-cypher-ast-factory:jar:4.2.7
+ |     |  |  \- com.github.ben-manes.caffeine:caffeine:jar:2.8.5
+ |     |  \- org.apache.shiro:shiro-core:jar:1.7.1
+ |     |     +- org.apache.shiro:shiro-lang:jar:1.7.1
+ |     |     +- org.apache.shiro:shiro-cache:jar:1.7.1
+ |     |     +- org.apache.shiro:shiro-crypto-hash:jar:1.7.1
+ |     |     |  \- org.apache.shiro:shiro-crypto-core:jar:1.7.1
+ |     |     +- org.apache.shiro:shiro-crypto-cipher:jar:1.7.1
+ |     |     +- org.apache.shiro:shiro-config-core:jar:1.7.1
+ |     |     +- org.apache.shiro:shiro-config-ogdl:jar:1.7.1
+ |     |     \- org.apache.shiro:shiro-event:jar:1.7.1
+ |     \- org.neo4j:neo4j-front-end:jar:4.2.7
+ |        \- org.neo4j:neo4j-rewriting:jar:4.2.7
+ +- org.neo4j:neo4j-kernel:jar:4.2.7
+ |  +- org.neo4j:neo4j-native:jar:4.2.7
+ |  |  \- net.java.dev.jna:jna:jar:5.6.0
+ |  +- org.neo4j:neo4j-storage-engine-api:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-lock:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-diagnostics:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-token-api:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-schema:jar:4.2.7
+ |  |  \- org.neo4j:neo4j-monitoring:jar:4.2.7
+ |  +- org.neo4j:neo4j-kernel-api:jar:4.2.7
+ |  +- org.neo4j:neo4j-values:jar:4.2.7
+ |  |  \- org.neo4j:neo4j-exceptions:jar:4.2.7
+ |  +- org.neo4j:neo4j-io:jar:4.2.7
+ |  |  \- org.neo4j:neo4j-concurrent:jar:4.2.7
+ |  +- org.neo4j:neo4j-logging:jar:4.2.7
  |  |  \- org.codehaus.jettison:jettison:jar:1.4.1
- |  +- org.neo4j:neo4j-configuration:jar:4.1.0
- |  +- org.neo4j:neo4j-layout:jar:4.1.0
- |  +- org.neo4j:neo4j-index:jar:4.1.0
- |  +- org.neo4j:neo4j-spatial-index:jar:4.1.0
- |  +- org.neo4j:neo4j-fulltext-index:jar:4.1.0
- |  |  \- org.neo4j:neo4j-lucene-index:jar:4.1.0
+ |  +- org.neo4j:neo4j-configuration:jar:4.2.7
+ |  |  \- org.apache.commons:commons-exec:jar:1.3
+ |  +- org.neo4j:neo4j-layout:jar:4.2.7
+ |  +- org.neo4j:neo4j-index:jar:4.2.7
+ |  +- org.neo4j:neo4j-spatial-index:jar:4.2.7
+ |  +- org.neo4j:neo4j-fulltext-index:jar:4.2.7
+ |  |  \- org.neo4j:neo4j-lucene-index:jar:4.2.7
  |  |     +- org.apache.lucene:lucene-analyzers-common:jar:8.5.1
  |  |     +- org.apache.lucene:lucene-core:jar:8.5.1
  |  |     +- org.apache.lucene:lucene-queryparser:jar:8.5.1
  |  |     \- org.apache.lucene:lucene-backward-codecs:jar:8.5.1
- |  +- org.neo4j:neo4j-id-generator:jar:4.1.0
- |  +- org.neo4j:neo4j-label-index:jar:4.1.0
- |  +- org.neo4j:neo4j-wal:jar:4.1.0
- |  \- org.jctools:jctools-core:jar:3.0.0
- +- com.fasterxml.jackson.core:jackson-databind:jar:2.11.1
- |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.11.1
- |  \- com.fasterxml.jackson.core:jackson-core:jar:2.11.1
- +- org.neo4j.procedure:apoc:jar:4.0.0.15
- |  +- commons-codec:commons-codec:jar:1.14
+ |  +- org.neo4j:neo4j-id-generator:jar:4.2.7
+ |  +- org.neo4j:neo4j-label-index:jar:4.2.7
+ |  +- org.neo4j:neo4j-wal:jar:4.2.7
+ |  +- org.jctools:jctools-core:jar:3.1.0
+ |  \- commons-io:commons-io:jar:2.7
+ +- com.fasterxml.jackson.core:jackson-databind:jar:2.12.3
+ |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.12.3
+ |  \- com.fasterxml.jackson.core:jackson-core:jar:2.12.3
+ +- org.neo4j.procedure:apoc:jar:all:4.2.0.4
  |  +- com.jayway.jsonpath:json-path:jar:2.4.0
  |  |  \- net.minidev:json-smart:jar:2.3
  |  |     \- net.minidev:accessors-smart:jar:1.2
@@ -110,91 +113,97 @@
  |     +- org.antlr:antlr-runtime:jar:3.5.2
  |     \- org.antlr:ST4:jar:4.1
  +- io.netty:netty-all:jar:4.1.51.Final
- +- ca.uhn.hapi.fhir:hapi-fhir-base:jar:5.1.0
- |  +- org.apache.commons:commons-lang3:jar:3.9
- |  +- org.apache.commons:commons-text:jar:1.7
- |  +- commons-io:commons-io:jar:2.6
- |  +- com.google.guava:guava:jar:29.0-jre
+ +- ca.uhn.hapi.fhir:hapi-fhir-base:jar:5.4.0
+ |  +- org.apache.commons:commons-lang3:jar:3.12.0
+ |  +- org.apache.commons:commons-text:jar:1.9
+ |  +- commons-codec:commons-codec:jar:1.15
+ |  +- com.google.guava:guava:jar:30.1.1-jre
  |  |  +- com.google.guava:failureaccess:jar:1.0.1
  |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava
- |  |  +- org.checkerframework:checker-qual:jar:2.11.1
- |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4
+ |  |  +- org.checkerframework:checker-qual:jar:3.8.0
+ |  |  +- com.google.errorprone:error_prone_annotations:jar:2.5.1
  |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3
- |  +- org.slf4j:slf4j-api:jar:1.7.28
- |  \- org.slf4j:jcl-over-slf4j:jar:1.7.28
- +- ca.uhn.hapi.fhir:hapi-fhir-structures-r4:jar:5.1.0
- |  +- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:5.1.0
- |  +- ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:5.1.0
+ |  +- org.slf4j:slf4j-api:jar:1.7.30
+ |  +- org.slf4j:jcl-over-slf4j:jar:1.7.30
  |  \- com.google.code.findbugs:jsr305:jar:3.0.2
- +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:jar:5.1.0
- +- ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:5.1.0
- |  \- ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:5.1.0
- +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:5.1.0
- +- ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:5.1.0
- |  \- ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:5.1.0
- +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r5:jar:5.1.0
- +- org.neo4j.test:neo4j-harness:jar:4.1.0
- |  +- org.neo4j:neo4j:jar:4.1.0
- |  |  +- org.neo4j:neo4j-data-collector:jar:4.1.0
- |  |  +- org.neo4j:neo4j-security:jar:4.1.0
- |  |  |  \- org.neo4j:neo4j-command-line:jar:4.1.0
- |  |  |     \- info.picocli:picocli:jar:4.2.0
- |  |  +- org.neo4j:neo4j-consistency-check:jar:4.1.0
- |  |  +- org.neo4j:neo4j-record-storage-engine:jar:4.1.0
- |  |  |  \- org.neo4j:neo4j-import-util:jar:4.1.0
- |  |  +- org.neo4j:neo4j-dbms:jar:4.1.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-structures-r4:jar:5.4.0
+ |  +- ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:5.4.0
+ |  |  \- org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.5.0
+ |  |     +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.5.0
+ |  |     |  +- org.jetbrains:annotations:jar:13.0
+ |  |     |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.5.0
+ |  |     \- org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.5.0
+ |  \- ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:5.4.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:jar:5.4.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:5.4.0
+ |  \- ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:5.4.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:5.4.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:5.4.0
+ |  \- ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:5.4.0
+ +- ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r5:jar:5.4.0
+ +- org.neo4j.test:neo4j-harness:jar:4.2.7
+ |  +- org.neo4j:neo4j:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-data-collector:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-security:jar:4.2.7
+ |  |  |  \- org.neo4j:neo4j-command-line:jar:4.2.7
+ |  |  |     \- info.picocli:picocli:jar:4.5.0
+ |  |  +- org.neo4j:neo4j-consistency-check:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-record-storage-engine:jar:4.2.7
+ |  |  |  \- org.neo4j:neo4j-import-util:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-dbms:jar:4.2.7
  |  |  |  +- org.jprocesses:jProcesses:jar:1.6.5
  |  |  |  |  \- com.profesorfalken:WMI4Java:jar:1.6.3
  |  |  |  |     \- com.profesorfalken:jPowerShell:jar:3.0
- |  |  |  \- org.neo4j.licensing-proxy:zstd-proxy:jar:4.1.0
- |  |  |     \- com.github.luben:zstd-jni:jar:1.4.4-11
- |  |  +- org.neo4j:neo4j-import-tool:jar:4.1.0
- |  |  +- org.neo4j:neo4j-batch-insert:jar:4.1.0
- |  |  \- org.neo4j.app:neo4j-server:jar:4.1.0
+ |  |  |  \- org.neo4j.licensing-proxy:zstd-proxy:jar:4.2.7
+ |  |  |     \- com.github.luben:zstd-jni:jar:1.4.5-6
+ |  |  +- org.neo4j:neo4j-import-tool:jar:4.2.7
+ |  |  +- org.neo4j:neo4j-batch-insert:jar:4.2.7
+ |  |  \- org.neo4j.app:neo4j-server:jar:4.2.7
  |  +- org.slf4j:slf4j-nop:jar:1.7.30
- |  +- org.neo4j:test-utils:jar:4.1.0
+ |  +- org.neo4j:test-utils:jar:4.2.7
  |  |  +- org.junit.vintage:junit-vintage-engine:jar:5.6.2
- |  |  +- org.assertj:assertj-core:jar:3.16.0
- |  |  +- org.mockito:mockito-core:jar:3.3.3
- |  |  |  +- net.bytebuddy:byte-buddy:jar:1.10.5
- |  |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.5
- |  |  |  \- org.objenesis:objenesis:jar:2.6
- |  |  \- org.awaitility:awaitility:jar:4.0.2
- |  +- org.neo4j:io-test-utils:jar:4.1.0
+ |  |  +- org.assertj:assertj-core:jar:3.16.1
+ |  |  +- org.mockito:mockito-core:jar:3.5.13
+ |  |  |  +- net.bytebuddy:byte-buddy:jar:1.10.15
+ |  |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.15
+ |  |  |  \- org.objenesis:objenesis:jar:3.1
+ |  |  \- org.awaitility:awaitility:jar:4.0.3
+ |  +- org.neo4j:io-test-utils:jar:4.2.7
  |  |  \- org.junit.platform:junit-platform-launcher:jar:1.6.2
- |  \- org.neo4j.app:neo4j-server:test-jar:tests:4.1.0
- |     +- org.neo4j:server-api:jar:4.1.0
+ |  \- org.neo4j.app:neo4j-server:test-jar:tests:4.2.7
+ |     +- org.neo4j:server-api:jar:4.2.7
  |     |  \- javax.ws.rs:javax.ws.rs-api:jar:2.1.1
- |     +- org.eclipse.jetty:jetty-server:jar:9.4.26.v20200117
+ |     +- org.eclipse.jetty:jetty-server:jar:9.4.39.v20210325
  |     |  +- javax.servlet:javax.servlet-api:jar:3.1.0
- |     |  +- org.eclipse.jetty:jetty-http:jar:9.4.26.v20200117
- |     |  |  \- org.eclipse.jetty:jetty-util:jar:9.4.26.v20200117
- |     |  \- org.eclipse.jetty:jetty-io:jar:9.4.26.v20200117
- |     +- org.eclipse.jetty:jetty-webapp:jar:9.4.26.v20200117
- |     |  +- org.eclipse.jetty:jetty-xml:jar:9.4.26.v20200117
- |     |  \- org.eclipse.jetty:jetty-servlet:jar:9.4.26.v20200117
- |     |     \- org.eclipse.jetty:jetty-security:jar:9.4.26.v20200117
- |     +- org.glassfish.jersey.core:jersey-server:jar:2.30.1
- |     |  +- org.glassfish.jersey.core:jersey-common:jar:2.30.1
- |     |  |  \- com.sun.activation:jakarta.activation:jar:1.2.1
- |     |  +- org.glassfish.jersey.core:jersey-client:jar:2.30.1
+ |     |  +- org.eclipse.jetty:jetty-http:jar:9.4.39.v20210325
+ |     |  |  \- org.eclipse.jetty:jetty-util:jar:9.4.39.v20210325
+ |     |  \- org.eclipse.jetty:jetty-io:jar:9.4.39.v20210325
+ |     +- org.eclipse.jetty:jetty-webapp:jar:9.4.39.v20210325
+ |     |  +- org.eclipse.jetty:jetty-xml:jar:9.4.39.v20210325
+ |     |  \- org.eclipse.jetty:jetty-servlet:jar:9.4.39.v20210325
+ |     |     +- org.eclipse.jetty:jetty-security:jar:9.4.39.v20210325
+ |     |     \- org.eclipse.jetty:jetty-util-ajax:jar:9.4.39.v20210325
+ |     +- org.glassfish.jersey.core:jersey-server:jar:2.32
+ |     |  +- org.glassfish.jersey.core:jersey-common:jar:2.32
+ |     |  |  +- org.glassfish.hk2:osgi-resource-locator:jar:1.0.3
+ |     |  |  \- com.sun.activation:jakarta.activation:jar:1.2.2
+ |     |  +- org.glassfish.jersey.core:jersey-client:jar:2.32
  |     |  +- jakarta.ws.rs:jakarta.ws.rs-api:jar:2.1.6
- |     |  +- org.glassfish.jersey.media:jersey-media-jaxb:jar:2.30.1
+ |     |  +- org.glassfish.jersey.media:jersey-media-jaxb:jar:2.32
  |     |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5
  |     |  +- org.glassfish.hk2.external:jakarta.inject:jar:2.6.1
  |     |  +- jakarta.validation:jakarta.validation-api:jar:2.0.2
- |     |  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2
- |     +- org.glassfish.jersey.inject:jersey-hk2:jar:2.30.1
+ |     |  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3
+ |     +- org.glassfish.jersey.inject:jersey-hk2:jar:2.32
  |     |  +- org.glassfish.hk2:hk2-locator:jar:2.6.1
  |     |  |  +- org.glassfish.hk2:hk2-api:jar:2.6.1
  |     |  |  \- org.glassfish.hk2:hk2-utils:jar:2.6.1
  |     |  \- org.javassist:javassist:jar:3.25.0-GA
- |     +- org.glassfish.jersey.containers:jersey-container-servlet:jar:2.30.1
- |     |  \- org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.30.1
- |     +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.11.0
- |     |  +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.11.0
- |     |  \- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.11.0
- |     +- javax.activation:activation:jar:1.1.1
+ |     +- org.glassfish.jersey.containers:jersey-container-servlet:jar:2.32
+ |     |  \- org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.32
+ |     +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.11.3
+ |     |  +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.11.3
+ |     |  \- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.11.3
  |     +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.2
  |     |  +- org.glassfish.jaxb:txw2:jar:2.3.2
  |     |  +- com.sun.istack:istack-commons-runtime:jar:3.0.8
@@ -202,25 +211,22 @@
  |     |  +- com.sun.xml.fastinfoset:FastInfoset:jar:1.2.16
  |     |  \- jakarta.activation:jakarta.activation-api:jar:1.2.1
  |     \- javax.xml.bind:jaxb-api:jar:2.3.0
- +- org.neo4j.driver:neo4j-java-driver:jar:4.1.0
- +- org.testcontainers:testcontainers:jar:1.14.3
+ +- org.neo4j.driver:neo4j-java-driver:jar:4.2.5
+ +- org.testcontainers:testcontainers:jar:1.15.3
  |  +- junit:junit:jar:4.12
  |  |  \- org.hamcrest:hamcrest-core:jar:1.3
- |  +- org.jetbrains:annotations:jar:19.0.0
  |  +- org.apache.commons:commons-compress:jar:1.20
  |  +- org.rnorth.duct-tape:duct-tape:jar:1.0.8
  |  +- org.rnorth.visible-assertions:visible-assertions:jar:2.1.2
- |  +- org.rnorth:tcp-unix-socket-proxy:jar:1.0.2
- |  |  +- com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4
- |  |  |  \- org.scijava:native-lib-loader:jar:2.0.2
- |  |  \- com.kohlschutter.junixsocket:junixsocket-common:jar:2.0.4
- |  \- net.java.dev.jna:jna-platform:jar:5.5.0
- +- org.testcontainers:junit-jupiter:jar:1.14.3
- |  \- org.junit.jupiter:junit-jupiter-api:jar:5.6.2
- +- org.junit.jupiter:junit-jupiter:jar:5.6.2
- |  +- org.junit.jupiter:junit-jupiter-params:jar:5.6.2
- |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.6.2
- \- org.junit.platform:junit-platform-engine:jar:1.6.2
+ |  +- com.github.docker-java:docker-java-api:jar:3.2.8
+ |  \- com.github.docker-java:docker-java-transport-zerodep:jar:3.2.8
+ |     \- com.github.docker-java:docker-java-transport:jar:3.2.8
+ +- org.testcontainers:junit-jupiter:jar:1.15.3
+ |  \- org.junit.jupiter:junit-jupiter-api:jar:5.7.0
+ +- org.junit.jupiter:junit-jupiter:jar:5.7.2
+ |  +- org.junit.jupiter:junit-jupiter-params:jar:5.7.2
+ |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.7.2
+ \- org.junit.platform:junit-platform-engine:jar:1.7.2
     +- org.apiguardian:apiguardian-api:jar:1.1.0
     +- org.opentest4j:opentest4j:jar:1.2.0
-    \- org.junit.platform:junit-platform-commons:jar:1.6.2
+    \- org.junit.platform:junit-platform-commons:jar:1.7.2
