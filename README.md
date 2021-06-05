@@ -44,7 +44,7 @@ We recommend the use of Docker for running Neo4j version 4.2.x locally to mainta
 
 ### CyFHIR Commands
 
-Currently CyFHIR has 3 procedure2 and 2 aggregating functions:
+Currently CyFHIR has 3 procedures and 2 aggregating functions:
 
 ##### Procedures:
 
