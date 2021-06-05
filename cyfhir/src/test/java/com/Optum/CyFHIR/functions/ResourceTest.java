@@ -16,6 +16,7 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.shaded.com.fasterxml.jackson.core.JsonProcessingException;
 import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
+import org.testcontainers.utility.DockerImageName;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -31,10 +32,10 @@ import static org.assertj.core.api.Assertions.fail;
 class ResourceTest {
 
     @Container
-    private static final GenericContainer neo4j = new GenericContainer<>("neo4j:4.1.0")
-            .withEnv("NEO4J_AUTH", "neo4j/password")
+    private static final GenericContainer<?> neo4j = new GenericContainer<>(DockerImageName.parse("neo4j:4.2.7"))
+            .withExposedPorts(7687).withEnv("NEO4J_AUTH", "neo4j/password")
             .withEnv("NEO4J_dbms_security_procedures_unrestricted", "cyfhir.*,apoc.*")
-            .withFileSystemBind("./plugins", "/var/lib/neo4j/plugins", BindMode.READ_ONLY).withExposedPorts(7687);
+            .withFileSystemBind("./plugins", "/var/lib/neo4j/plugins", BindMode.READ_ONLY);
 
     Map loadJsonFromFile(String location) throws IOException {
         ObjectMapper mapper = new ObjectMapper();

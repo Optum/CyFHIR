@@ -1,22 +1,22 @@
 package com.Optum.CyFHIR.procedures;
 
+import com.Optum.CyFHIR.models.Entry;
+import com.Optum.CyFHIR.models.Validator;
+import com.Optum.CyFHIR.models.FhirRecursiveObj;
+import com.Optum.CyFHIR.models.FhirRelationship;
 import apoc.create.Create;
-import apoc.path.LabelSequenceEvaluator;
 import apoc.path.NodeEvaluators;
+import apoc.path.LabelSequenceEvaluator;
 import apoc.path.RelationshipSequenceExpander;
 import apoc.result.MapResult;
 import apoc.result.PathResult;
 import apoc.result.RelationshipResult;
-import com.Optum.CyFHIR.models.Entry;
-import com.Optum.CyFHIR.models.FhirRecursiveObj;
-import com.Optum.CyFHIR.models.FhirRelationship;
-import com.Optum.CyFHIR.models.Validator;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.hl7.fhir.instance.model.api.IAnyResource;
 import org.neo4j.graphdb.*;
+import org.neo4j.procedure.*;
 import org.neo4j.graphdb.traversal.*;
 import org.neo4j.internal.helpers.collection.Iterables;
-import org.neo4j.procedure.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hl7.fhir.instance.model.api.IAnyResource;
 
 import java.io.IOException;
 import java.util.*;

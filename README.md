@@ -33,7 +33,7 @@ CyFHIR is a native Neo4j plugin that acts as the bridge between FHIR and Neo4j. 
 
 ### How to use CyFHIR
 
-We recommend the use of Docker for running Neo4j locally to maintain static development environments that can be easily cleaned/removed. But if you wish to use Neo4j Desktop, that should work as well. Whichever development you choose, adding CyFHIR to Neo4j should be the same process:
+We recommend the use of Docker for running Neo4j version 4.2.x locally to maintain static development environments that can be easily cleaned/removed. But if you wish to use Neo4j Desktop, that should work as well. Whichever development you choose, adding CyFHIR to Neo4j should be the same process:
 
 1.  Download the latest release from <https://github.com/Optum/CyFHIR/releases>
 2.  Add CyFHIR to your `$NEO4J_HOME/plugins` folder
@@ -44,7 +44,7 @@ We recommend the use of Docker for running Neo4j locally to maintain static deve
 
 ### CyFHIR Commands
 
-Currently CyFHIR has 1 procedure and 1 aggregating function:
+Currently CyFHIR has 3 procedures and 2 aggregating functions:
 
 ##### Procedures:
 

@@ -1,9 +1,6 @@
 # Description
 <!--- Replace Description With Your Story's Name -->
 
-## Related US/Task
-<!--- Please link to the issue here: -->
-
 ## Motivation and Context
 <!--- Why is this change required? What problem does it solve? -->
 
