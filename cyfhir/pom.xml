@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <neo4j.version>4.2.7</neo4j.version>
+        <neo4j.version>4.2.8</neo4j.version>
         <apoc.version>4.2.0.4</apoc.version>
         <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
         <hapi-fhir.version>5.4.0</hapi-fhir.version>
