@@ -19,7 +19,7 @@
     "deep-equal": "^2.0.3",
     "dotenv": "^10.0.0",
     "elastic-apm-node": "^3.15.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.1",
     "jsonabc": "^2.3.1",
     "morgan": "^1.10.0",
